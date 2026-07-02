@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo O Barril — Cândido Mota/SP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --verde:#1A3D2E;
+  --verde2:#2a5c44;
+  --azul:#1F5FA6;
+  --azul2:#1878c8;
+  --amber:#E8A020;
+  --amber2:#d4911a;
+  --creme:#F0EBE0;
+  --branco:#fff;
+  --cinza:#666;
+  --borda:rgba(0,0,0,0.08);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#fff;color:#1a1a1a}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+/* ===== NAV ===== */
+nav{
+  background:var(--verde);
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 2rem;height:64px;position:sticky;top:0;z-index:200;
+}
+.nav-logo{cursor:pointer;display:flex;flex-direction:column}
+.nav-grupo{font-size:8px;color:rgba(255,255,255,0.5);letter-spacing:3px;text-transform:uppercase}
+.nav-nome{font-family:'Playfair Display',serif;font-size:22px;color:#fff;font-weight:700;line-height:1}
+.nav-links{display:flex}
+.nav-links a{
+  color:rgba(255,255,255,0.75);font-size:11px;letter-spacing:1.5px;
+  text-transform:uppercase;font-weight:500;padding:0 1rem;height:64px;
+  display:flex;align-items:center;cursor:pointer;
+  border-bottom:3px solid transparent;transition:all .2s;
+}
+.nav-links a:hover,.nav-links a.ativo{color:#fff;border-bottom-color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:1.5rem}
+.nav-info{text-align:right}
+.nav-tel{font-size:13px;font-weight:600;color:#fff;display:flex;align-items:center;gap:5px}
+.nav-end{font-size:10px;color:rgba(255,255,255,0.5);display:flex;align-items:center;gap:4px}
+.nav-cta{
+  background:var(--amber);color:#fff;font-size:11px;font-weight:700;
+  letter-spacing:1px;text-transform:uppercase;padding:10px 18px;
+  border-radius:6px;cursor:pointer;border:none;font-family:'Inter',sans-serif;
+  display:flex;align-items:center;gap:6px;white-space:nowrap;transition:background .2s;
+}
+.nav-cta:hover{background:var(--amber2)}
+
+/* ===== PAGES ===== */
+.pagina{display:none}
+.pagina.ativa{display:block}
+
+/* ===== HERO ===== */
+.hero{
+  position:relative;min-height:480px;
+  display:flex;align-items:center;
+  background:linear-gradient(to right, rgba(15,30,20,0.92) 45%, rgba(15,30,20,0.4) 100%),
+    url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400&q=80') center/cover no-repeat;
+  padding:5rem 3rem;
+}
+.hero-content{max-width:520px}
+.hero-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--amber);margin-bottom:1rem}
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:58px;font-weight:900;line-height:1.05;color:#fff;margin-bottom:.3rem;
+}
+.hero-title em{color:var(--amber);font-style:normal}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.65;margin-bottom:2.5rem;max-width:400px}
+.hero-btns{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-outline{
+  padding:13px 22px;border:2px solid rgba(255,255,255,0.5);color:#fff;
+  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  border-radius:6px;cursor:pointer;background:transparent;font-family:'Inter',sans-serif;
+  display:flex;align-items:center;gap:8px;transition:all .2s;
+}
+.btn-outline:hover{background:rgba(255,255,255,0.1);border-color:#fff}
+.btn-wpp{
+  padding:13px 22px;background:#25D366;color:#fff;
+  font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  border-radius:6px;cursor:pointer;border:none;font-family:'Inter',sans-serif;
+  display:flex;align-items:center;gap:8px;transition:background .2s;
+}
+.btn-wpp:hover{background:#1fb355}
+
+/* ===== BRANDS SECTION ===== */
+.brands-section{background:var(--creme);padding:4rem 2rem}
+.brands-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
+.brand-card{border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.brand-card-header{
+  padding:2.5rem 2rem 1.8rem;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;min-height:220px;
+}
+.bc-blue{background:var(--azul)}
+.bc-green{background:var(--verde)}
+.bc-amber{background:var(--amber)}
+.brand-card-body{background:#fff;padding:1.4rem 1.6rem;flex:1;display:flex;flex-direction:column}
+.brand-card-body p{font-size:13px;color:var(--cinza);line-height:1.6;flex:1;margin-bottom:1.2rem}
+.btn-card{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:11px 16px;border:1.5px solid rgba(0,0,0,0.15);border-radius:8px;
+  font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  cursor:pointer;background:transparent;font-family:'Inter',sans-serif;
+  color:#1a1a1a;transition:all .2s;
+}
+.btn-card:hover{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+
+/* ===== PROMOS SECTION ===== */
+.promos-section{padding:4rem 2rem;background:#fff}
+.section-header{display:flex;align-items:flex-end;justify-content:space-between;max-width:1000px;margin:0 auto 2rem}
+.section-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem}
+.section-title{font-family:'Playfair Display',serif;font-size:36px;font-weight:700;color:#1a1a1a}
+.section-title-line{width:40px;height:3px;background:var(--amber);margin-top:.5rem}
+.btn-ver-mais{
+  padding:10px 20px;border:1.5px solid rgba(0,0,0,0.2);border-radius:6px;
+  font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  cursor:pointer;background:transparent;font-family:'Inter',sans-serif;
+  display:flex;align-items:center;gap:6px;white-space:nowrap;transition:all .2s;
+}
+.btn-ver-mais:hover{background:#1a1a1a;color:#fff;border-color:#1a1a1a}
+
+.promos-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;max-width:1000px;margin:0 auto}
+.promo-card{border-radius:12px;overflow:hidden;border:.5px solid var(--borda)}
+.promo-img{
+  height:140px;position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#2a2a2a,#444);
+}
+.promo-img img{width:100%;height:100%;object-fit:cover}
+.promo-tag{
+  position:absolute;top:10px;left:10px;
+  font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:5px 10px;border-radius:4px;color:#fff;line-height:1.2;
+}
+.tag-blue{background:var(--azul)}
+.tag-amber{background:var(--amber)}
+.tag-verde{background:var(--verde)}
+.promo-body{padding:1rem;background:#fff}
+.promo-body-desc{font-size:11px;color:var(--cinza);line-height:1.4;margin-bottom:.6rem}
+.promo-price-label{font-size:10px;color:var(--cinza);text-transform:uppercase;letter-spacing:.5px}
+.promo-price{font-size:22px;font-weight:700;color:#1a1a1a;line-height:1}
+.promo-price span{font-size:13px;font-weight:400;color:var(--cinza)}
+.promo-price-off{font-size:22px;font-weight:700;color:var(--amber)}
+.btn-promo{
+  width:100%;margin-top:.9rem;padding:10px;border-radius:7px;border:none;
+  font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;
+  cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s;
+}
+.btn-promo-verde{background:var(--verde);color:#fff}
+.btn-promo-verde:hover{background:var(--verde2)}
+.btn-promo-blue{background:var(--azul);color:#fff}
+.btn-promo-blue:hover{background:var(--azul2)}
+.btn-promo-amber{background:var(--amber);color:#fff}
+.btn-promo-amber:hover{background:var(--amber2)}
+
+/* ===== PEDIDO SECTION ===== */
+.pedido-section{background:var(--verde);padding:4rem 2rem}
+.pedido-section .section-eyebrow{color:rgba(255,255,255,0.5)}
+.pedido-section .section-title{color:#fff}
+.pedido-section .section-title-line{background:var(--amber)}
+.pedido-section .section-header{margin-bottom:2.5rem}
+.pedido-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1000px;margin:0 auto}
+.pedido-card{border-radius:16px;overflow:hidden}
+.pedido-card-header{
+  padding:2rem 1.5rem 1.5rem;display:flex;align-items:center;
+  justify-content:center;min-height:160px;
+}
+.pedido-card-body{background:#fff;padding:1.2rem 1.4rem}
+.btn-pedido{
+  width:100%;padding:11px 16px;border-radius:8px;border:none;
+  font-size:12px;font-weight:600;letter-spacing:.5px;text-transform:uppercase;
+  cursor:pointer;font-family:'Inter',sans-serif;margin-bottom:8px;
+  display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s;
+}
+.btn-wpp-pedido{background:#25D366;color:#fff}
+.btn-wpp-pedido:hover{background:#1fb355}
+.btn-ifood{background:#EA1D2C;color:#fff}
+.btn-ifood:hover{background:#c7111e}
+
+/* ===== CONTATO ===== */
+.contato-section{background:var(--creme);padding:4rem 2rem}
+.contato-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;max-width:1000px;margin:0 auto}
+.contato-info h2{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--verde);margin-bottom:1.5rem}
+.contato-item{display:flex;gap:12px;margin-bottom:1.2rem;align-items:flex-start}
+.c-icon{width:36px;height:36px;border-radius:50%;background:var(--verde);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;font-size:16px}
+.c-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--cinza);margin-bottom:3px}
+.c-val{font-size:14px;font-weight:500;line-height:1.4}
+.mapa-placeholder{
+  background:#ddd;border-radius:12px;min-height:200px;display:flex;
+  align-items:center;justify-content:center;color:#888;font-size:13px;overflow:hidden;
+}
+.mapa-placeholder iframe{width:100%;height:220px;border:none;border-radius:12px}
+.contato-form{background:#fff;border-radius:16px;padding:1.8rem}
+.form-label{font-size:10px;text-transform:uppercase;letter-spacing:.5px;color:var(--cinza);margin-bottom:5px;display:block}
+.form-input{
+  width:100%;padding:11px 14px;border:1px solid rgba(0,0,0,0.14);
+  border-radius:8px;font-size:14px;font-family:'Inter',sans-serif;
+  margin-bottom:12px;outline:none;transition:border-color .2s;
+}
+.form-input:focus{border-color:var(--verde)}
+textarea.form-input{resize:none;min-height:90px}
+.btn-enviar{
+  width:100%;padding:13px;background:var(--verde);color:#fff;border:none;
+  border-radius:8px;font-size:12px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;cursor:pointer;font-family:'Inter',sans-serif;
+  display:flex;align-items:center;justify-content:center;gap:8px;transition:background .2s;
+}
+.btn-enviar:hover{background:var(--verde2)}
+
+/* ===== FOOTER ===== */
+footer{background:var(--verde);padding:3rem 2rem 1.5rem}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr 1fr;gap:2rem;max-width:1000px;margin:0 auto 2rem}
+.footer-brand{display:flex;flex-direction:column}
+.footer-logo-grupo{font-size:8px;color:rgba(255,255,255,0.4);letter-spacing:3px;text-transform:uppercase;margin-bottom:2px}
+.footer-logo-nome{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#fff;line-height:1;margin-bottom:.8rem}
+.footer-tagline{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6}
+.footer-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:1rem}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:.6rem;cursor:pointer;transition:color .2s}
+.footer-col a:hover{color:#fff}
+.social-row{display:flex;gap:.8rem;margin-top:.5rem}
+.social-ico{
+  width:36px;height:36px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.25);
+  display:flex;align-items:center;justify-content:center;cursor:pointer;
+  color:rgba(255,255,255,0.65);font-size:16px;transition:all .2s;
+}
+.social-ico:hover{border-color:#fff;color:#fff;background:rgba(255,255,255,0.1)}
+.footer-divider{border:none;border-top:.5px solid rgba(255,255,255,0.1);max-width:1000px;margin:0 auto 1.2rem}
+.footer-bottom{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
+.footer-copy{font-size:11px;color:rgba(255,255,255,0.3)}
+.footer-badge{
+  width:60px;height:60px;border-radius:50%;border:2px solid rgba(255,255,255,0.2);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+}
+.footer-badge span:first-child{font-size:7px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.footer-badge span:last-child{font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:rgba(255,255,255,0.7);line-height:1}
+
+/* ===== CARDÁPIO PAGE ===== */
+.page-header{background:var(--verde);padding:2.8rem 2rem 2.2rem;text-align:center}
+.page-header h1{font-family:'Playfair Display',serif;font-size:36px;color:#fff;font-weight:700}
+.page-header p{color:rgba(255,255,255,0.6);font-size:13px;margin-top:6px}
+.brand-tabs{display:flex;justify-content:center;gap:12px;padding:1.5rem 2rem;background:#fff;border-bottom:1px solid var(--borda)}
+.btab{
+  padding:9px 22px;border-radius:30px;font-size:12px;font-weight:600;
+  border:2px solid transparent;cursor:pointer;transition:all .2s;
+  letter-spacing:.8px;font-family:'Inter',sans-serif;background:transparent;
+}
+.btab-blue{border-color:var(--azul);color:var(--azul)}
+.btab-blue.ativo,.btab-blue:hover{background:var(--azul);color:#fff}
+.btab-green{border-color:var(--verde);color:var(--verde)}
+.btab-green.ativo,.btab-green:hover{background:var(--verde);color:#fff}
+.btab-amber{border-color:#9a6b00;color:#9a6b00}
+.btab-amber.ativo,.btab-amber:hover{background:var(--amber);color:#fff}
+.menu-wrapper{padding:2rem;max-width:1000px;margin:0 auto}
+.menu-marca{display:none}
+.menu-marca.ativo{display:block}
+.menu-cat-titulo{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--cinza);margin-bottom:1rem;padding-bottom:8px;border-bottom:1px solid rgba(0,0,0,0.09)}
+.menu-itens{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:2.5rem}
+.menu-item{background:#fff;border-radius:12px;padding:14px 16px;display:flex;justify-content:space-between;align-items:flex-start;border:.5px solid var(--borda)}
+.mi-info h4{font-size:14px;font-weight:500;margin-bottom:3px}
+.mi-info p{font-size:12px;color:var(--cinza);line-height:1.4}
+.mi-preco{font-weight:700;font-size:14px;white-space:nowrap;margin-left:14px;padding-top:2px}
+.preco-blue{color:var(--azul)}
+.preco-green{color:var(--verde)}
+.preco-amber{color:#9a6b00}
+
+/* ===== PROMOS PAGE ===== */
+.promos-page-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:1000px;margin:0 auto;padding:2rem}
+.promo-pg-card{border-radius:16px;overflow:hidden;background:#fff;border:.5px solid var(--borda)}
+.promo-pg-banner{height:160px;display:flex;align-items:center;justify-content:center;font-size:56px;position:relative}
+.pb-blue{background:var(--azul)}
+.pb-green{background:var(--verde)}
+.pb-amber{background:var(--amber)}
+.promo-pg-badge{position:absolute;top:14px;right:14px;background:rgba(255,255,255,0.22);border:1px solid rgba(255,255,255,0.4);color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px}
+.promo-pg-body{padding:1.4rem}
+.promo-pg-body h3{font-size:17px;font-weight:600;margin-bottom:6px}
+.promo-pg-body p{font-size:13px;color:var(--cinza);line-height:1.55;margin-bottom:1rem}
+.promo-pg-footer{display:flex;justify-content:space-between;align-items:center}
+.promo-valid{font-size:11px;color:var(--cinza)}
+.btn-pp{font-size:11px;font-weight:700;padding:8px 20px;border-radius:20px;border:none;cursor:pointer;text-transform:uppercase;letter-spacing:.8px;font-family:'Inter',sans-serif}
+.btn-pp-blue{background:var(--azul);color:#fff}
+.btn-pp-green{background:var(--verde);color:#fff}
+.btn-pp-amber{background:var(--amber);color:#fff}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:800px){
+  .hero-title{font-size:36px}
+  .brands-grid,.pedido-grid,.contato-grid{grid-template-columns:1fr}
+  .promos-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-links a{padding:0 .6rem;font-size:10px}
+  .nav-info{display:none}
+  .promos-page-grid{grid-template-columns:1fr}
+  .menu-itens{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="irPara('home')">
+    <span class="nav-grupo">Grupo</span>
+    <span class="nav-nome">O Barril</span>
+  </div>
+  <div class="nav-links">
+    <a id="nl-home"    onclick="irPara('home')">Home</a>
+    <a id="nl-cardapio" onclick="irPara('cardapio')">Cardápios</a>
+    <a id="nl-promos"  onclick="irPara('promos')">Promoções</a>
+    <a id="nl-pedido"  onclick="irPara('pedido')">Fazer Pedido</a>
+    <a id="nl-contato" onclick="irPara('contato')">Contato</a>
+  </div>
+  <div class="nav-right">
+    <div class="nav-info">
+      <div class="nav-tel">📱 (18) 99765-7831</div>
+      <div class="nav-end">📍 R. Antônio Conte, 348 — Cândido Mota/SP</div>
+    </div>
+    <button class="nav-cta" onclick="irPara('pedido')">Peça Agora 🛒</button>
+  </div>
+</nav>
+
+<!-- ===== HOME ===== -->
+<div class="pagina ativa" id="pagina-home">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Grupo O Barril — Cândido Mota/SP</p>
+      <h1 class="hero-title">Três experiências.<br><em>Um só sabor.</em></h1>
+      <p class="hero-sub">Das pizzas populares às receitas gourmet e os melhores cortes na brasa.</p>
+      <div class="hero-btns">
+        <button class="btn-outline" onclick="irPara('cardapio')">🍽️ Ver Cardápios</button>
+        <button class="btn-wpp" onclick="window.open('https://wa.me/5518997657831','_blank')">📱 Fazer Pedido</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAND CARDS -->
+  <section class="brands-section">
+    <div class="brands-grid">
+
+      <!-- ROCKET'S -->
+      <div class="brand-card">
+        <div class="brand-card-header bc-blue">
+          <svg id="svg-rocket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286.9 271.1" width="160px" height="120px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #2c51a1;
+      }
+
+      .st1 {
+        fill: #ea2a28;
+      }
+
+      .st2, .st3 {
+        fill: #fff;
+      }
+
+      .st4 {
+        fill: #f6921e;
+      }
+
+      .st3 {
+        stroke: #353033;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .st5 {
+        fill: #ffd440;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M60.3,168.4h0,0s0,0,0,0Z"/>
+  <g>
+    <g>
+      <path class="st2" d="M132.9,251.2h-1.3v7.3h1.3c1.2,0,2.1-.3,2.8-1,.7-.7,1.1-1.5,1.1-2.6s-.4-1.9-1.1-2.6c-.7-.7-1.7-1-2.8-1Z"/>
+      <polygon class="st2" points="113.6 255.3 115.1 255.3 114.4 253.5 113.6 255.3"/>
+      <path class="st2" d="M94.4,250.6c-.4-.4-.5-.8-.6-1.3,0,.5-.2,1.1-.6,1.5l-6,7.8h4.6c.6,0,1.1.2,1.4.6.1.1.2.3.3.5.1-.2.2-.5.4-.7l6-7.8h-4.2c-.6,0-1.1-.2-1.4-.6Z"/>
+      <path class="st2" d="M68.8,251.2h-2v2.9h2c.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1s-.1-.7-.4-1c-.3-.3-.7-.4-1.3-.4Z"/>
+      <path class="st2" d="M206.2,251.2h-2.2v2.6h2.2c.5,0,.9-.1,1.2-.4.3-.2.4-.5.4-.9s-.1-.7-.4-.9c-.3-.3-.7-.4-1.2-.4Z"/>
+      <path class="st2" d="M232.8,235.9H55.9c-11.2,0-20.3,7.9-20.3,17.6s9.2,17.6,20.3,17.6h177c11.2,0,20.3-7.9,20.3-17.6s-9.2-17.6-20.3-17.6ZM73.2,256.5c-1.1,1-2.5,1.5-4.2,1.5h-2.2v2.4c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h4.4c1.7,0,3.1.5,4.2,1.5,1.1,1,1.7,2.3,1.7,3.9s-.6,2.9-1.7,4ZM80.1,260.4c0,.6-.2,1.2-.6,1.6-.4.4-1,.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6s1.2.2,1.6.6c.4.4.6,1,.6,1.6v11.2ZM104.4,258.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.4c-.4.4-.9.6-1.4.6h-8.8c-.6,0-1.1-.2-1.5-.6-.2-.2-.3-.4-.4-.6,0,.2-.2.4-.4.6-.4.4-.9.6-1.4.6h-8.8c-.6,0-1.1-.2-1.5-.6-.4-.4-.6-.9-.6-1.5s.2-1.1.6-1.5l6-7.8h-4.2c-.6,0-1.1-.2-1.4-.6-.4-.4-.6-.9-.6-1.4s.2-1,.6-1.4c.4-.4.9-.6,1.4-.6h8.4c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.4,0-.6.2-1,.6-1.4.4-.4.9-.6,1.4-.6h8.4c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.5s-.2,1.1-.6,1.5l-6,7.8h4.6ZM121.1,262c-.4.4-.9.6-1.6.6-1,0-1.7-.6-2.1-1.5l-.8-1.8h-4.6l-.8,1.9c-.6,1.3-1.5,1.5-2,1.5s-1.1-.2-1.5-.6c-.4-.4-.6-.9-.6-1.5s0-.7.3-1.1l4.6-10.7c.5-1.1,1.4-1.8,2.5-1.8s2,.6,2.5,1.8l4.6,10.6c.2.5.2.8.2,1.1,0,.6-.2,1.1-.6,1.6ZM140.1,258.8c-.7,1.2-1.7,2.1-3,2.8-1.3.7-2.7,1-4.3,1h-3.3c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h3.4c1.6,0,3,.3,4.3,1,1.3.7,2.3,1.6,3,2.8.7,1.2,1.1,2.5,1.1,3.9s-.4,2.8-1.1,4ZM153.3,262c-.4.4-.9.6-1.5.6h-7.7c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h7.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6h-5.3v1.4h4.4c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.4c-.4.4-.9.6-1.4.6h-4.4v1.9h5.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5ZM165.4,262c-.4.4-.9.6-1.5.6h-7.1c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-.9-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4,1-.6,1.6-.6s1.1.2,1.5.6c.4.4.6.9.6,1.6v9.2h4.9c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.5s-.2,1.1-.6,1.5ZM171.4,260.4c0,.6-.2,1.2-.6,1.6-.4.4-1,.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6s1.2.2,1.6.6c.4.4.6,1,.6,1.6v11.2ZM185.9,250.3l-4.5,10.5c-.7,1.6-1.9,1.9-2.5,1.9s-1.8-.2-2.5-1.9l-4.5-10.5c-.1-.3-.2-.7-.2-1,0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6,1,0,1.7.6,2.1,1.6l2.9,7.2,3-7.3c.3-.9,1.1-1.4,2.1-1.4s1.1.2,1.5.6c.4.4.6.9.6,1.5s0,.7-.3,1.1ZM198.4,262c-.4.4-.9.6-1.5.6h-7.7c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h7.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6h-5.3v1.4h4.4c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1-.6,1.4c-.4.4-.9.6-1.4.6h-4.4v1.9h5.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5ZM211.5,259c.4.5.5,1,.5,1.5s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6s-1.3-.3-1.8-.9l-3-4.1h-1.1v2.8c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h4.6c1.6,0,3,.5,4.1,1.4,1.1,1,1.6,2.3,1.6,3.8s-.4,2.2-1,3.1c-.4.5-.8.9-1.3,1.2l1.7,2.4ZM225.9,250.4l-4.2,6.3v3.8c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-3.8l-4.2-6.3c-.2-.3-.4-.8-.4-1.2s.2-1.1.6-1.5c.4-.4.9-.6,1.5-.6s1.5.4,1.9,1.1l2.8,4.2,2.8-4.2c.4-.7,1.1-1,1.8-1s1.1.2,1.5.6c.4.4.6.9.6,1.5s-.1.8-.4,1.2Z"/>
+    </g>
+    <path class="st0" d="M86,185.8h0,0s0,0,0,0Z"/>
+    <g>
+      <g>
+        <path class="st1" d="M143.2,159.5c-10.9-10.3-19.5-22.6-25.6-36.2-1,.3-1.9.8-2.6,1.6l-29.8,29.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l14.8-14.8c2.2-.8,4.8-.4,6.6,1.4s2.2,4.4,1.4,6.6l-34.8,34.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l34.8-34.8c2.2-.8,4.8-.4,6.6,1.4,1.8,1.8,2.2,4.4,1.4,6.6l-25,25c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l25-25c2.2-.8,4.8-.4,6.6,1.4s2.2,4.4,1.4,6.6l-6,6c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l23.3-23.3c-11.9-5.2-22.9-12.5-32.5-21.6Z"/>
+        <path class="st1" d="M77.7,204.6c-2.4-2.4-6.3-2.4-8.7,0l-3.8,3.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l3.8-3.8c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M103.2,211.2c-2.4-2.4-6.3-2.4-8.7,0l-3.8,3.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l3.8-3.8c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M140.3,207.8c-2.4-2.4-6.3-2.4-8.7,0l-2.5,2.5c-2.4,2.4-2.4,6.3,0,8.7s6.3,2.4,8.7,0l2.5-2.5c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M83.6,164.6c-2.4-2.4-6.3-2.4-8.7,0l-2.5,2.5c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l2.5-2.5c2.4-2.4,2.4-6.3,0-8.7Z"/>
+      </g>
+      <g>
+        <path class="st5" d="M220.5,76.5l-86.1,26.5c.6.6,1.1,1.3,1.4,2,6,13.3,14.6,25.4,25.3,35.6,9.5,9.1,20.6,16.3,32.5,21.6.8.3,1.4.8,2,1.4l29.5-82.2c1-2.9-1.7-5.8-4.6-4.9Z"/>
+        <path class="st4" d="M161.1,140.6c-10.7-10.1-19.3-22.2-25.3-35.6-1.4-3-4.7-4.6-8-3.8l-9.5,2.4c-3.9,1-6.1,5.1-4.8,8.9,5.9,17.9,16.1,34,29.8,47,12.2,11.6,26.8,20.3,42.8,25.5,3.8,1.2,7.9-.9,8.9-4.8l2.6-10c.8-3.3-.8-6.7-3.9-8-12-5.2-23-12.5-32.5-21.6Z"/>
+        <path class="st3" d="M170.4,132.1"/>
+        <path class="st3" d="M170.4,132.1"/>
+        <circle class="st1" cx="202.2" cy="99.4" r="6.6"/>
+        <circle class="st1" cx="174.4" cy="102.7" r="6.6" transform="translate(-19 43.2) rotate(-13.4)"/>
+        <circle class="st1" cx="193.9" cy="127.4" r="6.6"/>
+        <circle class="st1" cx="166.9" cy="127.4" r="6.6" transform="translate(6.4 262.8) rotate(-77.5)"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <path class="st2" d="M20,168c-2.3-.2-4.7-.3-7.1-.4-1,0-2.1-.2-3.1-.3q-.5,0-.5.4c0,1.3-.2,2.4-.2,3.7,0,1-.2,2-.3,3,0,.4-.2.5-.7.5-.4,0-.7-.1-1.1-.2-1.9-.2-3.8-.4-5.7-.5-.3,0-.6-.2-.9-.3-.3-.3-.3-.5-.3-.8.1-.7.3-1.5.3-2.2.3-2.2.5-4.3.8-6.5.2-2.3.4-4.6.7-6.9.3-2.2.5-4.3.8-6.5,0-.6.3-.8.9-.7,2,.2,3.9.4,5.9.5.7,0,.9.3,1,1,0,1.2.2,2.3.1,3.5,0,1.1,0,2.1-.1,3.1,0,.5,0,.5.5.6,1.4.1,2.7.3,4.1.4,2.1.2,4.1.5,6.2.8,2.4.3,4.9.5,7.3.8,5.4.6,10.8,1.1,16.2,1.6.2,0,.5.1.7.1.3,0,.5.3.5.6,0,.5,0,1.1,0,1.6,0,.4,0,.9,0,1.4,0,.4,0,.7-.1,1.1,0,.6-.1,1.2-.1,1.9,0,.9-.4,1.2-1.4,1.1-3.5-.3-7.1-.5-10.5-.9-2.2-.2-4.4-.4-6.7-.6h0c-2.4-.3-4.8-.6-7.2-.7Z"/>
+    <path class="st2" d="M45.8,144.6c1,.4,2,.7,3,1,.1,0,.3,0,.4.1.3.1.4.3.3.6-.2,1.4-.5,2.9-.8,4.3-.2.9-.7,1.8-1.1,2.7-.1.4-.4.4-.8.3-.5,0-1-.2-1.6-.5-2.4-.8-4.9-1.7-7.4-2.4-2.8-.8-5.7-1.6-8.5-2.4-1.9-.6-3.7-1-5.5-1.5-3.3-1-6.6-2.1-10-3.1-2-.7-4-1.3-5.9-2-1.1-.3-2.2-.8-3.3-1.2-.4-.1-.5-.3-.5-.7,0-.6,0-1.1.2-1.6.3-1.1.6-2.2.9-3.3.2-.7.5-1.3.8-2,.2-.6.5-.7,1-.5.9.2,1.8.5,2.7.8,2,.7,4,1.2,6,1.9,1.9.6,3.9,1.2,5.8,1.8,0,0,.2,0,.2,0,.2.1.3,0,.3-.2.1-.5.2-1,.4-1.5.3-1,.6-2,.9-3.1.3-1.4.6-2.8.9-4.3,0-.4.1-.4-.4-.6-2.9-.8-5.8-1.6-8.6-2.5-1.6-.5-3.2-1-4.8-1.6-.2,0-.4-.1-.5-.2-.5-.2-.7-.6-.6-1.1,0-1,.2-2,.3-2.9.1-1.2.5-2.4.9-3.6.1-.4.4-.6.9-.4.5.1,1,.3,1.4.5,2.2.8,4.5,1.3,6.7,1.9,3.3.9,6.5,1.7,9.7,2.6,3.3.9,6.5,1.8,9.8,2.7,3.9,1.1,7.8,2.1,11.6,3.2,1.1.3,2.2.6,3.3.9.1,0,.2,0,.3.2.4.1.5.4.4.7-.3,1.2-.4,2.3-.9,3.5-.3.7-.6,1.4-.8,2.2-.1.4-.3.8-.5,1.3-.2.5-.4.6-.9.4-2.4-.6-4.8-1.2-7.2-1.8-2.5-.7-5.1-1.5-7.7-2.2-1.1-.3-2.3-.7-3.5-1q-.5-.1-.6.3c-.5,1.5-.9,3.1-1.3,4.6-.4,1.4-.7,2.9-1.1,4.2,0,.4,0,.5.3.6,2,.6,4,1.2,6,1.7,1.1.3,2.1.6,3.2,1,2,.7,4,1.4,5.9,2Z"/>
+    <path class="st2" d="M52.8,111.8c.4.2.4.2.7-.2.2-.3.4-.6.6-1,.4-.5.7-1.1,1.1-1.6.9-1.4,1.7-3,2.5-4.5.8-1.4,1.4-2.8,2.1-4.3.1-.2.2-.4.4-.7.3-.5.7-.7,1.2-.5.5.1,1,.3,1.4.6,1.4.8,2.8,1.6,4.3,2.4.7.4.8.7.6,1.4-.3,1.2-.9,2.3-1.5,3.3-.6.9-1,1.9-1.5,2.8-.8,1.4-1.5,2.7-2.3,4-.3.6-.6,1.2-.9,1.9,0,.1-.2.3-.2.4-.9,1.7-1.8,3.4-2.8,5.2-.5,1-1.1,2-1.8,3-.3.5-.7.9-1,1.4-.2.3-.5.4-.9.2-.3-.2-.6-.3-.9-.6-.8-.5-1.5-1.1-2.3-1.6-1.2-.8-2.5-1.6-3.7-2.4-.7-.5-1.5-.9-2.2-1.4-2.5-1.5-4.9-2.9-7.3-4.4-1.3-.8-2.5-1.5-3.8-2.2-2-1-4-2-6-3-2.1-1.1-4-2.2-6-3.3-1.3-.7-2.5-1.6-3.7-2.4-.6-.4-1.2-.8-1.9-1.2-.5-.3-.6-.6-.4-1.1.2-.4.4-.7.6-1.1.3-.4.6-.8.8-1.1.9-1.5,1.8-3.1,2.7-4.6.5-.8,1.1-1.6,1.6-2.4,1.1-1.7,2.1-3.4,2.9-5.2.9-1.7,1.9-3.5,2.8-5.2.2-.3.4-.5.6-.8.2-.3.4-.4.9-.2.1,0,.2.1.3.2.5.3,1,.5,1.5.7,1.2.6,2.5,1.2,3.7,1.8.2.1.5.2.7.3.5.2.9.4,1.1.8.2.2.3.5.2.8,0,.3-.2.7-.5,1-.5.7-.9,1.5-1.3,2.4-.7,1.7-1.7,3.4-2.6,5-.3.6-.5,1.2-.7,1.8-.4.9-.8,1.9-1.2,2.9-.2.4-.2.4.2.6,1.5.8,3,1.6,4.4,2.5.2,0,.3,0,.4-.2.2-.5.5-1,.7-1.5.4-1.2,1.2-2.2,1.8-3.3.5-.7.9-1.5,1.2-2.3.3-.6.6-1.2.9-1.8,0-.1.2-.2.2-.3.4-.4.7-.4,1.1-.2.9.5,1.8,1,2.8,1.5.9.4,1.7.9,2.5,1.3.6.3.8.6.4,1.3-.3.6-.6,1.3-1,2-.2.5-.5,1.1-.7,1.7-.2.3-.4.7-.6,1.1-.5,1.1-.9,2.2-1.4,3.3-.2.4-.5.8-.5,1.3,0,.4,0,.4.3.7.8.4,1.5.8,2.2,1.2s1.5.9,2.3,1.3h0c1.5.9,3.1,1.8,4.6,2.6Z"/>
+    <path class="st2" d="M65.7,81.8c-1.3-1.3-2.8-2.6-4.2-4-.8-.7-1.6-1.5-2.3-2.4-1.2-1.2-2.4-2.4-3.6-3.5-3.1-3-6.1-6.1-9-9.3-.4-.5-.9-1-1.3-1.5-.2-.2-.3-.4-.1-.8.2-.4.6-.6,1-.9.4-.3.7-.5,1-.7.3-.3.7-.6,1-.9.5-.4.8-.9,1.2-1.3.3-.3.6-.5.9-.8,1.2-1.2,2.5-2.3,3.7-3.4,1.3-1.3,2.6-2.6,3.8-3.8.5-.4,1-.8,1.6-1.1,2.2-1.1,4.5-1,6.8-.5.5,0,1,.4,1.5.6,2.7,1.3,5.1,2.8,7.1,5,.8.8,1.6,1.6,2.3,2.4,1.3,1.4,2.1,3.1,3,4.7.5,1,.8,2.1.9,3.3,0,.4,0,.7,0,1,0,.5-.2,1-.3,1.5,0,.2,0,.3.2.4.7.1,1.2.3,1.8.4.5.2,1.1.4,1.6.6,1,.4,2,.8,3,1.2.1,0,.3,0,.3.2,1.1.6,2.2,1,3.3,1.4,1.1.4,2.2.8,3.2,1.3.5.3,1,.6,1.4,1,.4.3.3.5.2,1-.2.7-.7,1.1-1.2,1.7-.9.9-1.6,1.9-2.4,2.8-.6.7-1.3,1.2-1.9,1.8-.3.2-.5.3-.9.2-1.3-.3-2.5-.8-3.7-1.4s-1.3-.4-2-.6c-1-.3-2-.5-3-.9-.9-.3-1.7-.7-2.5-1-.5-.2-.9-.4-1.4-.6-.3-.2-.4-.1-.6.1-.6.7-1.1,1.3-1.7,1.9q-.3.4,0,.8c2.6,2.6,5.1,5.2,7.6,7.9.2.2.3.4.5.5.1.2.2.4,0,.7-1,1.3-2.1,2.6-3.4,3.7-.6.6-1.3,1.3-1.9,1.9-.3.4-.6.4-.9,0-1.8-1.9-3.6-3.7-5.4-5.6t0,0c-1.7-1.7-3.4-3.5-5.2-5.2ZM64.8,67.6c1,1.1,2,2.3,3.1,3.4q.4.4.8,0c.6-.6,1.2-1.2,1.8-1.7,0,0,.2-.2.2-.3.4-.7.8-1.3,1.1-2.1.2-.6.3-1.2.3-1.9,0-.9-.4-1.8-.8-2.6-.8-1.3-1.9-2.2-2.9-3.2-.3-.4-.7-.6-1-1-.6-.5-1.2-.6-1.8-1-.8-.4-1.5-.5-2.4-.5-.8,0-1.4.1-2,.6-.8.6-1.4,1.2-2,1.9-.2.3-.5.6-.8.9q-.2.2,0,.5c1.6,1.7,3.2,3.4,4.9,5.1.5.5,1.1,1.1,1.6,1.7Z"/>
+    <path class="st2" d="M83.2,52.9c-.5-1-1-2.1-1.4-3.1-.6-1.5-1.3-2.9-1.9-4.3-.5-1.3-.9-2.6-1.1-3.9,0-.4-.1-.8-.2-1.2-.2-1.8,0-3.6.5-5.3.3-.9.6-1.8.9-2.7.3-.8.6-1.6,1.2-2.2,0,0,0,0,0-.1.5-.9,1.2-1.6,2-2.3.9-.7,1.8-1.5,2.9-2,1-.5,2-.9,3.1-1.2,1.3-.3,2.6-.3,3.9-.3,1,0,2,.2,2.9.6,1.5.6,2.8,1.4,4,2.4,1.9,1.6,3.6,3.1,5.3,4.9,1,1,1.8,2.1,2.6,3.2,1.7,2.6,3,5.4,4.2,8.3.8,1.9,1.5,3.8,1.8,5.9,0,.6.1,1.3.2,1.9.2,1.3,0,2.5,0,3.7,0,.8-.2,1.6-.3,2.5-.3,1.6-.7,3.1-1.5,4.5-.4.6-.8,1.1-1.3,1.7-.7.9-1.6,1.5-2.4,2.1h-.2c-.9.5-1.7.9-2.6,1.2-.7.3-1.5.4-2.2.6-.8.3-1.6.3-2.4.2-1.1,0-2.3-.2-3.4-.4-1-.2-2-.5-2.9-1,0,0-.2-.1-.2-.1-1-.3-1.8-.9-2.6-1.5-.7-.5-1.4-1.1-2-1.7-2-1.9-3.4-4.1-4.7-6.4-.1-.2-.3-.4-.4-.6-.7-1.1-1.4-2.2-1.9-3.4ZM98.5,39.4c-1-1.3-2.2-2.5-3.6-3.5-.8-.6-1.6-1.1-2.6-1.3-.3-.1-.6-.1-1,0-.7.1-1.4.5-2.1.8-.6.4-1,.8-1.1,1.5-.4,1.4-.5,2.8-.5,4.3.1,2.8,1.1,5.4,2.4,7.9,1.2,2.3,2.8,4.4,4.5,6.4.7.9,1.5,1.7,2.5,2.3.8.5,1.7.9,2.7.9.9,0,1.8-.1,2.6-.3,1.1-.2,1.8-.9,2.2-1.9.5-.9.6-1.9.5-3-.1-1.5-.5-3-1.1-4.4-.9-2.2-1.9-4.2-3.2-6.2-.9-1.2-1.6-2.3-2.5-3.4Z"/>
+    <path class="st2" d="M125.1,37.4c.1.4.4.8.6,1.1.6,1.1,1.2,2.1,1.9,3.1.6.7,1.3,1.2,2.1,1.6.2,0,.4.1.5.2,1,.7,2.2.8,3.3.8.9,0,2,0,2.9-.5,0,0,.1,0,.1,0,1-.3,1.8-1,2.5-1.7.3-.4.6-.9.9-1.4.2-.3.4-.7.6-1.1.4-.5.8-.7,1.3-.4.4.1.7.4,1,.6.3.2.7.4,1,.5.4.3.8.5,1.2.8.3.2.7.4,1,.4.2,0,.4.1.6.3.3,0,.6.3.8.3.6.2.9.7.8,1.3,0,0,0,.2,0,.3-.5,1-.9,2.1-1.3,3.1-.4,1.1-1.2,1.9-2,2.6-.3.2-.5.5-.8.7-1.2,1.1-2.6,1.8-4.1,2.4-1.2.4-2.4.8-3.6,1.2-1.2.4-2.4.5-3.7.3-.6-.1-1.3-.1-1.9-.2-.9-.1-1.7-.4-2.5-.6-.6-.2-1.1-.4-1.7-.6-.3-.1-.6-.3-.9-.4-1.3-.9-2.6-1.8-3.6-3.1-.2-.3-.5-.5-.7-.8-.6-.5-1-1.3-1.4-1.9-.6-.9-1.2-1.8-1.8-2.6-.7-1-1.1-2-1.5-3.1-.3-.6-.5-1.3-.7-1.9-.3-1-.5-2.1-.7-3.1-.2-.9-.2-1.8-.5-2.7,0-.3,0-.7-.1-1-.2-1.1-.3-2.1-.4-3.2,0-1.3-.1-2.6,0-3.9,0-.7.1-1.2.2-1.9.3-1.6.5-3.1,1.1-4.6.6-1.7,1.5-3.2,2.7-4.6.1-.2.4-.3.5-.5.3-.2.5-.4.8-.6.3-.3.7-.6,1-.8.9-.9,2-1.4,3.1-1.9,1-.5,2-.9,3.2-1,.3,0,.6-.1.9-.2,1.7-.3,3.6-.2,5.3.4.9.2,1.7.5,2.5,1,.7.4,1.4.9,2,1.5.3.3.4.6.3,1-.2.4-.4.8-.7,1.2-.9,1.5-1.9,2.9-2.8,4.3-.2.3-.4.5-.6.8-.3.4-.6.5-1.2.3-.5-.3-1-.6-1.5-.8-.9-.5-1.8-.7-2.8-.4-.6.1-1.1.1-1.7.4-.7.4-1.2.8-1.8,1.3-.5.6-1,1.3-1.2,2.1,0,0,0,.1,0,.2-.9,2-.9,4.1-.6,6.3,0,.2,0,.4,0,.6,0,1.4.4,2.7.9,4,.2.7.4,1.3.6,2,.3.9.6,1.9,1,2.8Z"/>
+    <path class="st2" d="M158.1,16.2c.6-.9,1.2-1.9,1.8-2.7.4-.7.7-1.3,1.1-2,.2-.3.4-.7.6-1.1.8-1.1,1.4-2.3,2-3.4.5-1.1,1.3-2.2,1.9-3.2.4-.8.9-1.6,1.4-2.4,0,0,0-.1,0-.2,0-.4.3-.5.7-.6,1.5-.3,3.1-.4,4.7-.5,1.2,0,2.4,0,3.6,0,.6,0,.9.4.6,1-.5.9-1,1.8-1.5,2.7-.1.2-.3.4-.4.6-1.2,2.7-2.8,5.2-4.3,7.8-1.1,1.9-2.1,3.8-3.2,5.7-.4.6-.7,1.2-1,1.8-.2.3-.2.5,0,.8.4.6.7,1.2,1,1.7,1.2,1.8,2.4,3.5,3.6,5.2.1.2.3.4.4.5.8,1.1,1.6,2.1,2.4,3.1,1,1.4,2,2.7,3,4.2,1.5,2.1,3,4.2,4.5,6.4.6.8,1.1,1.7,1.7,2.6.4.5.3.8-.3,1-.5.2-1,.3-1.6.3-1.5.2-3,.4-4.5.6-.4,0-.7.1-1,.2-.4,0-.6,0-.8-.3-.9-1.1-1.8-2.2-2.7-3.4-1.7-2.2-3.5-4.4-5.2-6.6-1-1.3-2-2.7-3-4-1-1.2-2.1-2.5-3.1-3.7,0,0,0,0-.1,0-.5.6-.9,1.3-1.4,1.9,0,.1,0,.3,0,.4.4,4.2.8,8.5,1.2,12.7,0,1.2.1,2.3.2,3.5,0,1,0,1.1-1.1,1.3-.7.1-1.5.2-2.2.3-1.1.1-2.1.2-3.2.4-.3,0-.6.1-.9.1-.6.2-.9,0-.9-.6-.1-.7-.2-1.5-.2-2.2,0-.8-.1-1.7-.2-2.5-.5-4.1-.9-8.3-1.2-12.4-.3-3.2-.6-6.4-.9-9.5,0-1.2-.3-2.4-.5-3.6-.1-1.6-.3-3.2-.4-4.8-.2-3-.4-6-.7-8.9,0-.3,0-.6,0-.9,0-.4.2-.7.6-.8,0,0,.2,0,.3,0,1.6-.2,3.2-.4,4.8-.5.6,0,1.2-.2,1.8-.2.8,0,1.1.2,1.1.9.1,1.1.2,2.1.3,3.1.2,2.9.5,5.9.7,8.8,0,.7.1,1.3.2,1.9,0,0,.1,0,.1,0,.1-.1.2-.3.3-.5Z"/>
+    <path class="st2" d="M196.6,38.1c0,.4,0,.5.4.6.4,0,.7.2,1.1.2.6.2,1.3.3,1.9.4,1.7.3,3.4.6,5.1.8,1.5.2,3.2.3,4.7.4.2,0,.5,0,.7.1.6,0,.9.4.9,1,0,.5,0,1,0,1.5-.2,1.6-.5,3.2-.7,4.9-.1.7-.4,1-1.1,1.1-1.2.2-2.5,0-3.6-.3-1-.2-2.1-.3-3.1-.4-1.5-.2-3-.4-4.6-.7-.7,0-1.3-.1-2.1-.2-.1,0-.3,0-.5,0-1.9-.2-3.8-.5-5.8-.8-1.1-.1-2.3-.3-3.5-.6-.6,0-1.1-.3-1.6-.4-.4-.1-.6-.3-.5-.8,0-.3.1-.7.2-1,.2-.9.5-1.8.7-2.7.3-1.4.6-2.9,1-4.3.2-.9.3-1.7.5-2.6.5-2.8,1-5.6,1.6-8.4.3-1.5.6-2.9.7-4.4.3-2.2.5-4.4.7-6.7.3-2.3.6-4.5,1-6.7.2-1.5.6-2.9,1-4.3.2-.7.3-1.4.4-2.1.1-.5.4-.8.9-.8.4,0,.8.1,1.2.2.4.1.9.3,1.3.4,1.7.3,3.5.6,5.2.9.9.1,1.9.4,2.8.6,2,.4,3.9.7,5.9.9,1.9.2,3.9.5,5.8.7.3,0,.6.2.9.3.4.1.5.3.5.7,0,.1,0,.2,0,.4,0,.6-.2,1.1-.2,1.6-.1,1.4-.2,2.8-.4,4.1,0,.2,0,.6,0,.8,0,.5,0,.9-.3,1.3-.1.3-.3.5-.7.5-.3,0-.7,0-1.1,0-.9-.2-1.7-.3-2.7-.3-1.9,0-3.7-.4-5.6-.6-.7-.1-1.3,0-2,0-1,0-2.1,0-3.1,0-.4,0-.4,0-.5.4-.2,1.7-.5,3.3-.7,5,0,.3,0,.3.3.3.6,0,1.1.1,1.7.1,1.3,0,2.5.3,3.7.6.9.2,1.7.3,2.5.3.7,0,1.3.1,2,.2.1,0,.2,0,.4.1.5.2.6.5.6,1-.2,1.1-.2,2.1-.4,3.1,0,.9-.2,1.9-.4,2.9-.1.7-.3.9-1,.9-.7,0-1.4-.1-2.2-.2-.6,0-1.2,0-1.8,0-.4,0-.8-.1-1.2-.1-1.2,0-2.4,0-3.6,0-.5,0-.9-.1-1.5,0-.4.1-.4,0-.5.5-.1.9-.2,1.7-.4,2.5s-.3,1.7-.4,2.6h0c-.3,1.7-.5,3.5-.8,5.2Z"/>
+    <path class="st2" d="M227.3,28.3c.8-2.2,1.4-4.5,2.1-6.7.3-.9.7-1.9,1.1-2.9q.2-.5-.2-.6c-1.2-.4-2.3-.8-3.5-1.1-.9-.3-1.9-.7-2.8-1.1-.4-.1-.5-.4-.3-.8.1-.4.3-.7.4-1,.7-1.8,1.3-3.6,1.9-5.4.1-.3.3-.5.6-.8.3-.2.6-.2.9,0,.7.3,1.4.6,2.1.9,2,.8,4.1,1.6,6.1,2.4,2.2.8,4.4,1.6,6.5,2.4,2,.8,4.1,1.6,6.1,2.4.6.2.7.5.5,1-.7,1.9-1.3,3.7-2,5.5-.3.7-.5.8-1.2.7-1.2-.2-2.3-.4-3.4-.8-1-.2-2-.5-3-.9-.5-.1-.5-.2-.7.4-.5,1.3-.9,2.6-1.4,3.9-.7,1.9-1.5,3.8-2.3,5.8-.9,2.3-1.7,4.6-2.5,6.9-1.9,5-3.7,10.2-5.6,15.3,0,.2-.2.5-.3.7-.2.3-.4.4-.7.3-.5-.1-1-.2-1.6-.4-.4-.1-.9-.3-1.3-.4-.4-.1-.7-.3-1.1-.4-.6-.2-1.2-.4-1.8-.6-.8-.3-1-.6-.7-1.6,1.1-3.3,2.3-6.7,3.4-10,.8-2.1,1.5-4.2,2.3-6.3q0,0,.1,0c.8-2.2,1.6-4.5,2.4-6.8Z"/>
+    <path class="st2" d="M252.7,26.9c-.9-.5-.9-1.5-.6-2.1.2-.4.4-.7.6-1.1.8-1.3,1.7-2.7,2.4-4.1.3-.5.8-.8,1.3-.6.6.2,1.2.4,1.8.6.3.2.7.4,1.1.5.3,0,.5.3.6.5,0,.1.1.3.2.4.5.6.3,1.1,0,1.7-.3.5-.7,1.1-1.1,1.6-.6,1-1.2,2-2.1,2.9,0,0,0,.2-.1.2-.5.6-1,.8-1.7.6-.5-.1-1-.4-1.5-.6h0c-.3-.2-.7-.4-1-.6Z"/>
+    <path class="st2" d="M251.7,69.1c-.9-1.1-1.5-2.3-2.3-3.5-.3-.4-.5-.8-.7-1.1-.4-.8-.8-1.6-.8-2.5,0-1,0-2.1-.1-3.1,0-.5,0-1,0-1.5,0-.7,0-1.4,0-2,0-.5.1-.7.7-.8.2,0,.4,0,.5,0,1.4-.5,3-.7,4.4-.9.4,0,.8,0,1.2,0,.4,0,.7.3.7.7,0,1,.5,2,.7,2.9,0,.4.2.7.3,1.1.4,1.4,1.1,2.7,2.2,3.7.3.2.5.4.7.6.7.7,1.5,1,2.3,1,.1,0,.2,0,.3,0,1.5-.4,2.6-1.4,3.3-2.7.3-.5.3-1.2.2-1.9-.2-.9-.6-1.6-1-2.3-.4-.6-.7-1.3-1-1.9-.3-.7-.7-1.4-1-2.1-.2-.5-.4-1-.6-1.5-.4-1.1-.9-2.4-1.3-3.5,0,0,0-.2,0-.3-1.1-2.5-.8-5,.3-7.5.6-1.3,1.4-2.5,2.2-3.7.3-.4.7-.8,1.1-1.1.1,0,.3-.2.4-.3,1.2-1.2,2.7-1.9,4.3-2.4,1.7-.6,3.5-.8,5.3-1,1.3,0,2.6.2,3.9.8,1.2.5,2.4,1.2,3.5,2,2.1,1.5,3.4,3.5,4.2,6,.2.6.4,1.3.6,2,.2.6.4,1.1.6,1.7,0,.5.1,1,.1,1.5,0,.3-.2.6-.6.7-.5.2-1.1.4-1.8.6-.5.1-.9.3-1.4.4-1.2.2-2.5.5-3.7.7-.4,0-.5,0-.7-.4-.3-.7-.5-1.4-.8-2.1-.3-.8-.7-1.7-1.4-2.3-.7-.6-1.5-1.1-2.2-1.6-1.1-.8-2.2-.6-3.3,0-.5.3-.9.7-1.3,1.3,0,.1,0,.2,0,.2-.1.9-.3,1.9,0,2.8.3.7.6,1.3,1,1.8.9,1.2,1.6,2.6,2.3,4,.8,1.6,1.4,3.2,1.8,4.8.1.5.2.9.4,1.3.5,2.1.2,4-.8,5.9-.7,1.2-1.4,2.4-2.1,3.6-1,1.6-2.5,2.8-4.2,3.8-.7.5-1.5.8-2.4,1.1-1.1.4-2.2.8-3.4.9-1.5.1-3,0-4.4-.3-1.1-.3-2.2-.6-3.2-1.1-.3-.2-.7-.4-1-.6-.8-.6-1.4-1.2-2.1-2Z"/>
+  </g>
+</svg>
+        </div>
+        <div class="brand-card-body">
+          <p>Pizza deliciosa e preço acessível para o dia a dia. Delivery rápido, sabor garantido.</p>
+          <button class="btn-card" onclick="irPara('cardapio');trocarMarca('rocket')">Ver Cardápio →</button>
+        </div>
+      </div>
+
+      <!-- BARRIL PIZZA -->
+      <div class="brand-card">
+        <div class="brand-card-header bc-green" style="padding:1.8rem">
+          <svg id="svg-pizza" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28" width="220px" height="110px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffffff;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M112.82,234.7c92.59-8.42,108.83,137.74,17.17,148.62-98.38,11.7-113.12-140.2-17.17-148.62ZM112.63,236.96c-51.15,2.87-35.65,148.83,16.99,144.1,46.48-4.11,35.66-147.18-16.99-144.1Z"/>
+    <path class="st0" d="M303.21,381.88l-32.86-.21h-34.53v-1.03c8.59-.62,8.59-5.34,8.59-7.19v-126.86c0-1.85,0-6.57-8.59-7.18v-1.03h34.53c1.12,0,29.12,0,33.6-.21,69.25-2.26,74.3,60.76,11.01,65.48,71.5,3.08,79.71,78.01-11.76,78.21ZM273.9,243.73c-.37,1.03-.37,2.05-.37,2.87v55.84h32.67c34.16,0,36.22-61.79-2.24-61.99-15.49-.21-25.39-.82-30.05,3.28ZM306.2,304.7l-32.67-.21v68.97c0,.62,0,1.23.19,2.05,5.79,4.93,19.97,4.52,29.49,4.52,54.69.21,49.47-75.34,2.99-75.34Z"/>
+    <path class="st0" d="M486.33,376.55c1.49,2.87,6.53,4.31,8.21,4.31v1.03l-37.52-.21v-9.44c-29.68,20.53-76.91,13.14-79.34-17.04-1.87-22.79,14.19-35.1,37.52-39.41,29.68-4.93,38.27-11.08,40.69-15.81-2.05-11.29-7.47-19.71-21.47-20.32-6.72-.21-15.68,2.67-13.25,11.5,2.61,9.24-18.11,10.67-18.11,1.85,0-13.34,19.79-15.4,31.36-15.6,47.97-.41,52.08,18.68,52.08,43.72l-.19,55.42ZM457.02,370.18l.19-49.06c0-6.36,0-12.52-.75-18.27-2.43,3.28-8.03,7.59-22.4,12.11-20.53,6.36-29.49,21.14-28.56,39.62.93,18.06,19.6,36.54,51.52,15.6Z"/>
+    <path class="st0" d="M579.84,301.01c-14.93,0-5.97-19.5-12.69-19.91-9.15-.62-22.03,14.78-27.63,24.43l.19,68.15c0,1.85,0,6.57,8.59,7.19v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v22.99c5.04-9.24,16.24-22.38,27.25-24.02,24.27-4.11,29.12,22.58,13.07,22.58Z"/>
+    <path class="st0" d="M674.48,301.01c-14.93,0-5.97-19.5-12.69-19.91-9.15-.62-22.03,14.78-27.63,24.43l.19,68.15c0,1.85,0,6.57,8.59,7.19v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v22.99c5.04-9.24,16.24-22.38,27.25-24.02,24.27-4.11,29.12,22.58,13.07,22.58Z"/>
+    <path class="st0" d="M737.57,380.86v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v3.08l.19,91.14c0,1.85,0,6.57,8.59,7.19ZM698.55,252.15c0-8.62,6.53-15.81,14.37-15.81s14.37,7.18,14.37,15.81-6.53,15.81-14.37,15.81-14.37-7.18-14.37-15.81Z"/>
+    <path class="st0" d="M791.51,380.86v1.03h-46.29v-1.03c8.03-.62,8.59-4.72,8.59-6.77l-.19-138.56c0-1.85,0-6.57-8.59-7.18v-1.03h46.3v1.03c-8.03.62-8.59,4.72-8.59,6.77l.19,138.56c0,1.85,0,6.57,8.59,7.19Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M552.4,432.5c0-.82.35-1.22,1.07-1.22h11.52c1.51,0,2.92.31,4.23.94s2.44,1.48,3.39,2.56c.96,1.08,1.71,2.34,2.26,3.77.55,1.44.82,2.95.82,4.55s-.27,3.08-.81,4.5c-.54,1.42-1.29,2.66-2.24,3.73-.95,1.07-2.07,1.92-3.36,2.55-1.29.63-2.68.94-4.18.94h-8.69v13.17c0,.75-.35,1.12-1.04,1.12h-1.95c-.68,0-1.02-.37-1.02-1.12v-35.49ZM571.68,443.05c0-.99-.17-1.92-.52-2.82s-.82-1.68-1.43-2.36c-.6-.68-1.31-1.22-2.13-1.63-.82-.41-1.69-.61-2.62-.61h-8.57v14.85h8.57c.91,0,1.77-.2,2.58-.6.81-.4,1.52-.94,2.13-1.63s1.09-1.48,1.45-2.37c.35-.89.53-1.84.53-2.84Z"/>
+    <path class="st0" d="M614.31,468c0,.37-.09.65-.28.84s-.44.28-.77.28h-1.92c-.7,0-1.04-.37-1.04-1.12v-35.59c0-.34.09-.61.27-.82.18-.2.44-.31.78-.31h1.92c.31,0,.56.1.75.31.19.2.29.47.29.82v35.59Z"/>
+    <path class="st0" d="M649.41,469.12c-.31,0-.57-.11-.79-.34-.22-.23-.32-.51-.32-.85v-2.29c0-.12.02-.26.05-.43.03-.17.12-.33.26-.48l20.34-29h-19.05c-.73,0-1.09-.39-1.09-1.17v-2.14c0-.75.36-1.12,1.09-1.12h23.42c.29,0,.55.11.76.33s.33.5.33.84v2.37c0,.32-.07.58-.21.79l-20.25,29.07h19.46c.29,0,.54.1.74.29s.3.5.3.9v2.04c0,.31-.1.58-.29.83-.19.25-.44.37-.75.37h-24Z"/>
+    <path class="st0" d="M707.75,469.12c-.31,0-.57-.11-.79-.34-.22-.23-.32-.51-.32-.85v-2.29c0-.12.02-.26.05-.43.03-.17.12-.33.26-.48l20.34-29h-19.05c-.73,0-1.09-.39-1.09-1.17v-2.14c0-.75.36-1.12,1.09-1.12h23.42c.29,0,.55.11.76.33s.33.5.33.84v2.37c0,.32-.07.58-.21.79l-20.25,29.07h19.46c.29,0,.54.1.74.29s.3.5.3.9v2.04c0,.31-.1.58-.29.83-.19.25-.44.37-.75.37h-24Z"/>
+    <path class="st0" d="M767.41,468.1c-.25.68-.67,1.02-1.27,1.02h-1.99c-.66,0-1-.27-1-.82,0-.15.02-.31.05-.48.02-.07.04-.13.07-.18,1.67-4.42,3.14-8.31,4.41-11.68,1.27-3.37,2.38-6.3,3.33-8.79.94-2.49,1.74-4.58,2.39-6.28.65-1.7,1.18-3.1,1.6-4.22s.74-1.97.97-2.56.4-1.03.51-1.31c.11-.28.18-.47.21-.57.06-.19.17-.39.31-.61s.43-.33.85-.33h1.37c.39,0,.65.11.8.33s.26.42.34.61l13.35,35.44s.03.1.08.25c.05.15.08.28.08.38,0,.27-.1.48-.29.61-.19.14-.44.2-.75.2h-1.99c-.31,0-.57-.09-.78-.27-.21-.18-.37-.41-.48-.7l-2.69-7.31h-16.84l-2.62,7.26ZM771.7,456.51h13.55l-6.74-18.65-6.81,18.65Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M480.14,200.41c-1.18-1.18-2.64-1.96-4.12-2.2-1.7-.27-3.21.16-4.25,1.23-1.05,1.08-1.48,2.58-1.21,4.24.24,1.47,1.02,2.94,2.2,4.12s2.64,1.96,4.09,2.19c.31.06.63.09.99.09,1.3,0,2.47-.47,3.29-1.31,1.05-1.07,1.48-2.58,1.21-4.24-.24-1.47-1.02-2.94-2.2-4.12Z"/>
+    <path class="st0" d="M542.36,143.31c-11.06-11.06-25.76-17.15-41.4-17.15-4.18,0-7.57,3.4-7.57,7.58,0,3.27,2.08,6.05,4.98,7.11l-39.52,73.07c-.52.98-.86,2.03-1.02,3.11,0,0-.12,1.3-.12,1.42,0,5.25,4.27,9.52,9.52,9.52,1.55,0,3.12-.4,4.54-1.14l19.98-10.81.37.43c.9,1.01,2.18,1.59,3.51,1.59,2.57,0,4.65-2.09,4.65-4.66v-1.94l7.16-3.87s.02.07.02.11l.94,10.23c.23,2.53,2.32,4.43,4.87,4.43s4.69-1.99,4.87-4.52l1.24-16.71,24.18-13.08-1.61-2.98-22.27,12.04c.11-1.2.81-2.25,1.89-2.83l17.1-9.24c1.79-.99,3-2.7,3.3-4.71.31-2.01-.33-4-1.78-5.47-.55-.56-.86-1.32-.88-2.12l-.04-4c-.02-2.38-1.36-4.54-3.48-5.65l-3.54-1.82c-.7-.37-1.23-.98-1.48-1.72l-1.27-3.7c-.79-2.31-2.79-3.95-5.23-4.28l-3.37-.45c-.83-.11-1.58-.57-2.08-1.26l-1.94-2.73c-1.43-2-3.92-3.02-6.33-2.6l-3.29.57c-.84.14-1.7-.06-2.37-.57-1.14-.87-2.52-1.32-3.94-1.31l1.01-1.87c23.46.53,42.39,19.78,42.39,43.37,0,4.18,3.4,7.58,7.58,7.58s7.58-3.4,7.58-7.58c0-15.64-6.09-30.34-17.15-41.4ZM556.11,184.7c0,2.31-1.88,4.19-4.19,4.19s-4.19-1.88-4.19-4.19,1.88-4.19,4.19-4.19,4.19,1.88,4.19,4.19ZM496.77,133.74c0-2.31,1.88-4.19,4.19-4.19,28.19,0,51.5,21.27,54.75,48.6-1.12-.65-2.41-1.02-3.78-1.02-1.72,0-3.31.58-4.58,1.56-1.3-10.22-5.9-19.67-13.3-27.07-8.83-8.83-20.58-13.7-33.09-13.7-2.31,0-4.19-1.88-4.19-4.19ZM505.48,204.75l-5.18,2.8c.08-1.16.75-2.22,1.78-2.78,1.08-.58,2.31-.58,3.4-.02ZM507.15,201.75c-2.1-1.12-4.59-1.11-6.67.02-2.2,1.18-3.57,3.47-3.57,5.98v5.57c0,.7-.57,1.26-1.26,1.26-.36,0-.71-.16-.95-.44l-1.88-2.16c-2.11-2.41-5.65-3.04-8.43-1.49l-18.33,10.15c-1.04.58-2.25.56-3.31-.05-.93-.55-1.52-1.48-1.63-2.53.05-.88.29-1.76.71-2.56l35.44-65.52c3.01.49,5.33,3.11,5.33,6.25,0,3.5-2.85,6.34-6.34,6.34-.83,0-1.62-.15-2.34-.44l-.67-.27-1.26,3.15.66.27c1.14.46,2.35.7,3.6.7,5.37,0,9.73-4.37,9.73-9.75,0-4.26-2.76-7.88-6.58-9.2.29-.18.6-.32.94-.39.87-.19,1.77.01,2.49.56,1.42,1.08,3.24,1.52,4.99,1.21l3.3-.57c1.13-.21,2.31.28,3,1.22l1.94,2.73c1.03,1.43,2.63,2.38,4.39,2.62l3.37.45c1.15.16,2.1.94,2.48,2.03l1.27,3.7c.52,1.55,1.64,2.84,3.13,3.62l3.55,1.82c1,.51,1.63,1.53,1.65,2.66l.04,4c.02,1.7.67,3.27,1.86,4.46.68.68.98,1.62.84,2.58-.14.96-.71,1.77-1.55,2.22l-17.1,9.23c-2.12,1.16-3.49,3.28-3.66,5.67l-1.53,20.62c-.07.79-.73,1.4-1.5,1.4s-1.44-.6-1.5-1.37l-.94-10.23c-.22-2.37-1.6-4.45-3.69-5.56ZM489.24,213.49l-19.1,10.33c-.91.48-1.92.74-2.92.74-.56,0-1.09-.08-1.6-.22.69-.12,1.38-.34,2.05-.67l18.33-10.16c1.02-.57,2.24-.55,3.24-.02Z"/>
+    <path class="st0" d="M519.97,172.48c3.5,0,6.34,2.85,6.34,6.34s-2.85,6.34-6.34,6.34-6.34-2.85-6.34-6.34,2.85-6.34,6.34-6.34Z"/>
+    <path class="st0" d="M519.97,188.55c5.37,0,9.73-4.37,9.73-9.73s-4.37-9.73-9.73-9.73-9.73,4.37-9.73,9.73,4.37,9.73,9.73,9.73ZM519.97,170.52c4.58,0,8.3,3.72,8.3,8.3s-3.72,8.3-8.3,8.3-8.3-3.72-8.3-8.3,3.72-8.3,8.3-8.3Z"/>
+    <path class="st0" d="M494.1,173.99c-5.37,0-9.73,4.37-9.73,9.73s4.37,9.73,9.73,9.73,9.73-4.37,9.73-9.73-4.37-9.73-9.73-9.73ZM494.1,192.03c-4.58,0-8.3-3.72-8.3-8.3s3.72-8.3,8.3-8.3,8.3,3.72,8.3,8.3-3.72,8.3-8.3,8.3Z"/>
+    <path class="st0" d="M494.1,190.07c-3.5,0-6.34-2.85-6.34-6.34s2.85-6.34,6.34-6.34,6.34,2.85,6.34,6.34-2.85,6.34-6.34,6.34Z"/>
+    <path class="st1" d="M478.76,201.79c-.9-.88-1.98-1.47-3.04-1.65-.16-.02-.38-.05-.61-.05-.78,0-1.45.25-1.92.72-.85.85-.75,2.07-.67,2.55.19,1.09.79,2.19,1.66,3.04.9.88,1.98,1.47,3.03,1.64.22.04.43.05.64.05.77,0,1.43-.25,1.9-.72.85-.86.75-2.07.67-2.55-.19-1.09-.79-2.19-1.66-3.04ZM478.73,206.37c-.36.36-.97.33-1.3.27-.76-.13-1.57-.58-2.27-1.26-.64-.63-1.11-1.47-1.25-2.26-.03-.2-.12-.9.27-1.29.2-.2.5-.3.91-.3.16,0,.3.02.39.03.76.13,1.57.58,2.27,1.26.64.63,1.11,1.47,1.25,2.26.03.2.12.9-.27,1.29Z"/>
+    <path class="st0" d="M516.05,162.73c.13-.77.58-1.57,1.26-2.27.63-.64,1.47-1.11,2.23-1.24.11-.02.25-.03.41-.03.22,0,.63.04.91.3.37.36.33.97.27,1.3-.13.76-.58,1.57-1.26,2.27-.63.64-1.47,1.11-2.25,1.25-.21.04-.9.12-1.3-.27-.36-.36-.33-.97-.27-1.3Z"/>
+    <path class="st0" d="M517.23,167.74c.36,0,.67-.03.96-.09,1.47-.24,2.94-1.02,4.12-2.2,1.18-1.18,1.96-2.64,2.2-4.12.27-1.68-.16-3.19-1.23-4.25-1.07-1.05-2.58-1.48-4.24-1.22-1.47.24-2.94,1.02-4.12,2.2-1.18,1.18-1.96,2.64-2.2,4.12-.27,1.68.16,3.19,1.21,4.24.82.85,1.99,1.31,3.3,1.31ZM514.13,162.41c.19-1.18.83-2.36,1.8-3.33.97-.97,2.15-1.61,3.33-1.8.25-.04.49-.06.73-.06.91,0,1.68.3,2.28.88.74.74,1.02,1.78.82,3.01-.19,1.18-.83,2.37-1.8,3.33-.97.97-2.15,1.61-3.36,1.8-1.24.25-2.28-.1-2.98-.82-.74-.74-1.02-1.78-.82-3.01Z"/>
+    <path class="st0" d="M489.22,195.04c-1.14,1.25-2.69,2.1-4.35,2.38l-1.09.17.58,3.32,1.1-.16c2.38-.42,4.6-1.63,6.26-3.41l.49-.53-2.51-2.3-.48.53Z"/>
+    <path class="st0" d="M506.7,167.26l-.17-1.09-3.33.58.17,1.08c.42,2.38,1.63,4.61,3.41,6.26l.52.49,2.31-2.48-.53-.49c-1.25-1.14-2.1-2.69-2.38-4.35Z"/>
+  </g>
+</svg>
+        </div>
+        <div class="brand-card-body">
+          <p>Pizzas gourmet com ingredientes selecionados e combinações especiais artesanais.</p>
+          <button class="btn-card" onclick="irPara('cardapio');trocarMarca('pizza')">Ver Cardápio →</button>
+        </div>
+      </div>
+
+      <!-- BARRIL GRILL -->
+      <div class="brand-card">
+        <div class="brand-card-header bc-amber" style="padding:1.8rem">
+          <svg id="svg-grill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28" width="220px" height="110px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M211.44,230.42c64.77-5.89,76.13,96.36,12.01,103.97-68.82,8.19-79.13-98.08-12.01-103.97ZM211.31,232c-35.78,2.01-24.94,104.11,11.88,100.81,32.52-2.87,24.94-102.96-11.88-100.81Z"/>
+    <path class="st0" d="M344.63,333.38l-22.98-.14h-24.16v-.72c6.01-.43,6.01-3.73,6.01-5.03v-88.74c0-1.29,0-4.6-6.01-5.03v-.72h24.16c.78,0,20.37,0,23.51-.14,48.45-1.58,51.97,42.51,7.7,45.81,50.01,2.15,55.76,54.57-8.23,54.71ZM324.12,236.73c-.26.72-.26,1.44-.26,2.01v39.06h22.85c23.9,0,25.33-43.22-1.57-43.37-10.84-.14-17.76-.57-21.02,2.3ZM346.71,279.38l-22.85-.14v48.25c0,.43,0,.86.13,1.44,4.05,3.45,13.97,3.16,20.63,3.16,38.26.14,34.6-52.7,2.09-52.7Z"/>
+    <path class="st0" d="M472.72,329.64c1.04,2.01,4.57,3.02,5.75,3.02v.72l-26.25-.14v-6.61c-20.76,14.36-53.8,9.19-55.5-11.92-1.31-15.94,9.92-24.56,26.25-27.57,20.76-3.45,26.77-7.75,28.47-11.06-1.44-7.9-5.22-13.79-15.02-14.22-4.7-.14-10.97,1.87-9.27,8.04,1.83,6.46-12.67,7.47-12.67,1.29,0-9.33,13.84-10.77,21.94-10.91,33.56-.29,36.43,13.07,36.43,30.59l-.13,38.77ZM452.22,325.19l.13-34.32c0-4.45,0-8.76-.52-12.78-1.7,2.3-5.62,5.31-15.67,8.47-14.36,4.45-20.63,14.79-19.98,27.71.65,12.64,13.71,25.56,36.04,10.91Z"/>
+    <path class="st0" d="M538.14,276.8c-10.45,0-4.18-13.64-8.88-13.93-6.4-.43-15.41,10.34-19.33,17.09l.13,47.67c0,1.29,0,4.6,6.01,5.03v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v16.08c3.53-6.46,11.36-15.65,19.07-16.8,16.98-2.87,20.37,15.8,9.14,15.8Z"/>
+    <path class="st0" d="M604.34,276.8c-10.45,0-4.18-13.64-8.88-13.93-6.4-.43-15.41,10.34-19.33,17.09l.13,47.67c0,1.29,0,4.6,6.01,5.03v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v16.08c3.53-6.46,11.36-15.65,19.07-16.8,16.98-2.87,20.37,15.8,9.14,15.8Z"/>
+    <path class="st0" d="M648.47,332.66v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v2.15l.13,63.76c0,1.29,0,4.6,6.01,5.03ZM621.18,242.62c0-6.03,4.57-11.06,10.06-11.06s10.05,5.03,10.05,11.06-4.57,11.06-10.05,11.06-10.06-5.03-10.06-11.06Z"/>
+    <path class="st0" d="M686.21,332.66v.72h-32.38v-.72c5.62-.43,6.01-3.3,6.01-4.74l-.13-96.93c0-1.29,0-4.6-6.01-5.03v-.72h32.39v.72c-5.62.43-6.01,3.3-6.01,4.74l.13,96.93c0,1.29,0,4.6,6.01,5.03Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M536.74,383.47c0-.52.24-.78.71-.78h1.36c.21,0,.38.07.53.21.15.14.22.33.22.58v7.91c0,.13-.03.26-.09.38-.06.12-.18.25-.35.38l-.08.05c-1.02.82-2.15,1.46-3.39,1.91-1.24.45-2.57.68-3.99.68-1.15,0-2.24-.16-3.29-.48-1.05-.32-2.03-.78-2.95-1.37-.92-.59-1.75-1.3-2.5-2.13-.75-.83-1.39-1.74-1.93-2.74s-.95-2.09-1.24-3.24c-.29-1.16-.44-2.37-.44-3.63s.15-2.45.44-3.6c.29-1.15.71-2.23,1.25-3.24.54-1.01,1.19-1.93,1.94-2.76.75-.83,1.58-1.54,2.5-2.14.92-.59,1.9-1.05,2.96-1.38,1.05-.33,2.15-.49,3.3-.49,1.52,0,3,.31,4.44.93.27.12.59.27.97.46.38.19.74.4,1.09.62s.64.46.88.7.37.47.37.7c0,.14-.04.27-.11.39l-.71,1.28c-.15.27-.33.41-.55.41-.08,0-.17-.02-.28-.06-.11-.04-.22-.11-.34-.21-.8-.64-1.69-1.15-2.67-1.52-.98-.37-2-.56-3.05-.56-1.41,0-2.7.29-3.87.87-1.18.58-2.19,1.36-3.04,2.33-.85.97-1.51,2.09-1.99,3.36-.48,1.26-.71,2.58-.71,3.95,0,1.46.26,2.83.77,4.1.51,1.27,1.21,2.38,2.08,3.32.88.94,1.89,1.69,3.05,2.23,1.16.54,2.38.81,3.66.81.56,0,1.1-.05,1.6-.14s.98-.22,1.42-.38c.44-.15.83-.33,1.17-.53s.63-.39.86-.58v-6.59Z"/>
+    <path class="st0" d="M564.13,368.79c0-.27.06-.48.19-.63s.3-.22.52-.22h9.37c1.07,0,2.07.22,2.99.66s1.73,1.04,2.42,1.81c.69.77,1.23,1.66,1.62,2.68.39,1.02.59,2.11.59,3.26,0,.84-.11,1.65-.32,2.42-.22.77-.52,1.49-.91,2.15-.39.66-.85,1.25-1.39,1.76-.54.52-1.14.94-1.8,1.27l4.26,9.66c.05.14.08.25.08.32,0,.13-.05.24-.15.33s-.25.13-.43.13h-1.8c-.22,0-.39-.06-.51-.18-.12-.12-.23-.29-.32-.5l-3.92-9.07c-.06.01-.19.02-.36.03-.18,0-.37.01-.58.02s-.42,0-.62,0h-6.12v8.91c0,.52-.24.78-.71.78h-1.38c-.48,0-.71-.26-.71-.78v-24.83ZM579.06,376.33c0-.71-.12-1.39-.37-2.03-.25-.64-.59-1.21-1.02-1.7-.43-.49-.95-.88-1.54-1.18-.59-.29-1.23-.44-1.91-.44h-7.28v10.68h7.33c.68,0,1.31-.14,1.9-.43.58-.29,1.09-.67,1.52-1.16.43-.49.76-1.05,1.01-1.7.25-.65.37-1.33.37-2.04Z"/>
+    <path class="st0" d="M608.78,393.62c0,.26-.06.46-.19.59s-.31.2-.54.2h-1.34c-.49,0-.73-.26-.73-.78v-24.9c0-.24.06-.43.19-.57.12-.14.3-.21.54-.21h1.34c.22,0,.39.07.53.21.13.14.2.33.2.57v24.9Z"/>
+    <path class="st0" d="M648.62,391.35c.19,0,.36.07.5.21s.21.34.21.61v1.44c0,.21-.07.4-.19.55-.13.15-.3.23-.52.23h-13.78c-.48,0-.71-.26-.71-.78v-24.9c0-.21.06-.4.19-.55s.31-.23.55-.23h1.35c.21,0,.38.07.51.21.13.14.2.33.2.58v22.64h11.69Z"/>
+    <path class="st0" d="M687.33,391.35c.19,0,.36.07.5.21s.21.34.21.61v1.44c0,.21-.07.4-.19.55-.13.15-.3.23-.52.23h-13.78c-.48,0-.71-.26-.71-.78v-24.9c0-.21.06-.4.19-.55s.31-.23.55-.23h1.35c.21,0,.38.07.51.21.13.14.2.33.2.58v22.64h11.69Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M456.42,218.28h-.01c-.63,0-1.14.51-1.14,1.14s.52,1.14,1.15,1.14,1.14-.51,1.14-1.14-.51-1.14-1.14-1.14Z"/>
+    <path class="st0" d="M506.65,153.79s0,0,0,0l-12.61,12.61c-2.23,2.23-2.23,5.86,0,8.09l1.61,1.61-8.97,8.97-9.99-9.99c.45-1.01.69-2.11.69-3.25,0-2.12-.82-4.11-2.3-5.61-.01-.01-.02-.03-.03-.05l-12.94-12.94s-.07-.04-.11-.07c-.06-.05-.12-.09-.2-.13-.07-.03-.14-.06-.22-.08-.04-.01-.08-.04-.13-.05l-2.83-.41c-.05,0-.1,0-.15,0-.06,0-.11-.02-.17,0-.03,0-.04.02-.07.02-.07.02-.13.04-.2.07-.08.03-.15.06-.22.1-.05.04-.09.08-.14.12-.06.06-.12.11-.17.18-.04.05-.06.12-.08.18-.03.07-.07.15-.08.23,0,.02-.02.04-.02.06,0,.06,0,.11,0,.16s-.02.11,0,.16l.4,2.83s.03.09.05.14c.02.06.03.12.06.18.04.08.09.15.15.22.03.03.04.07.07.1l10.51,10.51c.89.89.89,2.34,0,3.23-.89.89-2.34.89-3.23,0l-10.51-10.51s-.08-.05-.12-.08c-.05-.04-.11-.08-.17-.12-.08-.04-.16-.07-.24-.09-.04,0-.07-.03-.11-.04l-2.83-.41c-.06,0-.11,0-.16,0s-.11-.02-.16,0c-.02,0-.03.02-.05.02-.09.02-.18.05-.26.09-.05.02-.1.04-.15.07-.07.05-.13.11-.18.17-.05.05-.09.09-.13.14-.04.06-.07.13-.09.19-.03.07-.06.14-.08.22,0,.02-.02.04-.02.06,0,.05,0,.1,0,.16,0,.06-.02.11-.01.17l.4,2.84c0,.06.04.11.05.16.02.05.03.1.05.15.04.09.1.18.17.25.02.02.03.06.05.08l12.95,12.95s.04.02.05.04c1.5,1.48,3.49,2.3,5.6,2.3h0c1.14,0,2.24-.24,3.25-.69l9.99,9.99-6.19,6.19c-.45-.45-1.17-.45-1.62,0l-1.62,1.62-.81-.81c-.45-.45-1.17-.45-1.62,0l-18.84,18.84s0,0,0,0c-1.2,1.2-1.86,2.78-1.87,4.47,0,1.69.64,3.28,1.83,4.47,1.22,1.22,2.83,1.83,4.44,1.83,1.63,0,3.26-.62,4.5-1.87,0,0,0,0,0,0l18.84-18.84c.45-.45.45-1.17,0-1.62l-.81-.81,1.62-1.62c.22-.22.34-.52.34-.81,0-.02,0-.03-.01-.05-.01-.27-.12-.55-.32-.76l6.19-6.19,5.56,5.56c-.45.45-.45,1.17,0,1.62l1.62,1.62-.81.81c-.45.45-.45,1.17,0,1.62l19.45,19.45s0,0,0,0c1.24,1.24,2.87,1.87,4.5,1.87s3.22-.61,4.44-1.83c2.45-2.45,2.44-6.46-.04-8.94,0,0,0,0,0,0l-19.45-19.45c-.45-.45-1.17-.45-1.62,0l-.81.81-1.62-1.62c-.45-.45-1.17-.45-1.62,0l-5.56-5.56,8.97-8.97,1.62,1.62c1.08,1.08,2.51,1.67,4.04,1.67s2.97-.59,4.04-1.67l12.61-12.61h0s0,0,0,0c1.51-1.51,3.04-5.05-3.65-11.74-6.68-6.68-10.22-5.14-11.73-3.64h0ZM469.4,177.55c-1.53,0-2.96-.6-4.04-1.67-.01-.01-.03-.02-.04-.03l-12.64-12.64-.13-.94.95.14,10.24,10.24h0s0,0,0,0c.89.89,2.06,1.33,3.23,1.33s2.34-.45,3.24-1.34c1.78-1.78,1.78-4.68,0-6.47,0,0,0,0,0,0l-10.25-10.25-.13-.94.94.14,12.64,12.64s.01.03.02.04c1.08,1.08,1.67,2.51,1.67,4.04s-.59,2.96-1.67,4.04c-1.08,1.08-2.51,1.67-4.04,1.67h0ZM474.63,177.88c.14-.12.29-.25.43-.39s.26-.28.39-.43l9.63,9.63-.81.81-9.63-9.63ZM456.34,223.46c-1.07,0-2.07-.41-2.82-1.16-.76-.76-1.17-1.76-1.16-2.84,0-1.08.43-2.09,1.2-2.86,0,0,0,0,0,0l18.03-18.03,4.85,4.85s0,0,0,0,0,0,0,0l.81.81-18.03,18.03s0,0,0,0c-.77.77-1.78,1.19-2.86,1.2h-.02,0ZM474.83,198.56l.81-.81,2.42,2.42h0l-.81.81-2.42-2.42ZM519.83,222.28c-1.56,1.56-4.11,1.55-5.7-.03,0,0,0,0,0,0l-18.65-18.65,5.66-5.67,18.65,18.65s0,0,0,0c1.58,1.58,1.6,4.14.03,5.7h0ZM495.49,200.36l-.81-.81,2.42-2.42s0,0,0,0l.81.81-2.42,2.43ZM494.68,196.31l-.81.81-5.56-5.56.81-.81,5.56,5.56ZM478.88,197.75l-.81-.81,7-7s0,0,0,0,0,0,0,0l2.42-2.42s0,0,0,0,0,0,0,0l9.77-9.78.81.81-19.21,19.21ZM520.41,167.55l-12.61,12.61c-1.34,1.34-3.51,1.34-4.85,0l-7.28-7.28c-1.34-1.34-1.34-3.52,0-4.86l12.61-12.61s0,0,0,0c1.52-1.52,4.7-.16,8.49,3.64,3.8,3.8,5.16,6.98,3.64,8.5h0Z"/>
+    <path class="st0" d="M509.89,160.27c-.45-.45-1.17-.45-1.62,0l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62h0Z"/>
+    <path class="st0" d="M512.71,163.1c-.45-.45-1.17-.45-1.62,0l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62Z"/>
+    <path class="st0" d="M513.93,165.93l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62s-1.17-.45-1.62,0Z"/>
+    <path class="st0" d="M517,218.27h-.01c-.63,0-1.14.51-1.14,1.14s.52,1.14,1.15,1.14,1.14-.51,1.14-1.14-.51-1.14-1.14-1.14Z"/>
+  </g>
+</svg>
+        </div>
+        <div class="brand-card-body">
+          <p>Filés, grelhados, hambúrgueres e porções para os amantes de um bom churrasco.</p>
+          <button class="btn-card" onclick="irPara('cardapio');trocarMarca('grill')">Ver Cardápio →</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROMOS PREVIEW -->
+  <section class="promos-section">
+    <div class="section-header">
+      <div>
+        <p class="section-eyebrow">Aproveite</p>
+        <h2 class="section-title">Promoções da Semana</h2>
+        <div class="section-title-line"></div>
+      </div>
+      <button class="btn-ver-mais" onclick="irPara('promos')">Ver todas as promoções →</button>
+    </div>
+    <div class="promos-grid">
+
+<!-- ✏️ PROMOS PREVIEW — edite os 4 cards abaixo -->
+
+      <!-- PROMO 1 -->
+      <div class="promo-card">
+        <div class="promo-img">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=70" alt="Pizza">
+          <span class="promo-tag tag-verde">Segunda<br>da Pizza</span>
+        </div>
+        <div class="promo-body">
+          <p class="promo-body-desc">2 pizzas grandes</p>
+          <p class="promo-price-label">a partir de</p>
+          <p class="promo-price">R$ 79,90</p>
+          <button class="btn-promo btn-promo-verde" onclick="irPara('pedido')">Aproveite</button>
+        </div>
+      </div>
+
+      <!-- PROMO 2 -->
+      <div class="promo-card">
+        <div class="promo-img">
+          <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&q=70" alt="Combo">
+          <span class="promo-tag tag-blue">Combo<br>Rocket's</span>
+        </div>
+        <div class="promo-body">
+          <p class="promo-body-desc">Pizza grande + Refrigerante 2L</p>
+          <p class="promo-price-label">a partir de</p>
+          <p class="promo-price">R$ 59,90</p>
+          <button class="btn-promo btn-promo-blue" onclick="irPara('pedido')">Peça Agora</button>
+        </div>
+      </div>
+
+      <!-- PROMO 3 -->
+      <div class="promo-card">
+        <div class="promo-img">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=70" alt="Grill">
+          <span class="promo-tag tag-amber">Quinta<br>do Grill</span>
+        </div>
+        <div class="promo-body">
+          <p class="promo-body-desc">Filé + 2 acompanhamentos + Refrigerante 1L</p>
+          <p class="promo-price-label">a partir de</p>
+          <p class="promo-price">R$ 89,90</p>
+          <button class="btn-promo btn-promo-amber" onclick="irPara('pedido')">Aproveite</button>
+        </div>
+      </div>
+
+      <!-- PROMO 4 -->
+      <div class="promo-card">
+        <div class="promo-img">
+          <img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96d47?w=400&q=70" alt="Pizzas">
+          <span class="promo-tag tag-verde">Festival<br>de Pizzas</span>
+        </div>
+        <div class="promo-body">
+          <p class="promo-body-desc">Pizzas especiais</p>
+          <p class="promo-price-label">com até</p>
+          <p class="promo-price promo-price-off">20% OFF</p>
+          <button class="btn-promo btn-promo-verde" onclick="irPara('cardapio')">Ver Cardápio</button>
+        </div>
+      </div>
+
+<!-- ✏️ FIM PROMOS PREVIEW -->
+
+    </div>
+  </section>
+
+  <!-- PEDIDO POR UNIDADE -->
+  <section class="pedido-section">
+    <div class="section-header" style="max-width:1000px;margin:0 auto 2.5rem">
+      <div>
+        <p class="section-eyebrow">Faça seu pedido</p>
+        <h2 class="section-title">Escolha a unidade</h2>
+        <div class="section-title-line"></div>
+      </div>
+    </div>
+    <div class="pedido-grid">
+
+      <div class="pedido-card">
+        <div class="pedido-card-header bc-blue">
+          <svg id="svg-rocket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286.9 271.1" width="130px" height="100px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #2c51a1;
+      }
+
+      .st1 {
+        fill: #ea2a28;
+      }
+
+      .st2, .st3 {
+        fill: #fff;
+      }
+
+      .st4 {
+        fill: #f6921e;
+      }
+
+      .st3 {
+        stroke: #353033;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .st5 {
+        fill: #ffd440;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M60.3,168.4h0,0s0,0,0,0Z"/>
+  <g>
+    <g>
+      <path class="st2" d="M132.9,251.2h-1.3v7.3h1.3c1.2,0,2.1-.3,2.8-1,.7-.7,1.1-1.5,1.1-2.6s-.4-1.9-1.1-2.6c-.7-.7-1.7-1-2.8-1Z"/>
+      <polygon class="st2" points="113.6 255.3 115.1 255.3 114.4 253.5 113.6 255.3"/>
+      <path class="st2" d="M94.4,250.6c-.4-.4-.5-.8-.6-1.3,0,.5-.2,1.1-.6,1.5l-6,7.8h4.6c.6,0,1.1.2,1.4.6.1.1.2.3.3.5.1-.2.2-.5.4-.7l6-7.8h-4.2c-.6,0-1.1-.2-1.4-.6Z"/>
+      <path class="st2" d="M68.8,251.2h-2v2.9h2c.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1s-.1-.7-.4-1c-.3-.3-.7-.4-1.3-.4Z"/>
+      <path class="st2" d="M206.2,251.2h-2.2v2.6h2.2c.5,0,.9-.1,1.2-.4.3-.2.4-.5.4-.9s-.1-.7-.4-.9c-.3-.3-.7-.4-1.2-.4Z"/>
+      <path class="st2" d="M232.8,235.9H55.9c-11.2,0-20.3,7.9-20.3,17.6s9.2,17.6,20.3,17.6h177c11.2,0,20.3-7.9,20.3-17.6s-9.2-17.6-20.3-17.6ZM73.2,256.5c-1.1,1-2.5,1.5-4.2,1.5h-2.2v2.4c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h4.4c1.7,0,3.1.5,4.2,1.5,1.1,1,1.7,2.3,1.7,3.9s-.6,2.9-1.7,4ZM80.1,260.4c0,.6-.2,1.2-.6,1.6-.4.4-1,.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6s1.2.2,1.6.6c.4.4.6,1,.6,1.6v11.2ZM104.4,258.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.4c-.4.4-.9.6-1.4.6h-8.8c-.6,0-1.1-.2-1.5-.6-.2-.2-.3-.4-.4-.6,0,.2-.2.4-.4.6-.4.4-.9.6-1.4.6h-8.8c-.6,0-1.1-.2-1.5-.6-.4-.4-.6-.9-.6-1.5s.2-1.1.6-1.5l6-7.8h-4.2c-.6,0-1.1-.2-1.4-.6-.4-.4-.6-.9-.6-1.4s.2-1,.6-1.4c.4-.4.9-.6,1.4-.6h8.4c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.4,0-.6.2-1,.6-1.4.4-.4.9-.6,1.4-.6h8.4c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.5s-.2,1.1-.6,1.5l-6,7.8h4.6ZM121.1,262c-.4.4-.9.6-1.6.6-1,0-1.7-.6-2.1-1.5l-.8-1.8h-4.6l-.8,1.9c-.6,1.3-1.5,1.5-2,1.5s-1.1-.2-1.5-.6c-.4-.4-.6-.9-.6-1.5s0-.7.3-1.1l4.6-10.7c.5-1.1,1.4-1.8,2.5-1.8s2,.6,2.5,1.8l4.6,10.6c.2.5.2.8.2,1.1,0,.6-.2,1.1-.6,1.6ZM140.1,258.8c-.7,1.2-1.7,2.1-3,2.8-1.3.7-2.7,1-4.3,1h-3.3c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h3.4c1.6,0,3,.3,4.3,1,1.3.7,2.3,1.6,3,2.8.7,1.2,1.1,2.5,1.1,3.9s-.4,2.8-1.1,4ZM153.3,262c-.4.4-.9.6-1.5.6h-7.7c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h7.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6h-5.3v1.4h4.4c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.4c-.4.4-.9.6-1.4.6h-4.4v1.9h5.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5ZM165.4,262c-.4.4-.9.6-1.5.6h-7.1c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-.9-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4,1-.6,1.6-.6s1.1.2,1.5.6c.4.4.6.9.6,1.6v9.2h4.9c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.5s-.2,1.1-.6,1.5ZM171.4,260.4c0,.6-.2,1.2-.6,1.6-.4.4-1,.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6s1.2.2,1.6.6c.4.4.6,1,.6,1.6v11.2ZM185.9,250.3l-4.5,10.5c-.7,1.6-1.9,1.9-2.5,1.9s-1.8-.2-2.5-1.9l-4.5-10.5c-.1-.3-.2-.7-.2-1,0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6,1,0,1.7.6,2.1,1.6l2.9,7.2,3-7.3c.3-.9,1.1-1.4,2.1-1.4s1.1.2,1.5.6c.4.4.6.9.6,1.5s0,.7-.3,1.1ZM198.4,262c-.4.4-.9.6-1.5.6h-7.7c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h7.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6h-5.3v1.4h4.4c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1-.6,1.4c-.4.4-.9.6-1.4.6h-4.4v1.9h5.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5ZM211.5,259c.4.5.5,1,.5,1.5s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6s-1.3-.3-1.8-.9l-3-4.1h-1.1v2.8c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h4.6c1.6,0,3,.5,4.1,1.4,1.1,1,1.6,2.3,1.6,3.8s-.4,2.2-1,3.1c-.4.5-.8.9-1.3,1.2l1.7,2.4ZM225.9,250.4l-4.2,6.3v3.8c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-3.8l-4.2-6.3c-.2-.3-.4-.8-.4-1.2s.2-1.1.6-1.5c.4-.4.9-.6,1.5-.6s1.5.4,1.9,1.1l2.8,4.2,2.8-4.2c.4-.7,1.1-1,1.8-1s1.1.2,1.5.6c.4.4.6.9.6,1.5s-.1.8-.4,1.2Z"/>
+    </g>
+    <path class="st0" d="M86,185.8h0,0s0,0,0,0Z"/>
+    <g>
+      <g>
+        <path class="st1" d="M143.2,159.5c-10.9-10.3-19.5-22.6-25.6-36.2-1,.3-1.9.8-2.6,1.6l-29.8,29.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l14.8-14.8c2.2-.8,4.8-.4,6.6,1.4s2.2,4.4,1.4,6.6l-34.8,34.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l34.8-34.8c2.2-.8,4.8-.4,6.6,1.4,1.8,1.8,2.2,4.4,1.4,6.6l-25,25c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l25-25c2.2-.8,4.8-.4,6.6,1.4s2.2,4.4,1.4,6.6l-6,6c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l23.3-23.3c-11.9-5.2-22.9-12.5-32.5-21.6Z"/>
+        <path class="st1" d="M77.7,204.6c-2.4-2.4-6.3-2.4-8.7,0l-3.8,3.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l3.8-3.8c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M103.2,211.2c-2.4-2.4-6.3-2.4-8.7,0l-3.8,3.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l3.8-3.8c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M140.3,207.8c-2.4-2.4-6.3-2.4-8.7,0l-2.5,2.5c-2.4,2.4-2.4,6.3,0,8.7s6.3,2.4,8.7,0l2.5-2.5c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M83.6,164.6c-2.4-2.4-6.3-2.4-8.7,0l-2.5,2.5c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l2.5-2.5c2.4-2.4,2.4-6.3,0-8.7Z"/>
+      </g>
+      <g>
+        <path class="st5" d="M220.5,76.5l-86.1,26.5c.6.6,1.1,1.3,1.4,2,6,13.3,14.6,25.4,25.3,35.6,9.5,9.1,20.6,16.3,32.5,21.6.8.3,1.4.8,2,1.4l29.5-82.2c1-2.9-1.7-5.8-4.6-4.9Z"/>
+        <path class="st4" d="M161.1,140.6c-10.7-10.1-19.3-22.2-25.3-35.6-1.4-3-4.7-4.6-8-3.8l-9.5,2.4c-3.9,1-6.1,5.1-4.8,8.9,5.9,17.9,16.1,34,29.8,47,12.2,11.6,26.8,20.3,42.8,25.5,3.8,1.2,7.9-.9,8.9-4.8l2.6-10c.8-3.3-.8-6.7-3.9-8-12-5.2-23-12.5-32.5-21.6Z"/>
+        <path class="st3" d="M170.4,132.1"/>
+        <path class="st3" d="M170.4,132.1"/>
+        <circle class="st1" cx="202.2" cy="99.4" r="6.6"/>
+        <circle class="st1" cx="174.4" cy="102.7" r="6.6" transform="translate(-19 43.2) rotate(-13.4)"/>
+        <circle class="st1" cx="193.9" cy="127.4" r="6.6"/>
+        <circle class="st1" cx="166.9" cy="127.4" r="6.6" transform="translate(6.4 262.8) rotate(-77.5)"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <path class="st2" d="M20,168c-2.3-.2-4.7-.3-7.1-.4-1,0-2.1-.2-3.1-.3q-.5,0-.5.4c0,1.3-.2,2.4-.2,3.7,0,1-.2,2-.3,3,0,.4-.2.5-.7.5-.4,0-.7-.1-1.1-.2-1.9-.2-3.8-.4-5.7-.5-.3,0-.6-.2-.9-.3-.3-.3-.3-.5-.3-.8.1-.7.3-1.5.3-2.2.3-2.2.5-4.3.8-6.5.2-2.3.4-4.6.7-6.9.3-2.2.5-4.3.8-6.5,0-.6.3-.8.9-.7,2,.2,3.9.4,5.9.5.7,0,.9.3,1,1,0,1.2.2,2.3.1,3.5,0,1.1,0,2.1-.1,3.1,0,.5,0,.5.5.6,1.4.1,2.7.3,4.1.4,2.1.2,4.1.5,6.2.8,2.4.3,4.9.5,7.3.8,5.4.6,10.8,1.1,16.2,1.6.2,0,.5.1.7.1.3,0,.5.3.5.6,0,.5,0,1.1,0,1.6,0,.4,0,.9,0,1.4,0,.4,0,.7-.1,1.1,0,.6-.1,1.2-.1,1.9,0,.9-.4,1.2-1.4,1.1-3.5-.3-7.1-.5-10.5-.9-2.2-.2-4.4-.4-6.7-.6h0c-2.4-.3-4.8-.6-7.2-.7Z"/>
+    <path class="st2" d="M45.8,144.6c1,.4,2,.7,3,1,.1,0,.3,0,.4.1.3.1.4.3.3.6-.2,1.4-.5,2.9-.8,4.3-.2.9-.7,1.8-1.1,2.7-.1.4-.4.4-.8.3-.5,0-1-.2-1.6-.5-2.4-.8-4.9-1.7-7.4-2.4-2.8-.8-5.7-1.6-8.5-2.4-1.9-.6-3.7-1-5.5-1.5-3.3-1-6.6-2.1-10-3.1-2-.7-4-1.3-5.9-2-1.1-.3-2.2-.8-3.3-1.2-.4-.1-.5-.3-.5-.7,0-.6,0-1.1.2-1.6.3-1.1.6-2.2.9-3.3.2-.7.5-1.3.8-2,.2-.6.5-.7,1-.5.9.2,1.8.5,2.7.8,2,.7,4,1.2,6,1.9,1.9.6,3.9,1.2,5.8,1.8,0,0,.2,0,.2,0,.2.1.3,0,.3-.2.1-.5.2-1,.4-1.5.3-1,.6-2,.9-3.1.3-1.4.6-2.8.9-4.3,0-.4.1-.4-.4-.6-2.9-.8-5.8-1.6-8.6-2.5-1.6-.5-3.2-1-4.8-1.6-.2,0-.4-.1-.5-.2-.5-.2-.7-.6-.6-1.1,0-1,.2-2,.3-2.9.1-1.2.5-2.4.9-3.6.1-.4.4-.6.9-.4.5.1,1,.3,1.4.5,2.2.8,4.5,1.3,6.7,1.9,3.3.9,6.5,1.7,9.7,2.6,3.3.9,6.5,1.8,9.8,2.7,3.9,1.1,7.8,2.1,11.6,3.2,1.1.3,2.2.6,3.3.9.1,0,.2,0,.3.2.4.1.5.4.4.7-.3,1.2-.4,2.3-.9,3.5-.3.7-.6,1.4-.8,2.2-.1.4-.3.8-.5,1.3-.2.5-.4.6-.9.4-2.4-.6-4.8-1.2-7.2-1.8-2.5-.7-5.1-1.5-7.7-2.2-1.1-.3-2.3-.7-3.5-1q-.5-.1-.6.3c-.5,1.5-.9,3.1-1.3,4.6-.4,1.4-.7,2.9-1.1,4.2,0,.4,0,.5.3.6,2,.6,4,1.2,6,1.7,1.1.3,2.1.6,3.2,1,2,.7,4,1.4,5.9,2Z"/>
+    <path class="st2" d="M52.8,111.8c.4.2.4.2.7-.2.2-.3.4-.6.6-1,.4-.5.7-1.1,1.1-1.6.9-1.4,1.7-3,2.5-4.5.8-1.4,1.4-2.8,2.1-4.3.1-.2.2-.4.4-.7.3-.5.7-.7,1.2-.5.5.1,1,.3,1.4.6,1.4.8,2.8,1.6,4.3,2.4.7.4.8.7.6,1.4-.3,1.2-.9,2.3-1.5,3.3-.6.9-1,1.9-1.5,2.8-.8,1.4-1.5,2.7-2.3,4-.3.6-.6,1.2-.9,1.9,0,.1-.2.3-.2.4-.9,1.7-1.8,3.4-2.8,5.2-.5,1-1.1,2-1.8,3-.3.5-.7.9-1,1.4-.2.3-.5.4-.9.2-.3-.2-.6-.3-.9-.6-.8-.5-1.5-1.1-2.3-1.6-1.2-.8-2.5-1.6-3.7-2.4-.7-.5-1.5-.9-2.2-1.4-2.5-1.5-4.9-2.9-7.3-4.4-1.3-.8-2.5-1.5-3.8-2.2-2-1-4-2-6-3-2.1-1.1-4-2.2-6-3.3-1.3-.7-2.5-1.6-3.7-2.4-.6-.4-1.2-.8-1.9-1.2-.5-.3-.6-.6-.4-1.1.2-.4.4-.7.6-1.1.3-.4.6-.8.8-1.1.9-1.5,1.8-3.1,2.7-4.6.5-.8,1.1-1.6,1.6-2.4,1.1-1.7,2.1-3.4,2.9-5.2.9-1.7,1.9-3.5,2.8-5.2.2-.3.4-.5.6-.8.2-.3.4-.4.9-.2.1,0,.2.1.3.2.5.3,1,.5,1.5.7,1.2.6,2.5,1.2,3.7,1.8.2.1.5.2.7.3.5.2.9.4,1.1.8.2.2.3.5.2.8,0,.3-.2.7-.5,1-.5.7-.9,1.5-1.3,2.4-.7,1.7-1.7,3.4-2.6,5-.3.6-.5,1.2-.7,1.8-.4.9-.8,1.9-1.2,2.9-.2.4-.2.4.2.6,1.5.8,3,1.6,4.4,2.5.2,0,.3,0,.4-.2.2-.5.5-1,.7-1.5.4-1.2,1.2-2.2,1.8-3.3.5-.7.9-1.5,1.2-2.3.3-.6.6-1.2.9-1.8,0-.1.2-.2.2-.3.4-.4.7-.4,1.1-.2.9.5,1.8,1,2.8,1.5.9.4,1.7.9,2.5,1.3.6.3.8.6.4,1.3-.3.6-.6,1.3-1,2-.2.5-.5,1.1-.7,1.7-.2.3-.4.7-.6,1.1-.5,1.1-.9,2.2-1.4,3.3-.2.4-.5.8-.5,1.3,0,.4,0,.4.3.7.8.4,1.5.8,2.2,1.2s1.5.9,2.3,1.3h0c1.5.9,3.1,1.8,4.6,2.6Z"/>
+    <path class="st2" d="M65.7,81.8c-1.3-1.3-2.8-2.6-4.2-4-.8-.7-1.6-1.5-2.3-2.4-1.2-1.2-2.4-2.4-3.6-3.5-3.1-3-6.1-6.1-9-9.3-.4-.5-.9-1-1.3-1.5-.2-.2-.3-.4-.1-.8.2-.4.6-.6,1-.9.4-.3.7-.5,1-.7.3-.3.7-.6,1-.9.5-.4.8-.9,1.2-1.3.3-.3.6-.5.9-.8,1.2-1.2,2.5-2.3,3.7-3.4,1.3-1.3,2.6-2.6,3.8-3.8.5-.4,1-.8,1.6-1.1,2.2-1.1,4.5-1,6.8-.5.5,0,1,.4,1.5.6,2.7,1.3,5.1,2.8,7.1,5,.8.8,1.6,1.6,2.3,2.4,1.3,1.4,2.1,3.1,3,4.7.5,1,.8,2.1.9,3.3,0,.4,0,.7,0,1,0,.5-.2,1-.3,1.5,0,.2,0,.3.2.4.7.1,1.2.3,1.8.4.5.2,1.1.4,1.6.6,1,.4,2,.8,3,1.2.1,0,.3,0,.3.2,1.1.6,2.2,1,3.3,1.4,1.1.4,2.2.8,3.2,1.3.5.3,1,.6,1.4,1,.4.3.3.5.2,1-.2.7-.7,1.1-1.2,1.7-.9.9-1.6,1.9-2.4,2.8-.6.7-1.3,1.2-1.9,1.8-.3.2-.5.3-.9.2-1.3-.3-2.5-.8-3.7-1.4s-1.3-.4-2-.6c-1-.3-2-.5-3-.9-.9-.3-1.7-.7-2.5-1-.5-.2-.9-.4-1.4-.6-.3-.2-.4-.1-.6.1-.6.7-1.1,1.3-1.7,1.9q-.3.4,0,.8c2.6,2.6,5.1,5.2,7.6,7.9.2.2.3.4.5.5.1.2.2.4,0,.7-1,1.3-2.1,2.6-3.4,3.7-.6.6-1.3,1.3-1.9,1.9-.3.4-.6.4-.9,0-1.8-1.9-3.6-3.7-5.4-5.6t0,0c-1.7-1.7-3.4-3.5-5.2-5.2ZM64.8,67.6c1,1.1,2,2.3,3.1,3.4q.4.4.8,0c.6-.6,1.2-1.2,1.8-1.7,0,0,.2-.2.2-.3.4-.7.8-1.3,1.1-2.1.2-.6.3-1.2.3-1.9,0-.9-.4-1.8-.8-2.6-.8-1.3-1.9-2.2-2.9-3.2-.3-.4-.7-.6-1-1-.6-.5-1.2-.6-1.8-1-.8-.4-1.5-.5-2.4-.5-.8,0-1.4.1-2,.6-.8.6-1.4,1.2-2,1.9-.2.3-.5.6-.8.9q-.2.2,0,.5c1.6,1.7,3.2,3.4,4.9,5.1.5.5,1.1,1.1,1.6,1.7Z"/>
+    <path class="st2" d="M83.2,52.9c-.5-1-1-2.1-1.4-3.1-.6-1.5-1.3-2.9-1.9-4.3-.5-1.3-.9-2.6-1.1-3.9,0-.4-.1-.8-.2-1.2-.2-1.8,0-3.6.5-5.3.3-.9.6-1.8.9-2.7.3-.8.6-1.6,1.2-2.2,0,0,0,0,0-.1.5-.9,1.2-1.6,2-2.3.9-.7,1.8-1.5,2.9-2,1-.5,2-.9,3.1-1.2,1.3-.3,2.6-.3,3.9-.3,1,0,2,.2,2.9.6,1.5.6,2.8,1.4,4,2.4,1.9,1.6,3.6,3.1,5.3,4.9,1,1,1.8,2.1,2.6,3.2,1.7,2.6,3,5.4,4.2,8.3.8,1.9,1.5,3.8,1.8,5.9,0,.6.1,1.3.2,1.9.2,1.3,0,2.5,0,3.7,0,.8-.2,1.6-.3,2.5-.3,1.6-.7,3.1-1.5,4.5-.4.6-.8,1.1-1.3,1.7-.7.9-1.6,1.5-2.4,2.1h-.2c-.9.5-1.7.9-2.6,1.2-.7.3-1.5.4-2.2.6-.8.3-1.6.3-2.4.2-1.1,0-2.3-.2-3.4-.4-1-.2-2-.5-2.9-1,0,0-.2-.1-.2-.1-1-.3-1.8-.9-2.6-1.5-.7-.5-1.4-1.1-2-1.7-2-1.9-3.4-4.1-4.7-6.4-.1-.2-.3-.4-.4-.6-.7-1.1-1.4-2.2-1.9-3.4ZM98.5,39.4c-1-1.3-2.2-2.5-3.6-3.5-.8-.6-1.6-1.1-2.6-1.3-.3-.1-.6-.1-1,0-.7.1-1.4.5-2.1.8-.6.4-1,.8-1.1,1.5-.4,1.4-.5,2.8-.5,4.3.1,2.8,1.1,5.4,2.4,7.9,1.2,2.3,2.8,4.4,4.5,6.4.7.9,1.5,1.7,2.5,2.3.8.5,1.7.9,2.7.9.9,0,1.8-.1,2.6-.3,1.1-.2,1.8-.9,2.2-1.9.5-.9.6-1.9.5-3-.1-1.5-.5-3-1.1-4.4-.9-2.2-1.9-4.2-3.2-6.2-.9-1.2-1.6-2.3-2.5-3.4Z"/>
+    <path class="st2" d="M125.1,37.4c.1.4.4.8.6,1.1.6,1.1,1.2,2.1,1.9,3.1.6.7,1.3,1.2,2.1,1.6.2,0,.4.1.5.2,1,.7,2.2.8,3.3.8.9,0,2,0,2.9-.5,0,0,.1,0,.1,0,1-.3,1.8-1,2.5-1.7.3-.4.6-.9.9-1.4.2-.3.4-.7.6-1.1.4-.5.8-.7,1.3-.4.4.1.7.4,1,.6.3.2.7.4,1,.5.4.3.8.5,1.2.8.3.2.7.4,1,.4.2,0,.4.1.6.3.3,0,.6.3.8.3.6.2.9.7.8,1.3,0,0,0,.2,0,.3-.5,1-.9,2.1-1.3,3.1-.4,1.1-1.2,1.9-2,2.6-.3.2-.5.5-.8.7-1.2,1.1-2.6,1.8-4.1,2.4-1.2.4-2.4.8-3.6,1.2-1.2.4-2.4.5-3.7.3-.6-.1-1.3-.1-1.9-.2-.9-.1-1.7-.4-2.5-.6-.6-.2-1.1-.4-1.7-.6-.3-.1-.6-.3-.9-.4-1.3-.9-2.6-1.8-3.6-3.1-.2-.3-.5-.5-.7-.8-.6-.5-1-1.3-1.4-1.9-.6-.9-1.2-1.8-1.8-2.6-.7-1-1.1-2-1.5-3.1-.3-.6-.5-1.3-.7-1.9-.3-1-.5-2.1-.7-3.1-.2-.9-.2-1.8-.5-2.7,0-.3,0-.7-.1-1-.2-1.1-.3-2.1-.4-3.2,0-1.3-.1-2.6,0-3.9,0-.7.1-1.2.2-1.9.3-1.6.5-3.1,1.1-4.6.6-1.7,1.5-3.2,2.7-4.6.1-.2.4-.3.5-.5.3-.2.5-.4.8-.6.3-.3.7-.6,1-.8.9-.9,2-1.4,3.1-1.9,1-.5,2-.9,3.2-1,.3,0,.6-.1.9-.2,1.7-.3,3.6-.2,5.3.4.9.2,1.7.5,2.5,1,.7.4,1.4.9,2,1.5.3.3.4.6.3,1-.2.4-.4.8-.7,1.2-.9,1.5-1.9,2.9-2.8,4.3-.2.3-.4.5-.6.8-.3.4-.6.5-1.2.3-.5-.3-1-.6-1.5-.8-.9-.5-1.8-.7-2.8-.4-.6.1-1.1.1-1.7.4-.7.4-1.2.8-1.8,1.3-.5.6-1,1.3-1.2,2.1,0,0,0,.1,0,.2-.9,2-.9,4.1-.6,6.3,0,.2,0,.4,0,.6,0,1.4.4,2.7.9,4,.2.7.4,1.3.6,2,.3.9.6,1.9,1,2.8Z"/>
+    <path class="st2" d="M158.1,16.2c.6-.9,1.2-1.9,1.8-2.7.4-.7.7-1.3,1.1-2,.2-.3.4-.7.6-1.1.8-1.1,1.4-2.3,2-3.4.5-1.1,1.3-2.2,1.9-3.2.4-.8.9-1.6,1.4-2.4,0,0,0-.1,0-.2,0-.4.3-.5.7-.6,1.5-.3,3.1-.4,4.7-.5,1.2,0,2.4,0,3.6,0,.6,0,.9.4.6,1-.5.9-1,1.8-1.5,2.7-.1.2-.3.4-.4.6-1.2,2.7-2.8,5.2-4.3,7.8-1.1,1.9-2.1,3.8-3.2,5.7-.4.6-.7,1.2-1,1.8-.2.3-.2.5,0,.8.4.6.7,1.2,1,1.7,1.2,1.8,2.4,3.5,3.6,5.2.1.2.3.4.4.5.8,1.1,1.6,2.1,2.4,3.1,1,1.4,2,2.7,3,4.2,1.5,2.1,3,4.2,4.5,6.4.6.8,1.1,1.7,1.7,2.6.4.5.3.8-.3,1-.5.2-1,.3-1.6.3-1.5.2-3,.4-4.5.6-.4,0-.7.1-1,.2-.4,0-.6,0-.8-.3-.9-1.1-1.8-2.2-2.7-3.4-1.7-2.2-3.5-4.4-5.2-6.6-1-1.3-2-2.7-3-4-1-1.2-2.1-2.5-3.1-3.7,0,0,0,0-.1,0-.5.6-.9,1.3-1.4,1.9,0,.1,0,.3,0,.4.4,4.2.8,8.5,1.2,12.7,0,1.2.1,2.3.2,3.5,0,1,0,1.1-1.1,1.3-.7.1-1.5.2-2.2.3-1.1.1-2.1.2-3.2.4-.3,0-.6.1-.9.1-.6.2-.9,0-.9-.6-.1-.7-.2-1.5-.2-2.2,0-.8-.1-1.7-.2-2.5-.5-4.1-.9-8.3-1.2-12.4-.3-3.2-.6-6.4-.9-9.5,0-1.2-.3-2.4-.5-3.6-.1-1.6-.3-3.2-.4-4.8-.2-3-.4-6-.7-8.9,0-.3,0-.6,0-.9,0-.4.2-.7.6-.8,0,0,.2,0,.3,0,1.6-.2,3.2-.4,4.8-.5.6,0,1.2-.2,1.8-.2.8,0,1.1.2,1.1.9.1,1.1.2,2.1.3,3.1.2,2.9.5,5.9.7,8.8,0,.7.1,1.3.2,1.9,0,0,.1,0,.1,0,.1-.1.2-.3.3-.5Z"/>
+    <path class="st2" d="M196.6,38.1c0,.4,0,.5.4.6.4,0,.7.2,1.1.2.6.2,1.3.3,1.9.4,1.7.3,3.4.6,5.1.8,1.5.2,3.2.3,4.7.4.2,0,.5,0,.7.1.6,0,.9.4.9,1,0,.5,0,1,0,1.5-.2,1.6-.5,3.2-.7,4.9-.1.7-.4,1-1.1,1.1-1.2.2-2.5,0-3.6-.3-1-.2-2.1-.3-3.1-.4-1.5-.2-3-.4-4.6-.7-.7,0-1.3-.1-2.1-.2-.1,0-.3,0-.5,0-1.9-.2-3.8-.5-5.8-.8-1.1-.1-2.3-.3-3.5-.6-.6,0-1.1-.3-1.6-.4-.4-.1-.6-.3-.5-.8,0-.3.1-.7.2-1,.2-.9.5-1.8.7-2.7.3-1.4.6-2.9,1-4.3.2-.9.3-1.7.5-2.6.5-2.8,1-5.6,1.6-8.4.3-1.5.6-2.9.7-4.4.3-2.2.5-4.4.7-6.7.3-2.3.6-4.5,1-6.7.2-1.5.6-2.9,1-4.3.2-.7.3-1.4.4-2.1.1-.5.4-.8.9-.8.4,0,.8.1,1.2.2.4.1.9.3,1.3.4,1.7.3,3.5.6,5.2.9.9.1,1.9.4,2.8.6,2,.4,3.9.7,5.9.9,1.9.2,3.9.5,5.8.7.3,0,.6.2.9.3.4.1.5.3.5.7,0,.1,0,.2,0,.4,0,.6-.2,1.1-.2,1.6-.1,1.4-.2,2.8-.4,4.1,0,.2,0,.6,0,.8,0,.5,0,.9-.3,1.3-.1.3-.3.5-.7.5-.3,0-.7,0-1.1,0-.9-.2-1.7-.3-2.7-.3-1.9,0-3.7-.4-5.6-.6-.7-.1-1.3,0-2,0-1,0-2.1,0-3.1,0-.4,0-.4,0-.5.4-.2,1.7-.5,3.3-.7,5,0,.3,0,.3.3.3.6,0,1.1.1,1.7.1,1.3,0,2.5.3,3.7.6.9.2,1.7.3,2.5.3.7,0,1.3.1,2,.2.1,0,.2,0,.4.1.5.2.6.5.6,1-.2,1.1-.2,2.1-.4,3.1,0,.9-.2,1.9-.4,2.9-.1.7-.3.9-1,.9-.7,0-1.4-.1-2.2-.2-.6,0-1.2,0-1.8,0-.4,0-.8-.1-1.2-.1-1.2,0-2.4,0-3.6,0-.5,0-.9-.1-1.5,0-.4.1-.4,0-.5.5-.1.9-.2,1.7-.4,2.5s-.3,1.7-.4,2.6h0c-.3,1.7-.5,3.5-.8,5.2Z"/>
+    <path class="st2" d="M227.3,28.3c.8-2.2,1.4-4.5,2.1-6.7.3-.9.7-1.9,1.1-2.9q.2-.5-.2-.6c-1.2-.4-2.3-.8-3.5-1.1-.9-.3-1.9-.7-2.8-1.1-.4-.1-.5-.4-.3-.8.1-.4.3-.7.4-1,.7-1.8,1.3-3.6,1.9-5.4.1-.3.3-.5.6-.8.3-.2.6-.2.9,0,.7.3,1.4.6,2.1.9,2,.8,4.1,1.6,6.1,2.4,2.2.8,4.4,1.6,6.5,2.4,2,.8,4.1,1.6,6.1,2.4.6.2.7.5.5,1-.7,1.9-1.3,3.7-2,5.5-.3.7-.5.8-1.2.7-1.2-.2-2.3-.4-3.4-.8-1-.2-2-.5-3-.9-.5-.1-.5-.2-.7.4-.5,1.3-.9,2.6-1.4,3.9-.7,1.9-1.5,3.8-2.3,5.8-.9,2.3-1.7,4.6-2.5,6.9-1.9,5-3.7,10.2-5.6,15.3,0,.2-.2.5-.3.7-.2.3-.4.4-.7.3-.5-.1-1-.2-1.6-.4-.4-.1-.9-.3-1.3-.4-.4-.1-.7-.3-1.1-.4-.6-.2-1.2-.4-1.8-.6-.8-.3-1-.6-.7-1.6,1.1-3.3,2.3-6.7,3.4-10,.8-2.1,1.5-4.2,2.3-6.3q0,0,.1,0c.8-2.2,1.6-4.5,2.4-6.8Z"/>
+    <path class="st2" d="M252.7,26.9c-.9-.5-.9-1.5-.6-2.1.2-.4.4-.7.6-1.1.8-1.3,1.7-2.7,2.4-4.1.3-.5.8-.8,1.3-.6.6.2,1.2.4,1.8.6.3.2.7.4,1.1.5.3,0,.5.3.6.5,0,.1.1.3.2.4.5.6.3,1.1,0,1.7-.3.5-.7,1.1-1.1,1.6-.6,1-1.2,2-2.1,2.9,0,0,0,.2-.1.2-.5.6-1,.8-1.7.6-.5-.1-1-.4-1.5-.6h0c-.3-.2-.7-.4-1-.6Z"/>
+    <path class="st2" d="M251.7,69.1c-.9-1.1-1.5-2.3-2.3-3.5-.3-.4-.5-.8-.7-1.1-.4-.8-.8-1.6-.8-2.5,0-1,0-2.1-.1-3.1,0-.5,0-1,0-1.5,0-.7,0-1.4,0-2,0-.5.1-.7.7-.8.2,0,.4,0,.5,0,1.4-.5,3-.7,4.4-.9.4,0,.8,0,1.2,0,.4,0,.7.3.7.7,0,1,.5,2,.7,2.9,0,.4.2.7.3,1.1.4,1.4,1.1,2.7,2.2,3.7.3.2.5.4.7.6.7.7,1.5,1,2.3,1,.1,0,.2,0,.3,0,1.5-.4,2.6-1.4,3.3-2.7.3-.5.3-1.2.2-1.9-.2-.9-.6-1.6-1-2.3-.4-.6-.7-1.3-1-1.9-.3-.7-.7-1.4-1-2.1-.2-.5-.4-1-.6-1.5-.4-1.1-.9-2.4-1.3-3.5,0,0,0-.2,0-.3-1.1-2.5-.8-5,.3-7.5.6-1.3,1.4-2.5,2.2-3.7.3-.4.7-.8,1.1-1.1.1,0,.3-.2.4-.3,1.2-1.2,2.7-1.9,4.3-2.4,1.7-.6,3.5-.8,5.3-1,1.3,0,2.6.2,3.9.8,1.2.5,2.4,1.2,3.5,2,2.1,1.5,3.4,3.5,4.2,6,.2.6.4,1.3.6,2,.2.6.4,1.1.6,1.7,0,.5.1,1,.1,1.5,0,.3-.2.6-.6.7-.5.2-1.1.4-1.8.6-.5.1-.9.3-1.4.4-1.2.2-2.5.5-3.7.7-.4,0-.5,0-.7-.4-.3-.7-.5-1.4-.8-2.1-.3-.8-.7-1.7-1.4-2.3-.7-.6-1.5-1.1-2.2-1.6-1.1-.8-2.2-.6-3.3,0-.5.3-.9.7-1.3,1.3,0,.1,0,.2,0,.2-.1.9-.3,1.9,0,2.8.3.7.6,1.3,1,1.8.9,1.2,1.6,2.6,2.3,4,.8,1.6,1.4,3.2,1.8,4.8.1.5.2.9.4,1.3.5,2.1.2,4-.8,5.9-.7,1.2-1.4,2.4-2.1,3.6-1,1.6-2.5,2.8-4.2,3.8-.7.5-1.5.8-2.4,1.1-1.1.4-2.2.8-3.4.9-1.5.1-3,0-4.4-.3-1.1-.3-2.2-.6-3.2-1.1-.3-.2-.7-.4-1-.6-.8-.6-1.4-1.2-2.1-2Z"/>
+  </g>
+</svg>
+        </div>
+        <div class="pedido-card-body">
+          <button class="btn-pedido btn-wpp-pedido" onclick="window.open('https://wa.me/5518997657831?text=Olá! Quero fazer um pedido no The Rocket\'s','_blank')">
+            📱 Pedir pelo WhatsApp
+          </button>
+          <button class="btn-pedido btn-ifood">
+            🍔 Pedir pelo iFood
+          </button>
+        </div>
+      </div>
+
+      <div class="pedido-card">
+        <div class="pedido-card-header bc-green" style="padding:1.5rem">
+          <svg id="svg-pizza" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28" width="180px" height="90px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffffff;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M112.82,234.7c92.59-8.42,108.83,137.74,17.17,148.62-98.38,11.7-113.12-140.2-17.17-148.62ZM112.63,236.96c-51.15,2.87-35.65,148.83,16.99,144.1,46.48-4.11,35.66-147.18-16.99-144.1Z"/>
+    <path class="st0" d="M303.21,381.88l-32.86-.21h-34.53v-1.03c8.59-.62,8.59-5.34,8.59-7.19v-126.86c0-1.85,0-6.57-8.59-7.18v-1.03h34.53c1.12,0,29.12,0,33.6-.21,69.25-2.26,74.3,60.76,11.01,65.48,71.5,3.08,79.71,78.01-11.76,78.21ZM273.9,243.73c-.37,1.03-.37,2.05-.37,2.87v55.84h32.67c34.16,0,36.22-61.79-2.24-61.99-15.49-.21-25.39-.82-30.05,3.28ZM306.2,304.7l-32.67-.21v68.97c0,.62,0,1.23.19,2.05,5.79,4.93,19.97,4.52,29.49,4.52,54.69.21,49.47-75.34,2.99-75.34Z"/>
+    <path class="st0" d="M486.33,376.55c1.49,2.87,6.53,4.31,8.21,4.31v1.03l-37.52-.21v-9.44c-29.68,20.53-76.91,13.14-79.34-17.04-1.87-22.79,14.19-35.1,37.52-39.41,29.68-4.93,38.27-11.08,40.69-15.81-2.05-11.29-7.47-19.71-21.47-20.32-6.72-.21-15.68,2.67-13.25,11.5,2.61,9.24-18.11,10.67-18.11,1.85,0-13.34,19.79-15.4,31.36-15.6,47.97-.41,52.08,18.68,52.08,43.72l-.19,55.42ZM457.02,370.18l.19-49.06c0-6.36,0-12.52-.75-18.27-2.43,3.28-8.03,7.59-22.4,12.11-20.53,6.36-29.49,21.14-28.56,39.62.93,18.06,19.6,36.54,51.52,15.6Z"/>
+    <path class="st0" d="M579.84,301.01c-14.93,0-5.97-19.5-12.69-19.91-9.15-.62-22.03,14.78-27.63,24.43l.19,68.15c0,1.85,0,6.57,8.59,7.19v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v22.99c5.04-9.24,16.24-22.38,27.25-24.02,24.27-4.11,29.12,22.58,13.07,22.58Z"/>
+    <path class="st0" d="M674.48,301.01c-14.93,0-5.97-19.5-12.69-19.91-9.15-.62-22.03,14.78-27.63,24.43l.19,68.15c0,1.85,0,6.57,8.59,7.19v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v22.99c5.04-9.24,16.24-22.38,27.25-24.02,24.27-4.11,29.12,22.58,13.07,22.58Z"/>
+    <path class="st0" d="M737.57,380.86v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v3.08l.19,91.14c0,1.85,0,6.57,8.59,7.19ZM698.55,252.15c0-8.62,6.53-15.81,14.37-15.81s14.37,7.18,14.37,15.81-6.53,15.81-14.37,15.81-14.37-7.18-14.37-15.81Z"/>
+    <path class="st0" d="M791.51,380.86v1.03h-46.29v-1.03c8.03-.62,8.59-4.72,8.59-6.77l-.19-138.56c0-1.85,0-6.57-8.59-7.18v-1.03h46.3v1.03c-8.03.62-8.59,4.72-8.59,6.77l.19,138.56c0,1.85,0,6.57,8.59,7.19Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M552.4,432.5c0-.82.35-1.22,1.07-1.22h11.52c1.51,0,2.92.31,4.23.94s2.44,1.48,3.39,2.56c.96,1.08,1.71,2.34,2.26,3.77.55,1.44.82,2.95.82,4.55s-.27,3.08-.81,4.5c-.54,1.42-1.29,2.66-2.24,3.73-.95,1.07-2.07,1.92-3.36,2.55-1.29.63-2.68.94-4.18.94h-8.69v13.17c0,.75-.35,1.12-1.04,1.12h-1.95c-.68,0-1.02-.37-1.02-1.12v-35.49ZM571.68,443.05c0-.99-.17-1.92-.52-2.82s-.82-1.68-1.43-2.36c-.6-.68-1.31-1.22-2.13-1.63-.82-.41-1.69-.61-2.62-.61h-8.57v14.85h8.57c.91,0,1.77-.2,2.58-.6.81-.4,1.52-.94,2.13-1.63s1.09-1.48,1.45-2.37c.35-.89.53-1.84.53-2.84Z"/>
+    <path class="st0" d="M614.31,468c0,.37-.09.65-.28.84s-.44.28-.77.28h-1.92c-.7,0-1.04-.37-1.04-1.12v-35.59c0-.34.09-.61.27-.82.18-.2.44-.31.78-.31h1.92c.31,0,.56.1.75.31.19.2.29.47.29.82v35.59Z"/>
+    <path class="st0" d="M649.41,469.12c-.31,0-.57-.11-.79-.34-.22-.23-.32-.51-.32-.85v-2.29c0-.12.02-.26.05-.43.03-.17.12-.33.26-.48l20.34-29h-19.05c-.73,0-1.09-.39-1.09-1.17v-2.14c0-.75.36-1.12,1.09-1.12h23.42c.29,0,.55.11.76.33s.33.5.33.84v2.37c0,.32-.07.58-.21.79l-20.25,29.07h19.46c.29,0,.54.1.74.29s.3.5.3.9v2.04c0,.31-.1.58-.29.83-.19.25-.44.37-.75.37h-24Z"/>
+    <path class="st0" d="M707.75,469.12c-.31,0-.57-.11-.79-.34-.22-.23-.32-.51-.32-.85v-2.29c0-.12.02-.26.05-.43.03-.17.12-.33.26-.48l20.34-29h-19.05c-.73,0-1.09-.39-1.09-1.17v-2.14c0-.75.36-1.12,1.09-1.12h23.42c.29,0,.55.11.76.33s.33.5.33.84v2.37c0,.32-.07.58-.21.79l-20.25,29.07h19.46c.29,0,.54.1.74.29s.3.5.3.9v2.04c0,.31-.1.58-.29.83-.19.25-.44.37-.75.37h-24Z"/>
+    <path class="st0" d="M767.41,468.1c-.25.68-.67,1.02-1.27,1.02h-1.99c-.66,0-1-.27-1-.82,0-.15.02-.31.05-.48.02-.07.04-.13.07-.18,1.67-4.42,3.14-8.31,4.41-11.68,1.27-3.37,2.38-6.3,3.33-8.79.94-2.49,1.74-4.58,2.39-6.28.65-1.7,1.18-3.1,1.6-4.22s.74-1.97.97-2.56.4-1.03.51-1.31c.11-.28.18-.47.21-.57.06-.19.17-.39.31-.61s.43-.33.85-.33h1.37c.39,0,.65.11.8.33s.26.42.34.61l13.35,35.44s.03.1.08.25c.05.15.08.28.08.38,0,.27-.1.48-.29.61-.19.14-.44.2-.75.2h-1.99c-.31,0-.57-.09-.78-.27-.21-.18-.37-.41-.48-.7l-2.69-7.31h-16.84l-2.62,7.26ZM771.7,456.51h13.55l-6.74-18.65-6.81,18.65Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M480.14,200.41c-1.18-1.18-2.64-1.96-4.12-2.2-1.7-.27-3.21.16-4.25,1.23-1.05,1.08-1.48,2.58-1.21,4.24.24,1.47,1.02,2.94,2.2,4.12s2.64,1.96,4.09,2.19c.31.06.63.09.99.09,1.3,0,2.47-.47,3.29-1.31,1.05-1.07,1.48-2.58,1.21-4.24-.24-1.47-1.02-2.94-2.2-4.12Z"/>
+    <path class="st0" d="M542.36,143.31c-11.06-11.06-25.76-17.15-41.4-17.15-4.18,0-7.57,3.4-7.57,7.58,0,3.27,2.08,6.05,4.98,7.11l-39.52,73.07c-.52.98-.86,2.03-1.02,3.11,0,0-.12,1.3-.12,1.42,0,5.25,4.27,9.52,9.52,9.52,1.55,0,3.12-.4,4.54-1.14l19.98-10.81.37.43c.9,1.01,2.18,1.59,3.51,1.59,2.57,0,4.65-2.09,4.65-4.66v-1.94l7.16-3.87s.02.07.02.11l.94,10.23c.23,2.53,2.32,4.43,4.87,4.43s4.69-1.99,4.87-4.52l1.24-16.71,24.18-13.08-1.61-2.98-22.27,12.04c.11-1.2.81-2.25,1.89-2.83l17.1-9.24c1.79-.99,3-2.7,3.3-4.71.31-2.01-.33-4-1.78-5.47-.55-.56-.86-1.32-.88-2.12l-.04-4c-.02-2.38-1.36-4.54-3.48-5.65l-3.54-1.82c-.7-.37-1.23-.98-1.48-1.72l-1.27-3.7c-.79-2.31-2.79-3.95-5.23-4.28l-3.37-.45c-.83-.11-1.58-.57-2.08-1.26l-1.94-2.73c-1.43-2-3.92-3.02-6.33-2.6l-3.29.57c-.84.14-1.7-.06-2.37-.57-1.14-.87-2.52-1.32-3.94-1.31l1.01-1.87c23.46.53,42.39,19.78,42.39,43.37,0,4.18,3.4,7.58,7.58,7.58s7.58-3.4,7.58-7.58c0-15.64-6.09-30.34-17.15-41.4ZM556.11,184.7c0,2.31-1.88,4.19-4.19,4.19s-4.19-1.88-4.19-4.19,1.88-4.19,4.19-4.19,4.19,1.88,4.19,4.19ZM496.77,133.74c0-2.31,1.88-4.19,4.19-4.19,28.19,0,51.5,21.27,54.75,48.6-1.12-.65-2.41-1.02-3.78-1.02-1.72,0-3.31.58-4.58,1.56-1.3-10.22-5.9-19.67-13.3-27.07-8.83-8.83-20.58-13.7-33.09-13.7-2.31,0-4.19-1.88-4.19-4.19ZM505.48,204.75l-5.18,2.8c.08-1.16.75-2.22,1.78-2.78,1.08-.58,2.31-.58,3.4-.02ZM507.15,201.75c-2.1-1.12-4.59-1.11-6.67.02-2.2,1.18-3.57,3.47-3.57,5.98v5.57c0,.7-.57,1.26-1.26,1.26-.36,0-.71-.16-.95-.44l-1.88-2.16c-2.11-2.41-5.65-3.04-8.43-1.49l-18.33,10.15c-1.04.58-2.25.56-3.31-.05-.93-.55-1.52-1.48-1.63-2.53.05-.88.29-1.76.71-2.56l35.44-65.52c3.01.49,5.33,3.11,5.33,6.25,0,3.5-2.85,6.34-6.34,6.34-.83,0-1.62-.15-2.34-.44l-.67-.27-1.26,3.15.66.27c1.14.46,2.35.7,3.6.7,5.37,0,9.73-4.37,9.73-9.75,0-4.26-2.76-7.88-6.58-9.2.29-.18.6-.32.94-.39.87-.19,1.77.01,2.49.56,1.42,1.08,3.24,1.52,4.99,1.21l3.3-.57c1.13-.21,2.31.28,3,1.22l1.94,2.73c1.03,1.43,2.63,2.38,4.39,2.62l3.37.45c1.15.16,2.1.94,2.48,2.03l1.27,3.7c.52,1.55,1.64,2.84,3.13,3.62l3.55,1.82c1,.51,1.63,1.53,1.65,2.66l.04,4c.02,1.7.67,3.27,1.86,4.46.68.68.98,1.62.84,2.58-.14.96-.71,1.77-1.55,2.22l-17.1,9.23c-2.12,1.16-3.49,3.28-3.66,5.67l-1.53,20.62c-.07.79-.73,1.4-1.5,1.4s-1.44-.6-1.5-1.37l-.94-10.23c-.22-2.37-1.6-4.45-3.69-5.56ZM489.24,213.49l-19.1,10.33c-.91.48-1.92.74-2.92.74-.56,0-1.09-.08-1.6-.22.69-.12,1.38-.34,2.05-.67l18.33-10.16c1.02-.57,2.24-.55,3.24-.02Z"/>
+    <path class="st0" d="M519.97,172.48c3.5,0,6.34,2.85,6.34,6.34s-2.85,6.34-6.34,6.34-6.34-2.85-6.34-6.34,2.85-6.34,6.34-6.34Z"/>
+    <path class="st0" d="M519.97,188.55c5.37,0,9.73-4.37,9.73-9.73s-4.37-9.73-9.73-9.73-9.73,4.37-9.73,9.73,4.37,9.73,9.73,9.73ZM519.97,170.52c4.58,0,8.3,3.72,8.3,8.3s-3.72,8.3-8.3,8.3-8.3-3.72-8.3-8.3,3.72-8.3,8.3-8.3Z"/>
+    <path class="st0" d="M494.1,173.99c-5.37,0-9.73,4.37-9.73,9.73s4.37,9.73,9.73,9.73,9.73-4.37,9.73-9.73-4.37-9.73-9.73-9.73ZM494.1,192.03c-4.58,0-8.3-3.72-8.3-8.3s3.72-8.3,8.3-8.3,8.3,3.72,8.3,8.3-3.72,8.3-8.3,8.3Z"/>
+    <path class="st0" d="M494.1,190.07c-3.5,0-6.34-2.85-6.34-6.34s2.85-6.34,6.34-6.34,6.34,2.85,6.34,6.34-2.85,6.34-6.34,6.34Z"/>
+    <path class="st1" d="M478.76,201.79c-.9-.88-1.98-1.47-3.04-1.65-.16-.02-.38-.05-.61-.05-.78,0-1.45.25-1.92.72-.85.85-.75,2.07-.67,2.55.19,1.09.79,2.19,1.66,3.04.9.88,1.98,1.47,3.03,1.64.22.04.43.05.64.05.77,0,1.43-.25,1.9-.72.85-.86.75-2.07.67-2.55-.19-1.09-.79-2.19-1.66-3.04ZM478.73,206.37c-.36.36-.97.33-1.3.27-.76-.13-1.57-.58-2.27-1.26-.64-.63-1.11-1.47-1.25-2.26-.03-.2-.12-.9.27-1.29.2-.2.5-.3.91-.3.16,0,.3.02.39.03.76.13,1.57.58,2.27,1.26.64.63,1.11,1.47,1.25,2.26.03.2.12.9-.27,1.29Z"/>
+    <path class="st0" d="M516.05,162.73c.13-.77.58-1.57,1.26-2.27.63-.64,1.47-1.11,2.23-1.24.11-.02.25-.03.41-.03.22,0,.63.04.91.3.37.36.33.97.27,1.3-.13.76-.58,1.57-1.26,2.27-.63.64-1.47,1.11-2.25,1.25-.21.04-.9.12-1.3-.27-.36-.36-.33-.97-.27-1.3Z"/>
+    <path class="st0" d="M517.23,167.74c.36,0,.67-.03.96-.09,1.47-.24,2.94-1.02,4.12-2.2,1.18-1.18,1.96-2.64,2.2-4.12.27-1.68-.16-3.19-1.23-4.25-1.07-1.05-2.58-1.48-4.24-1.22-1.47.24-2.94,1.02-4.12,2.2-1.18,1.18-1.96,2.64-2.2,4.12-.27,1.68.16,3.19,1.21,4.24.82.85,1.99,1.31,3.3,1.31ZM514.13,162.41c.19-1.18.83-2.36,1.8-3.33.97-.97,2.15-1.61,3.33-1.8.25-.04.49-.06.73-.06.91,0,1.68.3,2.28.88.74.74,1.02,1.78.82,3.01-.19,1.18-.83,2.37-1.8,3.33-.97.97-2.15,1.61-3.36,1.8-1.24.25-2.28-.1-2.98-.82-.74-.74-1.02-1.78-.82-3.01Z"/>
+    <path class="st0" d="M489.22,195.04c-1.14,1.25-2.69,2.1-4.35,2.38l-1.09.17.58,3.32,1.1-.16c2.38-.42,4.6-1.63,6.26-3.41l.49-.53-2.51-2.3-.48.53Z"/>
+    <path class="st0" d="M506.7,167.26l-.17-1.09-3.33.58.17,1.08c.42,2.38,1.63,4.61,3.41,6.26l.52.49,2.31-2.48-.53-.49c-1.25-1.14-2.1-2.69-2.38-4.35Z"/>
+  </g>
+</svg>
+        </div>
+        <div class="pedido-card-body">
+          <button class="btn-pedido btn-wpp-pedido" onclick="window.open('https://wa.me/5518997657831?text=Olá! Quero fazer um pedido no O Barril Pizza','_blank')">
+            📱 Pedir pelo WhatsApp
+          </button>
+          <button class="btn-pedido btn-ifood">
+            🍔 Pedir pelo iFood
+          </button>
+        </div>
+      </div>
+
+      <div class="pedido-card">
+        <div class="pedido-card-header bc-amber" style="padding:1.5rem">
+          <svg id="svg-grill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28" width="180px" height="90px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M211.44,230.42c64.77-5.89,76.13,96.36,12.01,103.97-68.82,8.19-79.13-98.08-12.01-103.97ZM211.31,232c-35.78,2.01-24.94,104.11,11.88,100.81,32.52-2.87,24.94-102.96-11.88-100.81Z"/>
+    <path class="st0" d="M344.63,333.38l-22.98-.14h-24.16v-.72c6.01-.43,6.01-3.73,6.01-5.03v-88.74c0-1.29,0-4.6-6.01-5.03v-.72h24.16c.78,0,20.37,0,23.51-.14,48.45-1.58,51.97,42.51,7.7,45.81,50.01,2.15,55.76,54.57-8.23,54.71ZM324.12,236.73c-.26.72-.26,1.44-.26,2.01v39.06h22.85c23.9,0,25.33-43.22-1.57-43.37-10.84-.14-17.76-.57-21.02,2.3ZM346.71,279.38l-22.85-.14v48.25c0,.43,0,.86.13,1.44,4.05,3.45,13.97,3.16,20.63,3.16,38.26.14,34.6-52.7,2.09-52.7Z"/>
+    <path class="st0" d="M472.72,329.64c1.04,2.01,4.57,3.02,5.75,3.02v.72l-26.25-.14v-6.61c-20.76,14.36-53.8,9.19-55.5-11.92-1.31-15.94,9.92-24.56,26.25-27.57,20.76-3.45,26.77-7.75,28.47-11.06-1.44-7.9-5.22-13.79-15.02-14.22-4.7-.14-10.97,1.87-9.27,8.04,1.83,6.46-12.67,7.47-12.67,1.29,0-9.33,13.84-10.77,21.94-10.91,33.56-.29,36.43,13.07,36.43,30.59l-.13,38.77ZM452.22,325.19l.13-34.32c0-4.45,0-8.76-.52-12.78-1.7,2.3-5.62,5.31-15.67,8.47-14.36,4.45-20.63,14.79-19.98,27.71.65,12.64,13.71,25.56,36.04,10.91Z"/>
+    <path class="st0" d="M538.14,276.8c-10.45,0-4.18-13.64-8.88-13.93-6.4-.43-15.41,10.34-19.33,17.09l.13,47.67c0,1.29,0,4.6,6.01,5.03v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v16.08c3.53-6.46,11.36-15.65,19.07-16.8,16.98-2.87,20.37,15.8,9.14,15.8Z"/>
+    <path class="st0" d="M604.34,276.8c-10.45,0-4.18-13.64-8.88-13.93-6.4-.43-15.41,10.34-19.33,17.09l.13,47.67c0,1.29,0,4.6,6.01,5.03v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v16.08c3.53-6.46,11.36-15.65,19.07-16.8,16.98-2.87,20.37,15.8,9.14,15.8Z"/>
+    <path class="st0" d="M648.47,332.66v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v2.15l.13,63.76c0,1.29,0,4.6,6.01,5.03ZM621.18,242.62c0-6.03,4.57-11.06,10.06-11.06s10.05,5.03,10.05,11.06-4.57,11.06-10.05,11.06-10.06-5.03-10.06-11.06Z"/>
+    <path class="st0" d="M686.21,332.66v.72h-32.38v-.72c5.62-.43,6.01-3.3,6.01-4.74l-.13-96.93c0-1.29,0-4.6-6.01-5.03v-.72h32.39v.72c-5.62.43-6.01,3.3-6.01,4.74l.13,96.93c0,1.29,0,4.6,6.01,5.03Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M536.74,383.47c0-.52.24-.78.71-.78h1.36c.21,0,.38.07.53.21.15.14.22.33.22.58v7.91c0,.13-.03.26-.09.38-.06.12-.18.25-.35.38l-.08.05c-1.02.82-2.15,1.46-3.39,1.91-1.24.45-2.57.68-3.99.68-1.15,0-2.24-.16-3.29-.48-1.05-.32-2.03-.78-2.95-1.37-.92-.59-1.75-1.3-2.5-2.13-.75-.83-1.39-1.74-1.93-2.74s-.95-2.09-1.24-3.24c-.29-1.16-.44-2.37-.44-3.63s.15-2.45.44-3.6c.29-1.15.71-2.23,1.25-3.24.54-1.01,1.19-1.93,1.94-2.76.75-.83,1.58-1.54,2.5-2.14.92-.59,1.9-1.05,2.96-1.38,1.05-.33,2.15-.49,3.3-.49,1.52,0,3,.31,4.44.93.27.12.59.27.97.46.38.19.74.4,1.09.62s.64.46.88.7.37.47.37.7c0,.14-.04.27-.11.39l-.71,1.28c-.15.27-.33.41-.55.41-.08,0-.17-.02-.28-.06-.11-.04-.22-.11-.34-.21-.8-.64-1.69-1.15-2.67-1.52-.98-.37-2-.56-3.05-.56-1.41,0-2.7.29-3.87.87-1.18.58-2.19,1.36-3.04,2.33-.85.97-1.51,2.09-1.99,3.36-.48,1.26-.71,2.58-.71,3.95,0,1.46.26,2.83.77,4.1.51,1.27,1.21,2.38,2.08,3.32.88.94,1.89,1.69,3.05,2.23,1.16.54,2.38.81,3.66.81.56,0,1.1-.05,1.6-.14s.98-.22,1.42-.38c.44-.15.83-.33,1.17-.53s.63-.39.86-.58v-6.59Z"/>
+    <path class="st0" d="M564.13,368.79c0-.27.06-.48.19-.63s.3-.22.52-.22h9.37c1.07,0,2.07.22,2.99.66s1.73,1.04,2.42,1.81c.69.77,1.23,1.66,1.62,2.68.39,1.02.59,2.11.59,3.26,0,.84-.11,1.65-.32,2.42-.22.77-.52,1.49-.91,2.15-.39.66-.85,1.25-1.39,1.76-.54.52-1.14.94-1.8,1.27l4.26,9.66c.05.14.08.25.08.32,0,.13-.05.24-.15.33s-.25.13-.43.13h-1.8c-.22,0-.39-.06-.51-.18-.12-.12-.23-.29-.32-.5l-3.92-9.07c-.06.01-.19.02-.36.03-.18,0-.37.01-.58.02s-.42,0-.62,0h-6.12v8.91c0,.52-.24.78-.71.78h-1.38c-.48,0-.71-.26-.71-.78v-24.83ZM579.06,376.33c0-.71-.12-1.39-.37-2.03-.25-.64-.59-1.21-1.02-1.7-.43-.49-.95-.88-1.54-1.18-.59-.29-1.23-.44-1.91-.44h-7.28v10.68h7.33c.68,0,1.31-.14,1.9-.43.58-.29,1.09-.67,1.52-1.16.43-.49.76-1.05,1.01-1.7.25-.65.37-1.33.37-2.04Z"/>
+    <path class="st0" d="M608.78,393.62c0,.26-.06.46-.19.59s-.31.2-.54.2h-1.34c-.49,0-.73-.26-.73-.78v-24.9c0-.24.06-.43.19-.57.12-.14.3-.21.54-.21h1.34c.22,0,.39.07.53.21.13.14.2.33.2.57v24.9Z"/>
+    <path class="st0" d="M648.62,391.35c.19,0,.36.07.5.21s.21.34.21.61v1.44c0,.21-.07.4-.19.55-.13.15-.3.23-.52.23h-13.78c-.48,0-.71-.26-.71-.78v-24.9c0-.21.06-.4.19-.55s.31-.23.55-.23h1.35c.21,0,.38.07.51.21.13.14.2.33.2.58v22.64h11.69Z"/>
+    <path class="st0" d="M687.33,391.35c.19,0,.36.07.5.21s.21.34.21.61v1.44c0,.21-.07.4-.19.55-.13.15-.3.23-.52.23h-13.78c-.48,0-.71-.26-.71-.78v-24.9c0-.21.06-.4.19-.55s.31-.23.55-.23h1.35c.21,0,.38.07.51.21.13.14.2.33.2.58v22.64h11.69Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M456.42,218.28h-.01c-.63,0-1.14.51-1.14,1.14s.52,1.14,1.15,1.14,1.14-.51,1.14-1.14-.51-1.14-1.14-1.14Z"/>
+    <path class="st0" d="M506.65,153.79s0,0,0,0l-12.61,12.61c-2.23,2.23-2.23,5.86,0,8.09l1.61,1.61-8.97,8.97-9.99-9.99c.45-1.01.69-2.11.69-3.25,0-2.12-.82-4.11-2.3-5.61-.01-.01-.02-.03-.03-.05l-12.94-12.94s-.07-.04-.11-.07c-.06-.05-.12-.09-.2-.13-.07-.03-.14-.06-.22-.08-.04-.01-.08-.04-.13-.05l-2.83-.41c-.05,0-.1,0-.15,0-.06,0-.11-.02-.17,0-.03,0-.04.02-.07.02-.07.02-.13.04-.2.07-.08.03-.15.06-.22.1-.05.04-.09.08-.14.12-.06.06-.12.11-.17.18-.04.05-.06.12-.08.18-.03.07-.07.15-.08.23,0,.02-.02.04-.02.06,0,.06,0,.11,0,.16s-.02.11,0,.16l.4,2.83s.03.09.05.14c.02.06.03.12.06.18.04.08.09.15.15.22.03.03.04.07.07.1l10.51,10.51c.89.89.89,2.34,0,3.23-.89.89-2.34.89-3.23,0l-10.51-10.51s-.08-.05-.12-.08c-.05-.04-.11-.08-.17-.12-.08-.04-.16-.07-.24-.09-.04,0-.07-.03-.11-.04l-2.83-.41c-.06,0-.11,0-.16,0s-.11-.02-.16,0c-.02,0-.03.02-.05.02-.09.02-.18.05-.26.09-.05.02-.1.04-.15.07-.07.05-.13.11-.18.17-.05.05-.09.09-.13.14-.04.06-.07.13-.09.19-.03.07-.06.14-.08.22,0,.02-.02.04-.02.06,0,.05,0,.1,0,.16,0,.06-.02.11-.01.17l.4,2.84c0,.06.04.11.05.16.02.05.03.1.05.15.04.09.1.18.17.25.02.02.03.06.05.08l12.95,12.95s.04.02.05.04c1.5,1.48,3.49,2.3,5.6,2.3h0c1.14,0,2.24-.24,3.25-.69l9.99,9.99-6.19,6.19c-.45-.45-1.17-.45-1.62,0l-1.62,1.62-.81-.81c-.45-.45-1.17-.45-1.62,0l-18.84,18.84s0,0,0,0c-1.2,1.2-1.86,2.78-1.87,4.47,0,1.69.64,3.28,1.83,4.47,1.22,1.22,2.83,1.83,4.44,1.83,1.63,0,3.26-.62,4.5-1.87,0,0,0,0,0,0l18.84-18.84c.45-.45.45-1.17,0-1.62l-.81-.81,1.62-1.62c.22-.22.34-.52.34-.81,0-.02,0-.03-.01-.05-.01-.27-.12-.55-.32-.76l6.19-6.19,5.56,5.56c-.45.45-.45,1.17,0,1.62l1.62,1.62-.81.81c-.45.45-.45,1.17,0,1.62l19.45,19.45s0,0,0,0c1.24,1.24,2.87,1.87,4.5,1.87s3.22-.61,4.44-1.83c2.45-2.45,2.44-6.46-.04-8.94,0,0,0,0,0,0l-19.45-19.45c-.45-.45-1.17-.45-1.62,0l-.81.81-1.62-1.62c-.45-.45-1.17-.45-1.62,0l-5.56-5.56,8.97-8.97,1.62,1.62c1.08,1.08,2.51,1.67,4.04,1.67s2.97-.59,4.04-1.67l12.61-12.61h0s0,0,0,0c1.51-1.51,3.04-5.05-3.65-11.74-6.68-6.68-10.22-5.14-11.73-3.64h0ZM469.4,177.55c-1.53,0-2.96-.6-4.04-1.67-.01-.01-.03-.02-.04-.03l-12.64-12.64-.13-.94.95.14,10.24,10.24h0s0,0,0,0c.89.89,2.06,1.33,3.23,1.33s2.34-.45,3.24-1.34c1.78-1.78,1.78-4.68,0-6.47,0,0,0,0,0,0l-10.25-10.25-.13-.94.94.14,12.64,12.64s.01.03.02.04c1.08,1.08,1.67,2.51,1.67,4.04s-.59,2.96-1.67,4.04c-1.08,1.08-2.51,1.67-4.04,1.67h0ZM474.63,177.88c.14-.12.29-.25.43-.39s.26-.28.39-.43l9.63,9.63-.81.81-9.63-9.63ZM456.34,223.46c-1.07,0-2.07-.41-2.82-1.16-.76-.76-1.17-1.76-1.16-2.84,0-1.08.43-2.09,1.2-2.86,0,0,0,0,0,0l18.03-18.03,4.85,4.85s0,0,0,0,0,0,0,0l.81.81-18.03,18.03s0,0,0,0c-.77.77-1.78,1.19-2.86,1.2h-.02,0ZM474.83,198.56l.81-.81,2.42,2.42h0l-.81.81-2.42-2.42ZM519.83,222.28c-1.56,1.56-4.11,1.55-5.7-.03,0,0,0,0,0,0l-18.65-18.65,5.66-5.67,18.65,18.65s0,0,0,0c1.58,1.58,1.6,4.14.03,5.7h0ZM495.49,200.36l-.81-.81,2.42-2.42s0,0,0,0l.81.81-2.42,2.43ZM494.68,196.31l-.81.81-5.56-5.56.81-.81,5.56,5.56ZM478.88,197.75l-.81-.81,7-7s0,0,0,0,0,0,0,0l2.42-2.42s0,0,0,0,0,0,0,0l9.77-9.78.81.81-19.21,19.21ZM520.41,167.55l-12.61,12.61c-1.34,1.34-3.51,1.34-4.85,0l-7.28-7.28c-1.34-1.34-1.34-3.52,0-4.86l12.61-12.61s0,0,0,0c1.52-1.52,4.7-.16,8.49,3.64,3.8,3.8,5.16,6.98,3.64,8.5h0Z"/>
+    <path class="st0" d="M509.89,160.27c-.45-.45-1.17-.45-1.62,0l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62h0Z"/>
+    <path class="st0" d="M512.71,163.1c-.45-.45-1.17-.45-1.62,0l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62Z"/>
+    <path class="st0" d="M513.93,165.93l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62s-1.17-.45-1.62,0Z"/>
+    <path class="st0" d="M517,218.27h-.01c-.63,0-1.14.51-1.14,1.14s.52,1.14,1.15,1.14,1.14-.51,1.14-1.14-.51-1.14-1.14-1.14Z"/>
+  </g>
+</svg>
+        </div>
+        <div class="pedido-card-body">
+          <button class="btn-pedido btn-wpp-pedido" onclick="window.open('https://wa.me/5518997657831?text=Olá! Quero fazer um pedido no O Barril Grill','_blank')">
+            📱 Pedir pelo WhatsApp
+          </button>
+          <button class="btn-pedido btn-ifood">
+            🍔 Pedir pelo iFood
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato-section">
+    <div class="contato-grid">
+      <div class="contato-info">
+        <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem">Onde Estamos</p>
+        <h2>Grupo O Barril</h2>
+        <div class="contato-item">
+          <div class="c-icon">📍</div>
+          <div>
+            <p class="c-label">Endereço</p>
+            <!-- ✏️ ENDEREÇO -->
+            <p class="c-val">R. Antônio Conte, 348<br>Cândido Mota – SP</p>
+          </div>
+        </div>
+        <div class="contato-item">
+          <div class="c-icon">📞</div>
+          <div>
+            <p class="c-label">Telefone / WhatsApp</p>
+            <!-- ✏️ TELEFONE -->
+            <p class="c-val">(18) 99765-7831</p>
+          </div>
+        </div>
+        <div class="contato-item">
+          <div class="c-icon">🕐</div>
+          <div>
+            <p class="c-label">Horário de Funcionamento</p>
+            <!-- ✏️ HORÁRIO -->
+            <p class="c-val">Segunda a Domingo<br>18h às 23h</p>
+          </div>
+        </div>
+      </div>
+      <div class="mapa-placeholder">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.3!2d-50.3862!3d-22.7457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQ0JzQ0LjUiUyA1MMKwMjMnMTAuMyJX!5e0!3m2!1spt!2sbr!4v1234567890"
+          loading="lazy" title="Mapa Grupo O Barril">
+        </iframe>
+      </div>
+      <div class="contato-form">
+        <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:1rem">Fale Conosco</p>
+        <label class="form-label">Nome</label>
+        <input class="form-input" type="text" id="cf-nome" placeholder="Seu nome">
+        <label class="form-label">Telefone</label>
+        <input class="form-input" type="tel" id="cf-tel" placeholder="(18) 9 ____-____">
+        <label class="form-label">Mensagem</label>
+        <textarea class="form-input" id="cf-msg" placeholder="Como podemos ajudar?"></textarea>
+        <button class="btn-enviar" onclick="enviarContato()">Enviar Mensagem 📨</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo-grupo">Grupo</span>
+        <span class="footer-logo-nome">O Barril</span>
+        <p class="footer-tagline">Três experiências.<br>Um só sabor.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Cardápios</h4>
+        <a onclick="irPara('cardapio');trocarMarca('rocket')">The Rocket's</a>
+        <a onclick="irPara('cardapio');trocarMarca('pizza')">O Barril Pizza</a>
+        <a onclick="irPara('cardapio');trocarMarca('grill')">O Barril Grill</a>
+      </div>
+      <div class="footer-col">
+        <h4>Institucional</h4>
+        <a onclick="irPara('promos')">Promoções</a>
+        <a onclick="irPara('pedido')">Fazer Pedido</a>
+        <a onclick="irPara('contato')">Contato</a>
+      </div>
+      <div class="footer-col">
+        <h4>Siga-nos</h4>
+        <div class="social-row">
+          <div class="social-ico" title="Instagram">📸</div>
+          <div class="social-ico" title="Facebook">👤</div>
+          <div class="social-ico" title="WhatsApp" onclick="window.open('https://wa.me/5518997657831','_blank')">💬</div>
+        </div>
+      </div>
+      <div class="footer-col" style="display:flex;align-items:center;justify-content:center">
+        <div class="footer-badge">
+          <span>Qualidade</span>
+          <span>OB</span>
+          <span style="font-size:7px;color:rgba(255,255,255,0.3)">Sabor</span>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2024 Grupo O Barril. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+</div><!-- /home -->
+
+<!-- ===== CARDÁPIO ===== -->
+<div class="pagina" id="pagina-cardapio">
+  <div class="page-header">
+    <h1>Cardápio</h1>
+    <p>Escolha sua marca favorita</p>
+  </div>
+  <div class="brand-tabs">
+    <button class="btab btab-blue ativo" id="tab-rocket" onclick="trocarMarca('rocket')">🚀 The Rocket's</button>
+    <button class="btab btab-green" id="tab-pizza" onclick="trocarMarca('pizza')">🍕 O Barril Pizza</button>
+    <button class="btab btab-amber" id="tab-grill" onclick="trocarMarca('grill')">🥩 O Barril Grill</button>
+  </div>
+  <div class="menu-wrapper">
+
+    <div class="menu-marca ativo" id="menu-rocket">
+      <p class="menu-cat-titulo">Pizzas Tradicionais</p>
+      <div class="menu-itens">
+        <div class="menu-item"><div class="mi-info"><h4>Margherita Express</h4><p>Molho de tomate, mussarela e manjericão</p></div><span class="mi-preco preco-blue">R$ 32</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Calabresa Hit</h4><p>Calabresa fatiada, cebola e azeitona</p></div><span class="mi-preco preco-blue">R$ 35</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Frango com Catupiry</h4><p>Frango desfiado temperado e catupiry cremoso</p></div><span class="mi-preco preco-blue">R$ 37</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Portuguesa</h4><p>Presunto, ovos, ervilha e cebola</p></div><span class="mi-preco preco-blue">R$ 38</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>4 Queijos</h4><p>Mussarela, provolone, parmesão e catupiry</p></div><span class="mi-preco preco-blue">R$ 40</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Pepperoni Rocket</h4><p>Molho especial da casa e pepperoni fatiado</p></div><span class="mi-preco preco-blue">R$ 42</span></div>
+      </div>
+      <p class="menu-cat-titulo">Combos</p>
+      <div class="menu-itens">
+        <div class="menu-item"><div class="mi-info"><h4>Combo Família</h4><p>2 pizzas tradicionais grandes + 2L de refrigerante</p></div><span class="mi-preco preco-blue">R$ 69</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Combo Casal</h4><p>1 pizza + 1 sobremesa + 1L de refrigerante</p></div><span class="mi-preco preco-blue">R$ 52</span></div>
+      </div>
+    </div>
+
+    <div class="menu-marca" id="menu-pizza">
+      <p class="menu-cat-titulo">Pizzas Gourmet</p>
+      <div class="menu-itens">
+        <div class="menu-item"><div class="mi-info"><h4>Burrata & Tomate Seco</h4><p>Massa artesanal, burrata fresca, tomate seco e rúcula</p></div><span class="mi-preco preco-green">R$ 68</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Trufada</h4><p>Creme de trufa negra, cogumelos shiitake e parmesão</p></div><span class="mi-preco preco-green">R$ 78</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Salmão ao Limone</h4><p>Salmão defumado, cream cheese e alcaparras</p></div><span class="mi-preco preco-green">R$ 72</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Camarão ao Alho</h4><p>Camarões salteados, alho confitado e azeite de ervas</p></div><span class="mi-preco preco-green">R$ 75</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Barril Especial</h4><p>Filé mignon, gorgonzola, pera e nozes caramelizadas</p></div><span class="mi-preco preco-green">R$ 82</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Vegana do Chef</h4><p>Legumes grelhados da estação, homus e azeite de ervas</p></div><span class="mi-preco preco-green">R$ 58</span></div>
+      </div>
+      <p class="menu-cat-titulo">Pizzas Doces</p>
+      <div class="menu-itens">
+        <div class="menu-item"><div class="mi-info"><h4>Nutella & Morango</h4><p>Nutella, morangos frescos e granola crocante</p></div><span class="mi-preco preco-green">R$ 48</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Banana Caramelada</h4><p>Banana, doce de leite artesanal e canela</p></div><span class="mi-preco preco-green">R$ 42</span></div>
+      </div>
+    </div>
+
+    <div class="menu-marca" id="menu-grill">
+      <p class="menu-cat-titulo">Filés & Grelhados</p>
+      <div class="menu-itens">
+        <div class="menu-item"><div class="mi-info"><h4>Filé Mignon ao Molho Madeira</h4><p>300g com arroz, farofa e legumes grelhados</p></div><span class="mi-preco preco-amber">R$ 89</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Picanha na Brasa</h4><p>400g com vinagrete, pão de alho e farofa</p></div><span class="mi-preco preco-amber">R$ 96</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Contra-filé Barril</h4><p>350g com fritas rústicas e salada da estação</p></div><span class="mi-preco preco-amber">R$ 78</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Frango Grelhado Especial</h4><p>Peito de frango com ervas, arroz e brócolis</p></div><span class="mi-preco preco-amber">R$ 65</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Mix Grill do Chef</h4><p>Seleção de cortes nobres grelhados para 2 pessoas</p></div><span class="mi-preco preco-amber">R$ 148</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Salmão na Grelha</h4><p>300g com purê de batata e capim-limão</p></div><span class="mi-preco preco-amber">R$ 82</span></div>
+      </div>
+      <p class="menu-cat-titulo">Entradas</p>
+      <div class="menu-itens">
+        <div class="menu-item"><div class="mi-info"><h4>Tábua de Frios</h4><p>Embutidos selecionados, queijos e geleias artesanais</p></div><span class="mi-preco preco-amber">R$ 52</span></div>
+        <div class="menu-item"><div class="mi-info"><h4>Carpaccio de Filé</h4><p>Com rúcula, parmesão ralado e alcaparras</p></div><span class="mi-preco preco-amber">R$ 45</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== PROMOÇÕES PAGE ===== -->
+<!-- ============================================================ -->
+<!--  ✏️  PROMOÇÕES — edite cada bloco abaixo                    -->
+<!--  Para remover: apague o bloco <div class="promo-pg-card">   -->
+<!--  Para adicionar: copie um bloco e cole dentro de            -->
+<!--  <div class="promos-page-grid">                             -->
+<!-- ============================================================ -->
+<div class="pagina" id="pagina-promos">
+  <div class="page-header">
+    <h1>Promoções</h1>
+    <p>Ofertas especiais das três marcas</p>
+  </div>
+  <div class="promos-page-grid">
+
+    <!-- ✏️ PROMOÇÃO 1 -->
+    <div class="promo-pg-card">
+      <div class="promo-pg-banner pb-blue"><span>🚀</span><span class="promo-pg-badge">Rocket's</span></div>
+      <div class="promo-pg-body">
+        <h3>Terça da Pizza Popular</h3>
+        <p>Todas as pizzas tradicionais com 30% de desconto às terças-feiras para pedidos via WhatsApp.</p>
+        <div class="promo-pg-footer">
+          <span class="promo-valid">📅 Toda terça-feira</span>
+          <button class="btn-pp btn-pp-blue" onclick="irPara('pedido')">Pedir agora</button>
+        </div>
+      </div>
+    </div>
+    <!-- ✏️ FIM PROMOÇÃO 1 -->
+
+    <!-- ✏️ PROMOÇÃO 2 -->
+    <div class="promo-pg-card">
+      <div class="promo-pg-banner pb-blue"><span>🍕</span><span class="promo-pg-badge">Rocket's</span></div>
+      <div class="promo-pg-body">
+        <h3>Combo Família R$ 69</h3>
+        <p>2 pizzas tradicionais tamanho grande + 2 litros de refrigerante. Perfeito para reunir a turma.</p>
+        <div class="promo-pg-footer">
+          <span class="promo-valid">🕐 Sempre disponível</span>
+          <button class="btn-pp btn-pp-blue" onclick="irPara('pedido')">Pedir agora</button>
+        </div>
+      </div>
+    </div>
+    <!-- ✏️ FIM PROMOÇÃO 2 -->
+
+    <!-- ✏️ PROMOÇÃO 3 -->
+    <div class="promo-pg-card">
+      <div class="promo-pg-banner pb-green"><span>🍷</span><span class="promo-pg-badge">Barril Pizza</span></div>
+      <div class="promo-pg-body">
+        <h3>Noite Gourmet — Sex e Sáb</h3>
+        <p>Jantar para dois: 1 pizza gourmet + entrada + sobremesa + taça de vinho por R$ 120.</p>
+        <div class="promo-pg-footer">
+          <span class="promo-valid">📅 Sexta e sábado</span>
+          <button class="btn-pp btn-pp-green" onclick="irPara('pedido')">Reservar</button>
+        </div>
+      </div>
+    </div>
+    <!-- ✏️ FIM PROMOÇÃO 3 -->
+
+    <!-- ✏️ PROMOÇÃO 4 -->
+    <div class="promo-pg-card">
+      <div class="promo-pg-banner pb-amber"><span>🥩</span><span class="promo-pg-badge">Barril Grill</span></div>
+      <div class="promo-pg-body">
+        <h3>Almoço Executivo do Grill</h3>
+        <p>De segunda a sexta, filé grelhado + acompanhamentos + bebida por R$ 55. Só até 14h.</p>
+        <div class="promo-pg-footer">
+          <span class="promo-valid">🕐 Seg–Sex até 14h</span>
+          <button class="btn-pp btn-pp-amber" onclick="irPara('pedido')">Reservar</button>
+        </div>
+      </div>
+    </div>
+    <!-- ✏️ FIM PROMOÇÃO 4 -->
+
+  </div>
+</div>
+<!-- ============================================================ -->
+<!--  ✏️  FIM DA ÁREA DE PROMOÇÕES                               -->
+<!-- ============================================================ -->
+
+<!-- ===== FAZER PEDIDO PAGE ===== -->
+<div class="pagina" id="pagina-pedido">
+  <div class="page-header">
+    <h1>Fazer Pedido</h1>
+    <p>Escolha sua marca e peça agora</p>
+  </div>
+  <section class="pedido-section" style="padding:3rem 2rem">
+    <div class="pedido-grid">
+      <div class="pedido-card">
+        <div class="pedido-card-header bc-blue"><svg id="svg-rocket" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 286.9 271.1" width="130px" height="100px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #2c51a1;
+      }
+
+      .st1 {
+        fill: #ea2a28;
+      }
+
+      .st2, .st3 {
+        fill: #fff;
+      }
+
+      .st4 {
+        fill: #f6921e;
+      }
+
+      .st3 {
+        stroke: #353033;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+
+      .st5 {
+        fill: #ffd440;
+      }
+    </style>
+  </defs>
+  <path class="st0" d="M60.3,168.4h0,0s0,0,0,0Z"/>
+  <g>
+    <g>
+      <path class="st2" d="M132.9,251.2h-1.3v7.3h1.3c1.2,0,2.1-.3,2.8-1,.7-.7,1.1-1.5,1.1-2.6s-.4-1.9-1.1-2.6c-.7-.7-1.7-1-2.8-1Z"/>
+      <polygon class="st2" points="113.6 255.3 115.1 255.3 114.4 253.5 113.6 255.3"/>
+      <path class="st2" d="M94.4,250.6c-.4-.4-.5-.8-.6-1.3,0,.5-.2,1.1-.6,1.5l-6,7.8h4.6c.6,0,1.1.2,1.4.6.1.1.2.3.3.5.1-.2.2-.5.4-.7l6-7.8h-4.2c-.6,0-1.1-.2-1.4-.6Z"/>
+      <path class="st2" d="M68.8,251.2h-2v2.9h2c.6,0,1-.1,1.3-.4.3-.3.4-.6.4-1s-.1-.7-.4-1c-.3-.3-.7-.4-1.3-.4Z"/>
+      <path class="st2" d="M206.2,251.2h-2.2v2.6h2.2c.5,0,.9-.1,1.2-.4.3-.2.4-.5.4-.9s-.1-.7-.4-.9c-.3-.3-.7-.4-1.2-.4Z"/>
+      <path class="st2" d="M232.8,235.9H55.9c-11.2,0-20.3,7.9-20.3,17.6s9.2,17.6,20.3,17.6h177c11.2,0,20.3-7.9,20.3-17.6s-9.2-17.6-20.3-17.6ZM73.2,256.5c-1.1,1-2.5,1.5-4.2,1.5h-2.2v2.4c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h4.4c1.7,0,3.1.5,4.2,1.5,1.1,1,1.7,2.3,1.7,3.9s-.6,2.9-1.7,4ZM80.1,260.4c0,.6-.2,1.2-.6,1.6-.4.4-1,.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6s1.2.2,1.6.6c.4.4.6,1,.6,1.6v11.2ZM104.4,258.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.4c-.4.4-.9.6-1.4.6h-8.8c-.6,0-1.1-.2-1.5-.6-.2-.2-.3-.4-.4-.6,0,.2-.2.4-.4.6-.4.4-.9.6-1.4.6h-8.8c-.6,0-1.1-.2-1.5-.6-.4-.4-.6-.9-.6-1.5s.2-1.1.6-1.5l6-7.8h-4.2c-.6,0-1.1-.2-1.4-.6-.4-.4-.6-.9-.6-1.4s.2-1,.6-1.4c.4-.4.9-.6,1.4-.6h8.4c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.4,0-.6.2-1,.6-1.4.4-.4.9-.6,1.4-.6h8.4c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.5s-.2,1.1-.6,1.5l-6,7.8h4.6ZM121.1,262c-.4.4-.9.6-1.6.6-1,0-1.7-.6-2.1-1.5l-.8-1.8h-4.6l-.8,1.9c-.6,1.3-1.5,1.5-2,1.5s-1.1-.2-1.5-.6c-.4-.4-.6-.9-.6-1.5s0-.7.3-1.1l4.6-10.7c.5-1.1,1.4-1.8,2.5-1.8s2,.6,2.5,1.8l4.6,10.6c.2.5.2.8.2,1.1,0,.6-.2,1.1-.6,1.6ZM140.1,258.8c-.7,1.2-1.7,2.1-3,2.8-1.3.7-2.7,1-4.3,1h-3.3c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h3.4c1.6,0,3,.3,4.3,1,1.3.7,2.3,1.6,3,2.8.7,1.2,1.1,2.5,1.1,3.9s-.4,2.8-1.1,4ZM153.3,262c-.4.4-.9.6-1.5.6h-7.7c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h7.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6h-5.3v1.4h4.4c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.4c-.4.4-.9.6-1.4.6h-4.4v1.9h5.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5ZM165.4,262c-.4.4-.9.6-1.5.6h-7.1c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-.9-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4,1-.6,1.6-.6s1.1.2,1.5.6c.4.4.6.9.6,1.6v9.2h4.9c.6,0,1.1.2,1.5.6.4.4.6.9.6,1.5s-.2,1.1-.6,1.5ZM171.4,260.4c0,.6-.2,1.2-.6,1.6-.4.4-1,.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6s1.2.2,1.6.6c.4.4.6,1,.6,1.6v11.2ZM185.9,250.3l-4.5,10.5c-.7,1.6-1.9,1.9-2.5,1.9s-1.8-.2-2.5-1.9l-4.5-10.5c-.1-.3-.2-.7-.2-1,0-.6.2-1.2.6-1.6.4-.4,1-.6,1.6-.6,1,0,1.7.6,2.1,1.6l2.9,7.2,3-7.3c.3-.9,1.1-1.4,2.1-1.4s1.1.2,1.5.6c.4.4.6.9.6,1.5s0,.7-.3,1.1ZM198.4,262c-.4.4-.9.6-1.5.6h-7.7c-.6,0-1.2-.2-1.6-.6-.4-.4-.6-1-.6-1.6v-11.1c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h7.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6h-5.3v1.4h4.4c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1-.6,1.4c-.4.4-.9.6-1.4.6h-4.4v1.9h5.5c.6,0,1.1.2,1.4.6.4.4.6.9.6,1.4s-.2,1.1-.6,1.5ZM211.5,259c.4.5.5,1,.5,1.5s-.2,1.1-.6,1.5c-.4.4-.9.6-1.5.6s-1.3-.3-1.8-.9l-3-4.1h-1.1v2.8c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-11.2c0-.6.2-1.1.6-1.6.4-.4.9-.6,1.6-.6h4.6c1.6,0,3,.5,4.1,1.4,1.1,1,1.6,2.3,1.6,3.8s-.4,2.2-1,3.1c-.4.5-.8.9-1.3,1.2l1.7,2.4ZM225.9,250.4l-4.2,6.3v3.8c0,.6-.2,1.1-.6,1.6-.4.4-.9.6-1.6.6s-1.2-.2-1.6-.6c-.4-.4-.6-1-.6-1.6v-3.8l-4.2-6.3c-.2-.3-.4-.8-.4-1.2s.2-1.1.6-1.5c.4-.4.9-.6,1.5-.6s1.5.4,1.9,1.1l2.8,4.2,2.8-4.2c.4-.7,1.1-1,1.8-1s1.1.2,1.5.6c.4.4.6.9.6,1.5s-.1.8-.4,1.2Z"/>
+    </g>
+    <path class="st0" d="M86,185.8h0,0s0,0,0,0Z"/>
+    <g>
+      <g>
+        <path class="st1" d="M143.2,159.5c-10.9-10.3-19.5-22.6-25.6-36.2-1,.3-1.9.8-2.6,1.6l-29.8,29.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l14.8-14.8c2.2-.8,4.8-.4,6.6,1.4s2.2,4.4,1.4,6.6l-34.8,34.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l34.8-34.8c2.2-.8,4.8-.4,6.6,1.4,1.8,1.8,2.2,4.4,1.4,6.6l-25,25c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l25-25c2.2-.8,4.8-.4,6.6,1.4s2.2,4.4,1.4,6.6l-6,6c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l23.3-23.3c-11.9-5.2-22.9-12.5-32.5-21.6Z"/>
+        <path class="st1" d="M77.7,204.6c-2.4-2.4-6.3-2.4-8.7,0l-3.8,3.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l3.8-3.8c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M103.2,211.2c-2.4-2.4-6.3-2.4-8.7,0l-3.8,3.8c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l3.8-3.8c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M140.3,207.8c-2.4-2.4-6.3-2.4-8.7,0l-2.5,2.5c-2.4,2.4-2.4,6.3,0,8.7s6.3,2.4,8.7,0l2.5-2.5c2.4-2.4,2.4-6.3,0-8.7Z"/>
+        <path class="st1" d="M83.6,164.6c-2.4-2.4-6.3-2.4-8.7,0l-2.5,2.5c-2.4,2.4-2.4,6.3,0,8.7,2.4,2.4,6.3,2.4,8.7,0l2.5-2.5c2.4-2.4,2.4-6.3,0-8.7Z"/>
+      </g>
+      <g>
+        <path class="st5" d="M220.5,76.5l-86.1,26.5c.6.6,1.1,1.3,1.4,2,6,13.3,14.6,25.4,25.3,35.6,9.5,9.1,20.6,16.3,32.5,21.6.8.3,1.4.8,2,1.4l29.5-82.2c1-2.9-1.7-5.8-4.6-4.9Z"/>
+        <path class="st4" d="M161.1,140.6c-10.7-10.1-19.3-22.2-25.3-35.6-1.4-3-4.7-4.6-8-3.8l-9.5,2.4c-3.9,1-6.1,5.1-4.8,8.9,5.9,17.9,16.1,34,29.8,47,12.2,11.6,26.8,20.3,42.8,25.5,3.8,1.2,7.9-.9,8.9-4.8l2.6-10c.8-3.3-.8-6.7-3.9-8-12-5.2-23-12.5-32.5-21.6Z"/>
+        <path class="st3" d="M170.4,132.1"/>
+        <path class="st3" d="M170.4,132.1"/>
+        <circle class="st1" cx="202.2" cy="99.4" r="6.6"/>
+        <circle class="st1" cx="174.4" cy="102.7" r="6.6" transform="translate(-19 43.2) rotate(-13.4)"/>
+        <circle class="st1" cx="193.9" cy="127.4" r="6.6"/>
+        <circle class="st1" cx="166.9" cy="127.4" r="6.6" transform="translate(6.4 262.8) rotate(-77.5)"/>
+      </g>
+    </g>
+  </g>
+  <g>
+    <path class="st2" d="M20,168c-2.3-.2-4.7-.3-7.1-.4-1,0-2.1-.2-3.1-.3q-.5,0-.5.4c0,1.3-.2,2.4-.2,3.7,0,1-.2,2-.3,3,0,.4-.2.5-.7.5-.4,0-.7-.1-1.1-.2-1.9-.2-3.8-.4-5.7-.5-.3,0-.6-.2-.9-.3-.3-.3-.3-.5-.3-.8.1-.7.3-1.5.3-2.2.3-2.2.5-4.3.8-6.5.2-2.3.4-4.6.7-6.9.3-2.2.5-4.3.8-6.5,0-.6.3-.8.9-.7,2,.2,3.9.4,5.9.5.7,0,.9.3,1,1,0,1.2.2,2.3.1,3.5,0,1.1,0,2.1-.1,3.1,0,.5,0,.5.5.6,1.4.1,2.7.3,4.1.4,2.1.2,4.1.5,6.2.8,2.4.3,4.9.5,7.3.8,5.4.6,10.8,1.1,16.2,1.6.2,0,.5.1.7.1.3,0,.5.3.5.6,0,.5,0,1.1,0,1.6,0,.4,0,.9,0,1.4,0,.4,0,.7-.1,1.1,0,.6-.1,1.2-.1,1.9,0,.9-.4,1.2-1.4,1.1-3.5-.3-7.1-.5-10.5-.9-2.2-.2-4.4-.4-6.7-.6h0c-2.4-.3-4.8-.6-7.2-.7Z"/>
+    <path class="st2" d="M45.8,144.6c1,.4,2,.7,3,1,.1,0,.3,0,.4.1.3.1.4.3.3.6-.2,1.4-.5,2.9-.8,4.3-.2.9-.7,1.8-1.1,2.7-.1.4-.4.4-.8.3-.5,0-1-.2-1.6-.5-2.4-.8-4.9-1.7-7.4-2.4-2.8-.8-5.7-1.6-8.5-2.4-1.9-.6-3.7-1-5.5-1.5-3.3-1-6.6-2.1-10-3.1-2-.7-4-1.3-5.9-2-1.1-.3-2.2-.8-3.3-1.2-.4-.1-.5-.3-.5-.7,0-.6,0-1.1.2-1.6.3-1.1.6-2.2.9-3.3.2-.7.5-1.3.8-2,.2-.6.5-.7,1-.5.9.2,1.8.5,2.7.8,2,.7,4,1.2,6,1.9,1.9.6,3.9,1.2,5.8,1.8,0,0,.2,0,.2,0,.2.1.3,0,.3-.2.1-.5.2-1,.4-1.5.3-1,.6-2,.9-3.1.3-1.4.6-2.8.9-4.3,0-.4.1-.4-.4-.6-2.9-.8-5.8-1.6-8.6-2.5-1.6-.5-3.2-1-4.8-1.6-.2,0-.4-.1-.5-.2-.5-.2-.7-.6-.6-1.1,0-1,.2-2,.3-2.9.1-1.2.5-2.4.9-3.6.1-.4.4-.6.9-.4.5.1,1,.3,1.4.5,2.2.8,4.5,1.3,6.7,1.9,3.3.9,6.5,1.7,9.7,2.6,3.3.9,6.5,1.8,9.8,2.7,3.9,1.1,7.8,2.1,11.6,3.2,1.1.3,2.2.6,3.3.9.1,0,.2,0,.3.2.4.1.5.4.4.7-.3,1.2-.4,2.3-.9,3.5-.3.7-.6,1.4-.8,2.2-.1.4-.3.8-.5,1.3-.2.5-.4.6-.9.4-2.4-.6-4.8-1.2-7.2-1.8-2.5-.7-5.1-1.5-7.7-2.2-1.1-.3-2.3-.7-3.5-1q-.5-.1-.6.3c-.5,1.5-.9,3.1-1.3,4.6-.4,1.4-.7,2.9-1.1,4.2,0,.4,0,.5.3.6,2,.6,4,1.2,6,1.7,1.1.3,2.1.6,3.2,1,2,.7,4,1.4,5.9,2Z"/>
+    <path class="st2" d="M52.8,111.8c.4.2.4.2.7-.2.2-.3.4-.6.6-1,.4-.5.7-1.1,1.1-1.6.9-1.4,1.7-3,2.5-4.5.8-1.4,1.4-2.8,2.1-4.3.1-.2.2-.4.4-.7.3-.5.7-.7,1.2-.5.5.1,1,.3,1.4.6,1.4.8,2.8,1.6,4.3,2.4.7.4.8.7.6,1.4-.3,1.2-.9,2.3-1.5,3.3-.6.9-1,1.9-1.5,2.8-.8,1.4-1.5,2.7-2.3,4-.3.6-.6,1.2-.9,1.9,0,.1-.2.3-.2.4-.9,1.7-1.8,3.4-2.8,5.2-.5,1-1.1,2-1.8,3-.3.5-.7.9-1,1.4-.2.3-.5.4-.9.2-.3-.2-.6-.3-.9-.6-.8-.5-1.5-1.1-2.3-1.6-1.2-.8-2.5-1.6-3.7-2.4-.7-.5-1.5-.9-2.2-1.4-2.5-1.5-4.9-2.9-7.3-4.4-1.3-.8-2.5-1.5-3.8-2.2-2-1-4-2-6-3-2.1-1.1-4-2.2-6-3.3-1.3-.7-2.5-1.6-3.7-2.4-.6-.4-1.2-.8-1.9-1.2-.5-.3-.6-.6-.4-1.1.2-.4.4-.7.6-1.1.3-.4.6-.8.8-1.1.9-1.5,1.8-3.1,2.7-4.6.5-.8,1.1-1.6,1.6-2.4,1.1-1.7,2.1-3.4,2.9-5.2.9-1.7,1.9-3.5,2.8-5.2.2-.3.4-.5.6-.8.2-.3.4-.4.9-.2.1,0,.2.1.3.2.5.3,1,.5,1.5.7,1.2.6,2.5,1.2,3.7,1.8.2.1.5.2.7.3.5.2.9.4,1.1.8.2.2.3.5.2.8,0,.3-.2.7-.5,1-.5.7-.9,1.5-1.3,2.4-.7,1.7-1.7,3.4-2.6,5-.3.6-.5,1.2-.7,1.8-.4.9-.8,1.9-1.2,2.9-.2.4-.2.4.2.6,1.5.8,3,1.6,4.4,2.5.2,0,.3,0,.4-.2.2-.5.5-1,.7-1.5.4-1.2,1.2-2.2,1.8-3.3.5-.7.9-1.5,1.2-2.3.3-.6.6-1.2.9-1.8,0-.1.2-.2.2-.3.4-.4.7-.4,1.1-.2.9.5,1.8,1,2.8,1.5.9.4,1.7.9,2.5,1.3.6.3.8.6.4,1.3-.3.6-.6,1.3-1,2-.2.5-.5,1.1-.7,1.7-.2.3-.4.7-.6,1.1-.5,1.1-.9,2.2-1.4,3.3-.2.4-.5.8-.5,1.3,0,.4,0,.4.3.7.8.4,1.5.8,2.2,1.2s1.5.9,2.3,1.3h0c1.5.9,3.1,1.8,4.6,2.6Z"/>
+    <path class="st2" d="M65.7,81.8c-1.3-1.3-2.8-2.6-4.2-4-.8-.7-1.6-1.5-2.3-2.4-1.2-1.2-2.4-2.4-3.6-3.5-3.1-3-6.1-6.1-9-9.3-.4-.5-.9-1-1.3-1.5-.2-.2-.3-.4-.1-.8.2-.4.6-.6,1-.9.4-.3.7-.5,1-.7.3-.3.7-.6,1-.9.5-.4.8-.9,1.2-1.3.3-.3.6-.5.9-.8,1.2-1.2,2.5-2.3,3.7-3.4,1.3-1.3,2.6-2.6,3.8-3.8.5-.4,1-.8,1.6-1.1,2.2-1.1,4.5-1,6.8-.5.5,0,1,.4,1.5.6,2.7,1.3,5.1,2.8,7.1,5,.8.8,1.6,1.6,2.3,2.4,1.3,1.4,2.1,3.1,3,4.7.5,1,.8,2.1.9,3.3,0,.4,0,.7,0,1,0,.5-.2,1-.3,1.5,0,.2,0,.3.2.4.7.1,1.2.3,1.8.4.5.2,1.1.4,1.6.6,1,.4,2,.8,3,1.2.1,0,.3,0,.3.2,1.1.6,2.2,1,3.3,1.4,1.1.4,2.2.8,3.2,1.3.5.3,1,.6,1.4,1,.4.3.3.5.2,1-.2.7-.7,1.1-1.2,1.7-.9.9-1.6,1.9-2.4,2.8-.6.7-1.3,1.2-1.9,1.8-.3.2-.5.3-.9.2-1.3-.3-2.5-.8-3.7-1.4s-1.3-.4-2-.6c-1-.3-2-.5-3-.9-.9-.3-1.7-.7-2.5-1-.5-.2-.9-.4-1.4-.6-.3-.2-.4-.1-.6.1-.6.7-1.1,1.3-1.7,1.9q-.3.4,0,.8c2.6,2.6,5.1,5.2,7.6,7.9.2.2.3.4.5.5.1.2.2.4,0,.7-1,1.3-2.1,2.6-3.4,3.7-.6.6-1.3,1.3-1.9,1.9-.3.4-.6.4-.9,0-1.8-1.9-3.6-3.7-5.4-5.6t0,0c-1.7-1.7-3.4-3.5-5.2-5.2ZM64.8,67.6c1,1.1,2,2.3,3.1,3.4q.4.4.8,0c.6-.6,1.2-1.2,1.8-1.7,0,0,.2-.2.2-.3.4-.7.8-1.3,1.1-2.1.2-.6.3-1.2.3-1.9,0-.9-.4-1.8-.8-2.6-.8-1.3-1.9-2.2-2.9-3.2-.3-.4-.7-.6-1-1-.6-.5-1.2-.6-1.8-1-.8-.4-1.5-.5-2.4-.5-.8,0-1.4.1-2,.6-.8.6-1.4,1.2-2,1.9-.2.3-.5.6-.8.9q-.2.2,0,.5c1.6,1.7,3.2,3.4,4.9,5.1.5.5,1.1,1.1,1.6,1.7Z"/>
+    <path class="st2" d="M83.2,52.9c-.5-1-1-2.1-1.4-3.1-.6-1.5-1.3-2.9-1.9-4.3-.5-1.3-.9-2.6-1.1-3.9,0-.4-.1-.8-.2-1.2-.2-1.8,0-3.6.5-5.3.3-.9.6-1.8.9-2.7.3-.8.6-1.6,1.2-2.2,0,0,0,0,0-.1.5-.9,1.2-1.6,2-2.3.9-.7,1.8-1.5,2.9-2,1-.5,2-.9,3.1-1.2,1.3-.3,2.6-.3,3.9-.3,1,0,2,.2,2.9.6,1.5.6,2.8,1.4,4,2.4,1.9,1.6,3.6,3.1,5.3,4.9,1,1,1.8,2.1,2.6,3.2,1.7,2.6,3,5.4,4.2,8.3.8,1.9,1.5,3.8,1.8,5.9,0,.6.1,1.3.2,1.9.2,1.3,0,2.5,0,3.7,0,.8-.2,1.6-.3,2.5-.3,1.6-.7,3.1-1.5,4.5-.4.6-.8,1.1-1.3,1.7-.7.9-1.6,1.5-2.4,2.1h-.2c-.9.5-1.7.9-2.6,1.2-.7.3-1.5.4-2.2.6-.8.3-1.6.3-2.4.2-1.1,0-2.3-.2-3.4-.4-1-.2-2-.5-2.9-1,0,0-.2-.1-.2-.1-1-.3-1.8-.9-2.6-1.5-.7-.5-1.4-1.1-2-1.7-2-1.9-3.4-4.1-4.7-6.4-.1-.2-.3-.4-.4-.6-.7-1.1-1.4-2.2-1.9-3.4ZM98.5,39.4c-1-1.3-2.2-2.5-3.6-3.5-.8-.6-1.6-1.1-2.6-1.3-.3-.1-.6-.1-1,0-.7.1-1.4.5-2.1.8-.6.4-1,.8-1.1,1.5-.4,1.4-.5,2.8-.5,4.3.1,2.8,1.1,5.4,2.4,7.9,1.2,2.3,2.8,4.4,4.5,6.4.7.9,1.5,1.7,2.5,2.3.8.5,1.7.9,2.7.9.9,0,1.8-.1,2.6-.3,1.1-.2,1.8-.9,2.2-1.9.5-.9.6-1.9.5-3-.1-1.5-.5-3-1.1-4.4-.9-2.2-1.9-4.2-3.2-6.2-.9-1.2-1.6-2.3-2.5-3.4Z"/>
+    <path class="st2" d="M125.1,37.4c.1.4.4.8.6,1.1.6,1.1,1.2,2.1,1.9,3.1.6.7,1.3,1.2,2.1,1.6.2,0,.4.1.5.2,1,.7,2.2.8,3.3.8.9,0,2,0,2.9-.5,0,0,.1,0,.1,0,1-.3,1.8-1,2.5-1.7.3-.4.6-.9.9-1.4.2-.3.4-.7.6-1.1.4-.5.8-.7,1.3-.4.4.1.7.4,1,.6.3.2.7.4,1,.5.4.3.8.5,1.2.8.3.2.7.4,1,.4.2,0,.4.1.6.3.3,0,.6.3.8.3.6.2.9.7.8,1.3,0,0,0,.2,0,.3-.5,1-.9,2.1-1.3,3.1-.4,1.1-1.2,1.9-2,2.6-.3.2-.5.5-.8.7-1.2,1.1-2.6,1.8-4.1,2.4-1.2.4-2.4.8-3.6,1.2-1.2.4-2.4.5-3.7.3-.6-.1-1.3-.1-1.9-.2-.9-.1-1.7-.4-2.5-.6-.6-.2-1.1-.4-1.7-.6-.3-.1-.6-.3-.9-.4-1.3-.9-2.6-1.8-3.6-3.1-.2-.3-.5-.5-.7-.8-.6-.5-1-1.3-1.4-1.9-.6-.9-1.2-1.8-1.8-2.6-.7-1-1.1-2-1.5-3.1-.3-.6-.5-1.3-.7-1.9-.3-1-.5-2.1-.7-3.1-.2-.9-.2-1.8-.5-2.7,0-.3,0-.7-.1-1-.2-1.1-.3-2.1-.4-3.2,0-1.3-.1-2.6,0-3.9,0-.7.1-1.2.2-1.9.3-1.6.5-3.1,1.1-4.6.6-1.7,1.5-3.2,2.7-4.6.1-.2.4-.3.5-.5.3-.2.5-.4.8-.6.3-.3.7-.6,1-.8.9-.9,2-1.4,3.1-1.9,1-.5,2-.9,3.2-1,.3,0,.6-.1.9-.2,1.7-.3,3.6-.2,5.3.4.9.2,1.7.5,2.5,1,.7.4,1.4.9,2,1.5.3.3.4.6.3,1-.2.4-.4.8-.7,1.2-.9,1.5-1.9,2.9-2.8,4.3-.2.3-.4.5-.6.8-.3.4-.6.5-1.2.3-.5-.3-1-.6-1.5-.8-.9-.5-1.8-.7-2.8-.4-.6.1-1.1.1-1.7.4-.7.4-1.2.8-1.8,1.3-.5.6-1,1.3-1.2,2.1,0,0,0,.1,0,.2-.9,2-.9,4.1-.6,6.3,0,.2,0,.4,0,.6,0,1.4.4,2.7.9,4,.2.7.4,1.3.6,2,.3.9.6,1.9,1,2.8Z"/>
+    <path class="st2" d="M158.1,16.2c.6-.9,1.2-1.9,1.8-2.7.4-.7.7-1.3,1.1-2,.2-.3.4-.7.6-1.1.8-1.1,1.4-2.3,2-3.4.5-1.1,1.3-2.2,1.9-3.2.4-.8.9-1.6,1.4-2.4,0,0,0-.1,0-.2,0-.4.3-.5.7-.6,1.5-.3,3.1-.4,4.7-.5,1.2,0,2.4,0,3.6,0,.6,0,.9.4.6,1-.5.9-1,1.8-1.5,2.7-.1.2-.3.4-.4.6-1.2,2.7-2.8,5.2-4.3,7.8-1.1,1.9-2.1,3.8-3.2,5.7-.4.6-.7,1.2-1,1.8-.2.3-.2.5,0,.8.4.6.7,1.2,1,1.7,1.2,1.8,2.4,3.5,3.6,5.2.1.2.3.4.4.5.8,1.1,1.6,2.1,2.4,3.1,1,1.4,2,2.7,3,4.2,1.5,2.1,3,4.2,4.5,6.4.6.8,1.1,1.7,1.7,2.6.4.5.3.8-.3,1-.5.2-1,.3-1.6.3-1.5.2-3,.4-4.5.6-.4,0-.7.1-1,.2-.4,0-.6,0-.8-.3-.9-1.1-1.8-2.2-2.7-3.4-1.7-2.2-3.5-4.4-5.2-6.6-1-1.3-2-2.7-3-4-1-1.2-2.1-2.5-3.1-3.7,0,0,0,0-.1,0-.5.6-.9,1.3-1.4,1.9,0,.1,0,.3,0,.4.4,4.2.8,8.5,1.2,12.7,0,1.2.1,2.3.2,3.5,0,1,0,1.1-1.1,1.3-.7.1-1.5.2-2.2.3-1.1.1-2.1.2-3.2.4-.3,0-.6.1-.9.1-.6.2-.9,0-.9-.6-.1-.7-.2-1.5-.2-2.2,0-.8-.1-1.7-.2-2.5-.5-4.1-.9-8.3-1.2-12.4-.3-3.2-.6-6.4-.9-9.5,0-1.2-.3-2.4-.5-3.6-.1-1.6-.3-3.2-.4-4.8-.2-3-.4-6-.7-8.9,0-.3,0-.6,0-.9,0-.4.2-.7.6-.8,0,0,.2,0,.3,0,1.6-.2,3.2-.4,4.8-.5.6,0,1.2-.2,1.8-.2.8,0,1.1.2,1.1.9.1,1.1.2,2.1.3,3.1.2,2.9.5,5.9.7,8.8,0,.7.1,1.3.2,1.9,0,0,.1,0,.1,0,.1-.1.2-.3.3-.5Z"/>
+    <path class="st2" d="M196.6,38.1c0,.4,0,.5.4.6.4,0,.7.2,1.1.2.6.2,1.3.3,1.9.4,1.7.3,3.4.6,5.1.8,1.5.2,3.2.3,4.7.4.2,0,.5,0,.7.1.6,0,.9.4.9,1,0,.5,0,1,0,1.5-.2,1.6-.5,3.2-.7,4.9-.1.7-.4,1-1.1,1.1-1.2.2-2.5,0-3.6-.3-1-.2-2.1-.3-3.1-.4-1.5-.2-3-.4-4.6-.7-.7,0-1.3-.1-2.1-.2-.1,0-.3,0-.5,0-1.9-.2-3.8-.5-5.8-.8-1.1-.1-2.3-.3-3.5-.6-.6,0-1.1-.3-1.6-.4-.4-.1-.6-.3-.5-.8,0-.3.1-.7.2-1,.2-.9.5-1.8.7-2.7.3-1.4.6-2.9,1-4.3.2-.9.3-1.7.5-2.6.5-2.8,1-5.6,1.6-8.4.3-1.5.6-2.9.7-4.4.3-2.2.5-4.4.7-6.7.3-2.3.6-4.5,1-6.7.2-1.5.6-2.9,1-4.3.2-.7.3-1.4.4-2.1.1-.5.4-.8.9-.8.4,0,.8.1,1.2.2.4.1.9.3,1.3.4,1.7.3,3.5.6,5.2.9.9.1,1.9.4,2.8.6,2,.4,3.9.7,5.9.9,1.9.2,3.9.5,5.8.7.3,0,.6.2.9.3.4.1.5.3.5.7,0,.1,0,.2,0,.4,0,.6-.2,1.1-.2,1.6-.1,1.4-.2,2.8-.4,4.1,0,.2,0,.6,0,.8,0,.5,0,.9-.3,1.3-.1.3-.3.5-.7.5-.3,0-.7,0-1.1,0-.9-.2-1.7-.3-2.7-.3-1.9,0-3.7-.4-5.6-.6-.7-.1-1.3,0-2,0-1,0-2.1,0-3.1,0-.4,0-.4,0-.5.4-.2,1.7-.5,3.3-.7,5,0,.3,0,.3.3.3.6,0,1.1.1,1.7.1,1.3,0,2.5.3,3.7.6.9.2,1.7.3,2.5.3.7,0,1.3.1,2,.2.1,0,.2,0,.4.1.5.2.6.5.6,1-.2,1.1-.2,2.1-.4,3.1,0,.9-.2,1.9-.4,2.9-.1.7-.3.9-1,.9-.7,0-1.4-.1-2.2-.2-.6,0-1.2,0-1.8,0-.4,0-.8-.1-1.2-.1-1.2,0-2.4,0-3.6,0-.5,0-.9-.1-1.5,0-.4.1-.4,0-.5.5-.1.9-.2,1.7-.4,2.5s-.3,1.7-.4,2.6h0c-.3,1.7-.5,3.5-.8,5.2Z"/>
+    <path class="st2" d="M227.3,28.3c.8-2.2,1.4-4.5,2.1-6.7.3-.9.7-1.9,1.1-2.9q.2-.5-.2-.6c-1.2-.4-2.3-.8-3.5-1.1-.9-.3-1.9-.7-2.8-1.1-.4-.1-.5-.4-.3-.8.1-.4.3-.7.4-1,.7-1.8,1.3-3.6,1.9-5.4.1-.3.3-.5.6-.8.3-.2.6-.2.9,0,.7.3,1.4.6,2.1.9,2,.8,4.1,1.6,6.1,2.4,2.2.8,4.4,1.6,6.5,2.4,2,.8,4.1,1.6,6.1,2.4.6.2.7.5.5,1-.7,1.9-1.3,3.7-2,5.5-.3.7-.5.8-1.2.7-1.2-.2-2.3-.4-3.4-.8-1-.2-2-.5-3-.9-.5-.1-.5-.2-.7.4-.5,1.3-.9,2.6-1.4,3.9-.7,1.9-1.5,3.8-2.3,5.8-.9,2.3-1.7,4.6-2.5,6.9-1.9,5-3.7,10.2-5.6,15.3,0,.2-.2.5-.3.7-.2.3-.4.4-.7.3-.5-.1-1-.2-1.6-.4-.4-.1-.9-.3-1.3-.4-.4-.1-.7-.3-1.1-.4-.6-.2-1.2-.4-1.8-.6-.8-.3-1-.6-.7-1.6,1.1-3.3,2.3-6.7,3.4-10,.8-2.1,1.5-4.2,2.3-6.3q0,0,.1,0c.8-2.2,1.6-4.5,2.4-6.8Z"/>
+    <path class="st2" d="M252.7,26.9c-.9-.5-.9-1.5-.6-2.1.2-.4.4-.7.6-1.1.8-1.3,1.7-2.7,2.4-4.1.3-.5.8-.8,1.3-.6.6.2,1.2.4,1.8.6.3.2.7.4,1.1.5.3,0,.5.3.6.5,0,.1.1.3.2.4.5.6.3,1.1,0,1.7-.3.5-.7,1.1-1.1,1.6-.6,1-1.2,2-2.1,2.9,0,0,0,.2-.1.2-.5.6-1,.8-1.7.6-.5-.1-1-.4-1.5-.6h0c-.3-.2-.7-.4-1-.6Z"/>
+    <path class="st2" d="M251.7,69.1c-.9-1.1-1.5-2.3-2.3-3.5-.3-.4-.5-.8-.7-1.1-.4-.8-.8-1.6-.8-2.5,0-1,0-2.1-.1-3.1,0-.5,0-1,0-1.5,0-.7,0-1.4,0-2,0-.5.1-.7.7-.8.2,0,.4,0,.5,0,1.4-.5,3-.7,4.4-.9.4,0,.8,0,1.2,0,.4,0,.7.3.7.7,0,1,.5,2,.7,2.9,0,.4.2.7.3,1.1.4,1.4,1.1,2.7,2.2,3.7.3.2.5.4.7.6.7.7,1.5,1,2.3,1,.1,0,.2,0,.3,0,1.5-.4,2.6-1.4,3.3-2.7.3-.5.3-1.2.2-1.9-.2-.9-.6-1.6-1-2.3-.4-.6-.7-1.3-1-1.9-.3-.7-.7-1.4-1-2.1-.2-.5-.4-1-.6-1.5-.4-1.1-.9-2.4-1.3-3.5,0,0,0-.2,0-.3-1.1-2.5-.8-5,.3-7.5.6-1.3,1.4-2.5,2.2-3.7.3-.4.7-.8,1.1-1.1.1,0,.3-.2.4-.3,1.2-1.2,2.7-1.9,4.3-2.4,1.7-.6,3.5-.8,5.3-1,1.3,0,2.6.2,3.9.8,1.2.5,2.4,1.2,3.5,2,2.1,1.5,3.4,3.5,4.2,6,.2.6.4,1.3.6,2,.2.6.4,1.1.6,1.7,0,.5.1,1,.1,1.5,0,.3-.2.6-.6.7-.5.2-1.1.4-1.8.6-.5.1-.9.3-1.4.4-1.2.2-2.5.5-3.7.7-.4,0-.5,0-.7-.4-.3-.7-.5-1.4-.8-2.1-.3-.8-.7-1.7-1.4-2.3-.7-.6-1.5-1.1-2.2-1.6-1.1-.8-2.2-.6-3.3,0-.5.3-.9.7-1.3,1.3,0,.1,0,.2,0,.2-.1.9-.3,1.9,0,2.8.3.7.6,1.3,1,1.8.9,1.2,1.6,2.6,2.3,4,.8,1.6,1.4,3.2,1.8,4.8.1.5.2.9.4,1.3.5,2.1.2,4-.8,5.9-.7,1.2-1.4,2.4-2.1,3.6-1,1.6-2.5,2.8-4.2,3.8-.7.5-1.5.8-2.4,1.1-1.1.4-2.2.8-3.4.9-1.5.1-3,0-4.4-.3-1.1-.3-2.2-.6-3.2-1.1-.3-.2-.7-.4-1-.6-.8-.6-1.4-1.2-2.1-2Z"/>
+  </g>
+</svg></div>
+        <div class="pedido-card-body">
+          <button class="btn-pedido btn-wpp-pedido" onclick="window.open('https://wa.me/5518997657831?text=Olá! Quero fazer um pedido no The Rocket\'s','_blank')">📱 Pedir pelo WhatsApp</button>
+          <button class="btn-pedido btn-ifood">🍔 Pedir pelo iFood</button>
+        </div>
+      </div>
+      <div class="pedido-card">
+        <div class="pedido-card-header bc-green" style="padding:1.5rem"><svg id="svg-pizza" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28" width="180px" height="90px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffffff;
+      }
+
+      .st1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M112.82,234.7c92.59-8.42,108.83,137.74,17.17,148.62-98.38,11.7-113.12-140.2-17.17-148.62ZM112.63,236.96c-51.15,2.87-35.65,148.83,16.99,144.1,46.48-4.11,35.66-147.18-16.99-144.1Z"/>
+    <path class="st0" d="M303.21,381.88l-32.86-.21h-34.53v-1.03c8.59-.62,8.59-5.34,8.59-7.19v-126.86c0-1.85,0-6.57-8.59-7.18v-1.03h34.53c1.12,0,29.12,0,33.6-.21,69.25-2.26,74.3,60.76,11.01,65.48,71.5,3.08,79.71,78.01-11.76,78.21ZM273.9,243.73c-.37,1.03-.37,2.05-.37,2.87v55.84h32.67c34.16,0,36.22-61.79-2.24-61.99-15.49-.21-25.39-.82-30.05,3.28ZM306.2,304.7l-32.67-.21v68.97c0,.62,0,1.23.19,2.05,5.79,4.93,19.97,4.52,29.49,4.52,54.69.21,49.47-75.34,2.99-75.34Z"/>
+    <path class="st0" d="M486.33,376.55c1.49,2.87,6.53,4.31,8.21,4.31v1.03l-37.52-.21v-9.44c-29.68,20.53-76.91,13.14-79.34-17.04-1.87-22.79,14.19-35.1,37.52-39.41,29.68-4.93,38.27-11.08,40.69-15.81-2.05-11.29-7.47-19.71-21.47-20.32-6.72-.21-15.68,2.67-13.25,11.5,2.61,9.24-18.11,10.67-18.11,1.85,0-13.34,19.79-15.4,31.36-15.6,47.97-.41,52.08,18.68,52.08,43.72l-.19,55.42ZM457.02,370.18l.19-49.06c0-6.36,0-12.52-.75-18.27-2.43,3.28-8.03,7.59-22.4,12.11-20.53,6.36-29.49,21.14-28.56,39.62.93,18.06,19.6,36.54,51.52,15.6Z"/>
+    <path class="st0" d="M579.84,301.01c-14.93,0-5.97-19.5-12.69-19.91-9.15-.62-22.03,14.78-27.63,24.43l.19,68.15c0,1.85,0,6.57,8.59,7.19v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v22.99c5.04-9.24,16.24-22.38,27.25-24.02,24.27-4.11,29.12,22.58,13.07,22.58Z"/>
+    <path class="st0" d="M674.48,301.01c-14.93,0-5.97-19.5-12.69-19.91-9.15-.62-22.03,14.78-27.63,24.43l.19,68.15c0,1.85,0,6.57,8.59,7.19v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v22.99c5.04-9.24,16.24-22.38,27.25-24.02,24.27-4.11,29.12,22.58,13.07,22.58Z"/>
+    <path class="st0" d="M737.57,380.86v1.03h-46.3v-1.03c7.65-.62,8.59-4.52,8.59-6.57l-.19-89.29c-1.12-3.08-6.72-4.72-8.4-4.72v-1.03l37.52.21v3.08l.19,91.14c0,1.85,0,6.57,8.59,7.19ZM698.55,252.15c0-8.62,6.53-15.81,14.37-15.81s14.37,7.18,14.37,15.81-6.53,15.81-14.37,15.81-14.37-7.18-14.37-15.81Z"/>
+    <path class="st0" d="M791.51,380.86v1.03h-46.29v-1.03c8.03-.62,8.59-4.72,8.59-6.77l-.19-138.56c0-1.85,0-6.57-8.59-7.18v-1.03h46.3v1.03c-8.03.62-8.59,4.72-8.59,6.77l.19,138.56c0,1.85,0,6.57,8.59,7.19Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M552.4,432.5c0-.82.35-1.22,1.07-1.22h11.52c1.51,0,2.92.31,4.23.94s2.44,1.48,3.39,2.56c.96,1.08,1.71,2.34,2.26,3.77.55,1.44.82,2.95.82,4.55s-.27,3.08-.81,4.5c-.54,1.42-1.29,2.66-2.24,3.73-.95,1.07-2.07,1.92-3.36,2.55-1.29.63-2.68.94-4.18.94h-8.69v13.17c0,.75-.35,1.12-1.04,1.12h-1.95c-.68,0-1.02-.37-1.02-1.12v-35.49ZM571.68,443.05c0-.99-.17-1.92-.52-2.82s-.82-1.68-1.43-2.36c-.6-.68-1.31-1.22-2.13-1.63-.82-.41-1.69-.61-2.62-.61h-8.57v14.85h8.57c.91,0,1.77-.2,2.58-.6.81-.4,1.52-.94,2.13-1.63s1.09-1.48,1.45-2.37c.35-.89.53-1.84.53-2.84Z"/>
+    <path class="st0" d="M614.31,468c0,.37-.09.65-.28.84s-.44.28-.77.28h-1.92c-.7,0-1.04-.37-1.04-1.12v-35.59c0-.34.09-.61.27-.82.18-.2.44-.31.78-.31h1.92c.31,0,.56.1.75.31.19.2.29.47.29.82v35.59Z"/>
+    <path class="st0" d="M649.41,469.12c-.31,0-.57-.11-.79-.34-.22-.23-.32-.51-.32-.85v-2.29c0-.12.02-.26.05-.43.03-.17.12-.33.26-.48l20.34-29h-19.05c-.73,0-1.09-.39-1.09-1.17v-2.14c0-.75.36-1.12,1.09-1.12h23.42c.29,0,.55.11.76.33s.33.5.33.84v2.37c0,.32-.07.58-.21.79l-20.25,29.07h19.46c.29,0,.54.1.74.29s.3.5.3.9v2.04c0,.31-.1.58-.29.83-.19.25-.44.37-.75.37h-24Z"/>
+    <path class="st0" d="M707.75,469.12c-.31,0-.57-.11-.79-.34-.22-.23-.32-.51-.32-.85v-2.29c0-.12.02-.26.05-.43.03-.17.12-.33.26-.48l20.34-29h-19.05c-.73,0-1.09-.39-1.09-1.17v-2.14c0-.75.36-1.12,1.09-1.12h23.42c.29,0,.55.11.76.33s.33.5.33.84v2.37c0,.32-.07.58-.21.79l-20.25,29.07h19.46c.29,0,.54.1.74.29s.3.5.3.9v2.04c0,.31-.1.58-.29.83-.19.25-.44.37-.75.37h-24Z"/>
+    <path class="st0" d="M767.41,468.1c-.25.68-.67,1.02-1.27,1.02h-1.99c-.66,0-1-.27-1-.82,0-.15.02-.31.05-.48.02-.07.04-.13.07-.18,1.67-4.42,3.14-8.31,4.41-11.68,1.27-3.37,2.38-6.3,3.33-8.79.94-2.49,1.74-4.58,2.39-6.28.65-1.7,1.18-3.1,1.6-4.22s.74-1.97.97-2.56.4-1.03.51-1.31c.11-.28.18-.47.21-.57.06-.19.17-.39.31-.61s.43-.33.85-.33h1.37c.39,0,.65.11.8.33s.26.42.34.61l13.35,35.44s.03.1.08.25c.05.15.08.28.08.38,0,.27-.1.48-.29.61-.19.14-.44.2-.75.2h-1.99c-.31,0-.57-.09-.78-.27-.21-.18-.37-.41-.48-.7l-2.69-7.31h-16.84l-2.62,7.26ZM771.7,456.51h13.55l-6.74-18.65-6.81,18.65Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M480.14,200.41c-1.18-1.18-2.64-1.96-4.12-2.2-1.7-.27-3.21.16-4.25,1.23-1.05,1.08-1.48,2.58-1.21,4.24.24,1.47,1.02,2.94,2.2,4.12s2.64,1.96,4.09,2.19c.31.06.63.09.99.09,1.3,0,2.47-.47,3.29-1.31,1.05-1.07,1.48-2.58,1.21-4.24-.24-1.47-1.02-2.94-2.2-4.12Z"/>
+    <path class="st0" d="M542.36,143.31c-11.06-11.06-25.76-17.15-41.4-17.15-4.18,0-7.57,3.4-7.57,7.58,0,3.27,2.08,6.05,4.98,7.11l-39.52,73.07c-.52.98-.86,2.03-1.02,3.11,0,0-.12,1.3-.12,1.42,0,5.25,4.27,9.52,9.52,9.52,1.55,0,3.12-.4,4.54-1.14l19.98-10.81.37.43c.9,1.01,2.18,1.59,3.51,1.59,2.57,0,4.65-2.09,4.65-4.66v-1.94l7.16-3.87s.02.07.02.11l.94,10.23c.23,2.53,2.32,4.43,4.87,4.43s4.69-1.99,4.87-4.52l1.24-16.71,24.18-13.08-1.61-2.98-22.27,12.04c.11-1.2.81-2.25,1.89-2.83l17.1-9.24c1.79-.99,3-2.7,3.3-4.71.31-2.01-.33-4-1.78-5.47-.55-.56-.86-1.32-.88-2.12l-.04-4c-.02-2.38-1.36-4.54-3.48-5.65l-3.54-1.82c-.7-.37-1.23-.98-1.48-1.72l-1.27-3.7c-.79-2.31-2.79-3.95-5.23-4.28l-3.37-.45c-.83-.11-1.58-.57-2.08-1.26l-1.94-2.73c-1.43-2-3.92-3.02-6.33-2.6l-3.29.57c-.84.14-1.7-.06-2.37-.57-1.14-.87-2.52-1.32-3.94-1.31l1.01-1.87c23.46.53,42.39,19.78,42.39,43.37,0,4.18,3.4,7.58,7.58,7.58s7.58-3.4,7.58-7.58c0-15.64-6.09-30.34-17.15-41.4ZM556.11,184.7c0,2.31-1.88,4.19-4.19,4.19s-4.19-1.88-4.19-4.19,1.88-4.19,4.19-4.19,4.19,1.88,4.19,4.19ZM496.77,133.74c0-2.31,1.88-4.19,4.19-4.19,28.19,0,51.5,21.27,54.75,48.6-1.12-.65-2.41-1.02-3.78-1.02-1.72,0-3.31.58-4.58,1.56-1.3-10.22-5.9-19.67-13.3-27.07-8.83-8.83-20.58-13.7-33.09-13.7-2.31,0-4.19-1.88-4.19-4.19ZM505.48,204.75l-5.18,2.8c.08-1.16.75-2.22,1.78-2.78,1.08-.58,2.31-.58,3.4-.02ZM507.15,201.75c-2.1-1.12-4.59-1.11-6.67.02-2.2,1.18-3.57,3.47-3.57,5.98v5.57c0,.7-.57,1.26-1.26,1.26-.36,0-.71-.16-.95-.44l-1.88-2.16c-2.11-2.41-5.65-3.04-8.43-1.49l-18.33,10.15c-1.04.58-2.25.56-3.31-.05-.93-.55-1.52-1.48-1.63-2.53.05-.88.29-1.76.71-2.56l35.44-65.52c3.01.49,5.33,3.11,5.33,6.25,0,3.5-2.85,6.34-6.34,6.34-.83,0-1.62-.15-2.34-.44l-.67-.27-1.26,3.15.66.27c1.14.46,2.35.7,3.6.7,5.37,0,9.73-4.37,9.73-9.75,0-4.26-2.76-7.88-6.58-9.2.29-.18.6-.32.94-.39.87-.19,1.77.01,2.49.56,1.42,1.08,3.24,1.52,4.99,1.21l3.3-.57c1.13-.21,2.31.28,3,1.22l1.94,2.73c1.03,1.43,2.63,2.38,4.39,2.62l3.37.45c1.15.16,2.1.94,2.48,2.03l1.27,3.7c.52,1.55,1.64,2.84,3.13,3.62l3.55,1.82c1,.51,1.63,1.53,1.65,2.66l.04,4c.02,1.7.67,3.27,1.86,4.46.68.68.98,1.62.84,2.58-.14.96-.71,1.77-1.55,2.22l-17.1,9.23c-2.12,1.16-3.49,3.28-3.66,5.67l-1.53,20.62c-.07.79-.73,1.4-1.5,1.4s-1.44-.6-1.5-1.37l-.94-10.23c-.22-2.37-1.6-4.45-3.69-5.56ZM489.24,213.49l-19.1,10.33c-.91.48-1.92.74-2.92.74-.56,0-1.09-.08-1.6-.22.69-.12,1.38-.34,2.05-.67l18.33-10.16c1.02-.57,2.24-.55,3.24-.02Z"/>
+    <path class="st0" d="M519.97,172.48c3.5,0,6.34,2.85,6.34,6.34s-2.85,6.34-6.34,6.34-6.34-2.85-6.34-6.34,2.85-6.34,6.34-6.34Z"/>
+    <path class="st0" d="M519.97,188.55c5.37,0,9.73-4.37,9.73-9.73s-4.37-9.73-9.73-9.73-9.73,4.37-9.73,9.73,4.37,9.73,9.73,9.73ZM519.97,170.52c4.58,0,8.3,3.72,8.3,8.3s-3.72,8.3-8.3,8.3-8.3-3.72-8.3-8.3,3.72-8.3,8.3-8.3Z"/>
+    <path class="st0" d="M494.1,173.99c-5.37,0-9.73,4.37-9.73,9.73s4.37,9.73,9.73,9.73,9.73-4.37,9.73-9.73-4.37-9.73-9.73-9.73ZM494.1,192.03c-4.58,0-8.3-3.72-8.3-8.3s3.72-8.3,8.3-8.3,8.3,3.72,8.3,8.3-3.72,8.3-8.3,8.3Z"/>
+    <path class="st0" d="M494.1,190.07c-3.5,0-6.34-2.85-6.34-6.34s2.85-6.34,6.34-6.34,6.34,2.85,6.34,6.34-2.85,6.34-6.34,6.34Z"/>
+    <path class="st1" d="M478.76,201.79c-.9-.88-1.98-1.47-3.04-1.65-.16-.02-.38-.05-.61-.05-.78,0-1.45.25-1.92.72-.85.85-.75,2.07-.67,2.55.19,1.09.79,2.19,1.66,3.04.9.88,1.98,1.47,3.03,1.64.22.04.43.05.64.05.77,0,1.43-.25,1.9-.72.85-.86.75-2.07.67-2.55-.19-1.09-.79-2.19-1.66-3.04ZM478.73,206.37c-.36.36-.97.33-1.3.27-.76-.13-1.57-.58-2.27-1.26-.64-.63-1.11-1.47-1.25-2.26-.03-.2-.12-.9.27-1.29.2-.2.5-.3.91-.3.16,0,.3.02.39.03.76.13,1.57.58,2.27,1.26.64.63,1.11,1.47,1.25,2.26.03.2.12.9-.27,1.29Z"/>
+    <path class="st0" d="M516.05,162.73c.13-.77.58-1.57,1.26-2.27.63-.64,1.47-1.11,2.23-1.24.11-.02.25-.03.41-.03.22,0,.63.04.91.3.37.36.33.97.27,1.3-.13.76-.58,1.57-1.26,2.27-.63.64-1.47,1.11-2.25,1.25-.21.04-.9.12-1.3-.27-.36-.36-.33-.97-.27-1.3Z"/>
+    <path class="st0" d="M517.23,167.74c.36,0,.67-.03.96-.09,1.47-.24,2.94-1.02,4.12-2.2,1.18-1.18,1.96-2.64,2.2-4.12.27-1.68-.16-3.19-1.23-4.25-1.07-1.05-2.58-1.48-4.24-1.22-1.47.24-2.94,1.02-4.12,2.2-1.18,1.18-1.96,2.64-2.2,4.12-.27,1.68.16,3.19,1.21,4.24.82.85,1.99,1.31,3.3,1.31ZM514.13,162.41c.19-1.18.83-2.36,1.8-3.33.97-.97,2.15-1.61,3.33-1.8.25-.04.49-.06.73-.06.91,0,1.68.3,2.28.88.74.74,1.02,1.78.82,3.01-.19,1.18-.83,2.37-1.8,3.33-.97.97-2.15,1.61-3.36,1.8-1.24.25-2.28-.1-2.98-.82-.74-.74-1.02-1.78-.82-3.01Z"/>
+    <path class="st0" d="M489.22,195.04c-1.14,1.25-2.69,2.1-4.35,2.38l-1.09.17.58,3.32,1.1-.16c2.38-.42,4.6-1.63,6.26-3.41l.49-.53-2.51-2.3-.48.53Z"/>
+    <path class="st0" d="M506.7,167.26l-.17-1.09-3.33.58.17,1.08c.42,2.38,1.63,4.61,3.41,6.26l.52.49,2.31-2.48-.53-.49c-1.25-1.14-2.1-2.69-2.38-4.35Z"/>
+  </g>
+</svg></div>
+        <div class="pedido-card-body">
+          <button class="btn-pedido btn-wpp-pedido" onclick="window.open('https://wa.me/5518997657831?text=Olá! Quero fazer um pedido no O Barril Pizza','_blank')">📱 Pedir pelo WhatsApp</button>
+          <button class="btn-pedido btn-ifood">🍔 Pedir pelo iFood</button>
+        </div>
+      </div>
+      <div class="pedido-card">
+        <div class="pedido-card-header bc-amber" style="padding:1.5rem"><svg id="svg-grill" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.89 595.28" width="180px" height="90px" style="display:block">
+  
+  <defs>
+    <style>
+      .st0 {
+        fill: #ffffff;
+      }
+    </style>
+  </defs>
+  <g>
+    <path class="st0" d="M211.44,230.42c64.77-5.89,76.13,96.36,12.01,103.97-68.82,8.19-79.13-98.08-12.01-103.97ZM211.31,232c-35.78,2.01-24.94,104.11,11.88,100.81,32.52-2.87,24.94-102.96-11.88-100.81Z"/>
+    <path class="st0" d="M344.63,333.38l-22.98-.14h-24.16v-.72c6.01-.43,6.01-3.73,6.01-5.03v-88.74c0-1.29,0-4.6-6.01-5.03v-.72h24.16c.78,0,20.37,0,23.51-.14,48.45-1.58,51.97,42.51,7.7,45.81,50.01,2.15,55.76,54.57-8.23,54.71ZM324.12,236.73c-.26.72-.26,1.44-.26,2.01v39.06h22.85c23.9,0,25.33-43.22-1.57-43.37-10.84-.14-17.76-.57-21.02,2.3ZM346.71,279.38l-22.85-.14v48.25c0,.43,0,.86.13,1.44,4.05,3.45,13.97,3.16,20.63,3.16,38.26.14,34.6-52.7,2.09-52.7Z"/>
+    <path class="st0" d="M472.72,329.64c1.04,2.01,4.57,3.02,5.75,3.02v.72l-26.25-.14v-6.61c-20.76,14.36-53.8,9.19-55.5-11.92-1.31-15.94,9.92-24.56,26.25-27.57,20.76-3.45,26.77-7.75,28.47-11.06-1.44-7.9-5.22-13.79-15.02-14.22-4.7-.14-10.97,1.87-9.27,8.04,1.83,6.46-12.67,7.47-12.67,1.29,0-9.33,13.84-10.77,21.94-10.91,33.56-.29,36.43,13.07,36.43,30.59l-.13,38.77ZM452.22,325.19l.13-34.32c0-4.45,0-8.76-.52-12.78-1.7,2.3-5.62,5.31-15.67,8.47-14.36,4.45-20.63,14.79-19.98,27.71.65,12.64,13.71,25.56,36.04,10.91Z"/>
+    <path class="st0" d="M538.14,276.8c-10.45,0-4.18-13.64-8.88-13.93-6.4-.43-15.41,10.34-19.33,17.09l.13,47.67c0,1.29,0,4.6,6.01,5.03v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v16.08c3.53-6.46,11.36-15.65,19.07-16.8,16.98-2.87,20.37,15.8,9.14,15.8Z"/>
+    <path class="st0" d="M604.34,276.8c-10.45,0-4.18-13.64-8.88-13.93-6.4-.43-15.41,10.34-19.33,17.09l.13,47.67c0,1.29,0,4.6,6.01,5.03v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v16.08c3.53-6.46,11.36-15.65,19.07-16.8,16.98-2.87,20.37,15.8,9.14,15.8Z"/>
+    <path class="st0" d="M648.47,332.66v.72h-32.39v-.72c5.35-.43,6.01-3.16,6.01-4.6l-.13-62.47c-.78-2.15-4.7-3.3-5.88-3.3v-.72l26.25.14v2.15l.13,63.76c0,1.29,0,4.6,6.01,5.03ZM621.18,242.62c0-6.03,4.57-11.06,10.06-11.06s10.05,5.03,10.05,11.06-4.57,11.06-10.05,11.06-10.06-5.03-10.06-11.06Z"/>
+    <path class="st0" d="M686.21,332.66v.72h-32.38v-.72c5.62-.43,6.01-3.3,6.01-4.74l-.13-96.93c0-1.29,0-4.6-6.01-5.03v-.72h32.39v.72c-5.62.43-6.01,3.3-6.01,4.74l.13,96.93c0,1.29,0,4.6,6.01,5.03Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M536.74,383.47c0-.52.24-.78.71-.78h1.36c.21,0,.38.07.53.21.15.14.22.33.22.58v7.91c0,.13-.03.26-.09.38-.06.12-.18.25-.35.38l-.08.05c-1.02.82-2.15,1.46-3.39,1.91-1.24.45-2.57.68-3.99.68-1.15,0-2.24-.16-3.29-.48-1.05-.32-2.03-.78-2.95-1.37-.92-.59-1.75-1.3-2.5-2.13-.75-.83-1.39-1.74-1.93-2.74s-.95-2.09-1.24-3.24c-.29-1.16-.44-2.37-.44-3.63s.15-2.45.44-3.6c.29-1.15.71-2.23,1.25-3.24.54-1.01,1.19-1.93,1.94-2.76.75-.83,1.58-1.54,2.5-2.14.92-.59,1.9-1.05,2.96-1.38,1.05-.33,2.15-.49,3.3-.49,1.52,0,3,.31,4.44.93.27.12.59.27.97.46.38.19.74.4,1.09.62s.64.46.88.7.37.47.37.7c0,.14-.04.27-.11.39l-.71,1.28c-.15.27-.33.41-.55.41-.08,0-.17-.02-.28-.06-.11-.04-.22-.11-.34-.21-.8-.64-1.69-1.15-2.67-1.52-.98-.37-2-.56-3.05-.56-1.41,0-2.7.29-3.87.87-1.18.58-2.19,1.36-3.04,2.33-.85.97-1.51,2.09-1.99,3.36-.48,1.26-.71,2.58-.71,3.95,0,1.46.26,2.83.77,4.1.51,1.27,1.21,2.38,2.08,3.32.88.94,1.89,1.69,3.05,2.23,1.16.54,2.38.81,3.66.81.56,0,1.1-.05,1.6-.14s.98-.22,1.42-.38c.44-.15.83-.33,1.17-.53s.63-.39.86-.58v-6.59Z"/>
+    <path class="st0" d="M564.13,368.79c0-.27.06-.48.19-.63s.3-.22.52-.22h9.37c1.07,0,2.07.22,2.99.66s1.73,1.04,2.42,1.81c.69.77,1.23,1.66,1.62,2.68.39,1.02.59,2.11.59,3.26,0,.84-.11,1.65-.32,2.42-.22.77-.52,1.49-.91,2.15-.39.66-.85,1.25-1.39,1.76-.54.52-1.14.94-1.8,1.27l4.26,9.66c.05.14.08.25.08.32,0,.13-.05.24-.15.33s-.25.13-.43.13h-1.8c-.22,0-.39-.06-.51-.18-.12-.12-.23-.29-.32-.5l-3.92-9.07c-.06.01-.19.02-.36.03-.18,0-.37.01-.58.02s-.42,0-.62,0h-6.12v8.91c0,.52-.24.78-.71.78h-1.38c-.48,0-.71-.26-.71-.78v-24.83ZM579.06,376.33c0-.71-.12-1.39-.37-2.03-.25-.64-.59-1.21-1.02-1.7-.43-.49-.95-.88-1.54-1.18-.59-.29-1.23-.44-1.91-.44h-7.28v10.68h7.33c.68,0,1.31-.14,1.9-.43.58-.29,1.09-.67,1.52-1.16.43-.49.76-1.05,1.01-1.7.25-.65.37-1.33.37-2.04Z"/>
+    <path class="st0" d="M608.78,393.62c0,.26-.06.46-.19.59s-.31.2-.54.2h-1.34c-.49,0-.73-.26-.73-.78v-24.9c0-.24.06-.43.19-.57.12-.14.3-.21.54-.21h1.34c.22,0,.39.07.53.21.13.14.2.33.2.57v24.9Z"/>
+    <path class="st0" d="M648.62,391.35c.19,0,.36.07.5.21s.21.34.21.61v1.44c0,.21-.07.4-.19.55-.13.15-.3.23-.52.23h-13.78c-.48,0-.71-.26-.71-.78v-24.9c0-.21.06-.4.19-.55s.31-.23.55-.23h1.35c.21,0,.38.07.51.21.13.14.2.33.2.58v22.64h11.69Z"/>
+    <path class="st0" d="M687.33,391.35c.19,0,.36.07.5.21s.21.34.21.61v1.44c0,.21-.07.4-.19.55-.13.15-.3.23-.52.23h-13.78c-.48,0-.71-.26-.71-.78v-24.9c0-.21.06-.4.19-.55s.31-.23.55-.23h1.35c.21,0,.38.07.51.21.13.14.2.33.2.58v22.64h11.69Z"/>
+  </g>
+  <g>
+    <path class="st0" d="M456.42,218.28h-.01c-.63,0-1.14.51-1.14,1.14s.52,1.14,1.15,1.14,1.14-.51,1.14-1.14-.51-1.14-1.14-1.14Z"/>
+    <path class="st0" d="M506.65,153.79s0,0,0,0l-12.61,12.61c-2.23,2.23-2.23,5.86,0,8.09l1.61,1.61-8.97,8.97-9.99-9.99c.45-1.01.69-2.11.69-3.25,0-2.12-.82-4.11-2.3-5.61-.01-.01-.02-.03-.03-.05l-12.94-12.94s-.07-.04-.11-.07c-.06-.05-.12-.09-.2-.13-.07-.03-.14-.06-.22-.08-.04-.01-.08-.04-.13-.05l-2.83-.41c-.05,0-.1,0-.15,0-.06,0-.11-.02-.17,0-.03,0-.04.02-.07.02-.07.02-.13.04-.2.07-.08.03-.15.06-.22.1-.05.04-.09.08-.14.12-.06.06-.12.11-.17.18-.04.05-.06.12-.08.18-.03.07-.07.15-.08.23,0,.02-.02.04-.02.06,0,.06,0,.11,0,.16s-.02.11,0,.16l.4,2.83s.03.09.05.14c.02.06.03.12.06.18.04.08.09.15.15.22.03.03.04.07.07.1l10.51,10.51c.89.89.89,2.34,0,3.23-.89.89-2.34.89-3.23,0l-10.51-10.51s-.08-.05-.12-.08c-.05-.04-.11-.08-.17-.12-.08-.04-.16-.07-.24-.09-.04,0-.07-.03-.11-.04l-2.83-.41c-.06,0-.11,0-.16,0s-.11-.02-.16,0c-.02,0-.03.02-.05.02-.09.02-.18.05-.26.09-.05.02-.1.04-.15.07-.07.05-.13.11-.18.17-.05.05-.09.09-.13.14-.04.06-.07.13-.09.19-.03.07-.06.14-.08.22,0,.02-.02.04-.02.06,0,.05,0,.1,0,.16,0,.06-.02.11-.01.17l.4,2.84c0,.06.04.11.05.16.02.05.03.1.05.15.04.09.1.18.17.25.02.02.03.06.05.08l12.95,12.95s.04.02.05.04c1.5,1.48,3.49,2.3,5.6,2.3h0c1.14,0,2.24-.24,3.25-.69l9.99,9.99-6.19,6.19c-.45-.45-1.17-.45-1.62,0l-1.62,1.62-.81-.81c-.45-.45-1.17-.45-1.62,0l-18.84,18.84s0,0,0,0c-1.2,1.2-1.86,2.78-1.87,4.47,0,1.69.64,3.28,1.83,4.47,1.22,1.22,2.83,1.83,4.44,1.83,1.63,0,3.26-.62,4.5-1.87,0,0,0,0,0,0l18.84-18.84c.45-.45.45-1.17,0-1.62l-.81-.81,1.62-1.62c.22-.22.34-.52.34-.81,0-.02,0-.03-.01-.05-.01-.27-.12-.55-.32-.76l6.19-6.19,5.56,5.56c-.45.45-.45,1.17,0,1.62l1.62,1.62-.81.81c-.45.45-.45,1.17,0,1.62l19.45,19.45s0,0,0,0c1.24,1.24,2.87,1.87,4.5,1.87s3.22-.61,4.44-1.83c2.45-2.45,2.44-6.46-.04-8.94,0,0,0,0,0,0l-19.45-19.45c-.45-.45-1.17-.45-1.62,0l-.81.81-1.62-1.62c-.45-.45-1.17-.45-1.62,0l-5.56-5.56,8.97-8.97,1.62,1.62c1.08,1.08,2.51,1.67,4.04,1.67s2.97-.59,4.04-1.67l12.61-12.61h0s0,0,0,0c1.51-1.51,3.04-5.05-3.65-11.74-6.68-6.68-10.22-5.14-11.73-3.64h0ZM469.4,177.55c-1.53,0-2.96-.6-4.04-1.67-.01-.01-.03-.02-.04-.03l-12.64-12.64-.13-.94.95.14,10.24,10.24h0s0,0,0,0c.89.89,2.06,1.33,3.23,1.33s2.34-.45,3.24-1.34c1.78-1.78,1.78-4.68,0-6.47,0,0,0,0,0,0l-10.25-10.25-.13-.94.94.14,12.64,12.64s.01.03.02.04c1.08,1.08,1.67,2.51,1.67,4.04s-.59,2.96-1.67,4.04c-1.08,1.08-2.51,1.67-4.04,1.67h0ZM474.63,177.88c.14-.12.29-.25.43-.39s.26-.28.39-.43l9.63,9.63-.81.81-9.63-9.63ZM456.34,223.46c-1.07,0-2.07-.41-2.82-1.16-.76-.76-1.17-1.76-1.16-2.84,0-1.08.43-2.09,1.2-2.86,0,0,0,0,0,0l18.03-18.03,4.85,4.85s0,0,0,0,0,0,0,0l.81.81-18.03,18.03s0,0,0,0c-.77.77-1.78,1.19-2.86,1.2h-.02,0ZM474.83,198.56l.81-.81,2.42,2.42h0l-.81.81-2.42-2.42ZM519.83,222.28c-1.56,1.56-4.11,1.55-5.7-.03,0,0,0,0,0,0l-18.65-18.65,5.66-5.67,18.65,18.65s0,0,0,0c1.58,1.58,1.6,4.14.03,5.7h0ZM495.49,200.36l-.81-.81,2.42-2.42s0,0,0,0l.81.81-2.42,2.43ZM494.68,196.31l-.81.81-5.56-5.56.81-.81,5.56,5.56ZM478.88,197.75l-.81-.81,7-7s0,0,0,0,0,0,0,0l2.42-2.42s0,0,0,0,0,0,0,0l9.77-9.78.81.81-19.21,19.21ZM520.41,167.55l-12.61,12.61c-1.34,1.34-3.51,1.34-4.85,0l-7.28-7.28c-1.34-1.34-1.34-3.52,0-4.86l12.61-12.61s0,0,0,0c1.52-1.52,4.7-.16,8.49,3.64,3.8,3.8,5.16,6.98,3.64,8.5h0Z"/>
+    <path class="st0" d="M509.89,160.27c-.45-.45-1.17-.45-1.62,0l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62h0Z"/>
+    <path class="st0" d="M512.71,163.1c-.45-.45-1.17-.45-1.62,0l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62Z"/>
+    <path class="st0" d="M513.93,165.93l-8.56,8.56c-.45.45-.45,1.17,0,1.62.22.22.52.34.81.34s.59-.11.81-.34l8.56-8.56c.45-.45.45-1.17,0-1.62s-1.17-.45-1.62,0Z"/>
+    <path class="st0" d="M517,218.27h-.01c-.63,0-1.14.51-1.14,1.14s.52,1.14,1.15,1.14,1.14-.51,1.14-1.14-.51-1.14-1.14-1.14Z"/>
+  </g>
+</svg></div>
+        <div class="pedido-card-body">
+          <button class="btn-pedido btn-wpp-pedido" onclick="window.open('https://wa.me/5518997657831?text=Olá! Quero fazer um pedido no O Barril Grill','_blank')">📱 Pedir pelo WhatsApp</button>
+          <button class="btn-pedido btn-ifood">🍔 Pedir pelo iFood</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CONTATO PAGE ===== -->
+<div class="pagina" id="pagina-contato">
+  <div class="page-header">
+    <h1>Contato</h1>
+    <p>Estamos aqui para atender você</p>
+  </div>
+  <section class="contato-section">
+    <div class="contato-grid">
+      <div class="contato-info">
+        <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:.5rem">Onde Estamos</p>
+        <h2>Grupo O Barril</h2>
+        <div class="contato-item">
+          <div class="c-icon">📍</div>
+          <div>
+            <p class="c-label">Endereço</p>
+            <p class="c-val">R. Antônio Conte, 348<br>Cândido Mota – SP</p>
+          </div>
+        </div>
+        <div class="contato-item">
+          <div class="c-icon">📞</div>
+          <div>
+            <p class="c-label">Telefone / WhatsApp</p>
+            <p class="c-val">(18) 99765-7831</p>
+          </div>
+        </div>
+        <div class="contato-item">
+          <div class="c-icon">🕐</div>
+          <div>
+            <p class="c-label">Horário</p>
+            <p class="c-val">Segunda a Domingo — 18h às 23h</p>
+          </div>
+        </div>
+      </div>
+      <div class="mapa-placeholder">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.3!2d-50.3862!3d-22.7457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDQ0JzQ0LjUiUyA1MMKwMjMnMTAuMyJX!5e0!3m2!1spt!2sbr!4v1234567890" loading="lazy" title="Mapa"></iframe>
+      </div>
+      <div class="contato-form">
+        <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--amber);margin-bottom:1rem">Fale Conosco</p>
+        <label class="form-label">Nome</label>
+        <input class="form-input" type="text" id="cf2-nome" placeholder="Seu nome">
+        <label class="form-label">Telefone</label>
+        <input class="form-input" type="tel" id="cf2-tel" placeholder="(18) 9 ____-____">
+        <label class="form-label">Mensagem</label>
+        <textarea class="form-input" id="cf2-msg" placeholder="Como podemos ajudar?"></textarea>
+        <button class="btn-enviar" onclick="enviarContato2()">Enviar Mensagem 📨</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+function irPara(id){
+  document.querySelectorAll('.pagina').forEach(p=>p.classList.remove('ativa'));
+  document.getElementById('pagina-'+id).classList.add('ativa');
+  ['home','cardapio','promos','pedido','contato'].forEach(t=>{
+    const el=document.getElementById('nl-'+t);
+    if(el)el.classList.remove('ativo');
+  });
+  const a=document.getElementById('nl-'+id);
+  if(a)a.classList.add('ativo');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function trocarMarca(m){
+  document.querySelectorAll('.menu-marca').forEach(x=>x.classList.remove('ativo'));
+  const el=document.getElementById('menu-'+m);
+  if(el)el.classList.add('ativo');
+  ['rocket','pizza','grill'].forEach(x=>{
+    const t=document.getElementById('tab-'+x);
+    if(t)t.classList.remove('ativo');
+  });
+  const tab=document.getElementById('tab-'+m);
+  if(tab)tab.classList.add('ativo');
+}
+
+function enviarContato(){
+  const n=document.getElementById('cf-nome').value;
+  const t=document.getElementById('cf-tel').value;
+  const m=document.getElementById('cf-msg').value;
+  if(!n||!m){alert('Preencha nome e mensagem.');return;}
+  window.open('https://wa.me/5518997657831?text='+encodeURIComponent('*Contato do Site*\nNome: '+n+'\nTel: '+t+'\nMsg: '+m),'_blank');
+}
+function enviarContato2(){
+  const n=document.getElementById('cf2-nome').value;
+  const t=document.getElementById('cf2-tel').value;
+  const m=document.getElementById('cf2-msg').value;
+  if(!n||!m){alert('Preencha nome e mensagem.');return;}
+  window.open('https://wa.me/5518997657831?text='+encodeURIComponent('*Contato do Site*\nNome: '+n+'\nTel: '+t+'\nMsg: '+m),'_blank');
+}
+</script>
+</body>
+</html>
